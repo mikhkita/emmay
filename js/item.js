@@ -8,7 +8,6 @@
     	$(".rsThumbsArrowLeft").trigger("click"); return false;
     });
 
-	
 	//фильтры товаров
 	
 	
