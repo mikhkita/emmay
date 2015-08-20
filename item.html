@@ -11,6 +11,7 @@
 	<meta name="description" content="">
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -357,7 +358,7 @@
 								</div>
 								<div class="b-item-buy">
 									<a href="#" class="btn btn-g"><span>КУПИТЬ</span></a>
-									<a href="#" class="buy-one-click"><span>Покупка в один клик</span></a>
+									<a href="#" class="buy-one-click fancy" data-block="#buy-one-click"><span>Покупка в один клик</span></a>
 								</div>
 							</div>
 						</div>
@@ -584,6 +585,51 @@
 		</div>
 	</div>	
 </div>
+<div style="display:none;">
+	<div id="buy-one-click">
+		<div class="for_all b-popup" >
+			<h3 class="popup-title">Покупка в один клик</h3>
+			<div class="popup-desc clearfix">
+				<div class="left popup-img">
+					<img src="i/popup-img.jpg" alt="">
+				</div>
+				<div class="left popup-text">
+					<h3>Букет из 11 красных роз</h3>
+					<h4>Букет в виде сердца.<br>Длина 50-70 см. Бутон 5-7 с...</h4>
+					<h5><b>2600</b> руб.</h5>
+					<h6>Доставка по городу Москва <span>400</span> руб.</h6>
+				</div>
+			</div>
+			<form action="kitsend.php" method="POST" id="b-form-1" data-block="#buy-one-click">
+				<p>Вы можете купить букет по телефону. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+				<div class="clearfix">
+					<label class="left" for="name-oneclick">Ваше имя:</label>
+					<input class="right" type="text" id="name-oneclick" name="name" required/>
+				</div>
+				<div class="clearfix">
+					<label class="left" for="tel-oneclick">Номер телефона:</label>
+					<input class="right" type="text" id="tel-oneclick" name="phone" required/>
+				</div>
+				<input type="hidden" name="subject" value="Покупка в один клик"/>
+				<input type="submit" class="ajax btn btn-g" value="Заказать">
+			</form>
+		</div>
+	</div>
+	<div id="b-popup-2">
+		<div class="b-thanks b-popup">
+			<h3>Спасибо!</h3>
+			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
+			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+		</div>
+	</div>
+	<div id="b-popup-error">
+		<div class="b-thanks b-popup">
+			<h3>Ошибка отправки!</h3>
+			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
+			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+		</div>
+	</div>
+</div>
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
@@ -594,7 +640,7 @@
 <script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
-
+<script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/item.js"></script>
 
