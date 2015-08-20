@@ -1,0 +1,36 @@
+.b-logo
+{
+	width: 291px;
+	height: 57px;
+	background-position:0 0;
+	background-repeat: no-repeat;
+	background-image: url('../i/logo.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-block;
+}
+.b-more-ico
+{
+	background-image: url('../i/rotate.png') 0 0 no-repeat;
+	background-position:0 0;
+	background-repeat: no-repeat;
+	width: 22px;
+	margin-right: 8px;
+	height: 17px;
+	display: inline-block;
+	margin-bottom: -4px;
+}
+.b-top-basket-name:before
+{
+	position: absolute;
+	left: 0px;
+	top: -4px;
+	width: 25px;
+	height: 20px;
+	background-image: url('../i/basket-ico.png');
+	background-position:0 0;
+	background-repeat: no-repeat;
+	display: block;
+	content:'';
+}
