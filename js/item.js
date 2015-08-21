@@ -8,6 +8,47 @@
     	$(".rsThumbsArrowLeft").trigger("click"); return false;
     });
 
+
+    $(function() {
+    var availableTags = [
+      "Москва",
+      "Санкт-Петербург",
+      "Астрахань",
+      "Барнаул",
+      "Владивосток",
+      "Волгоград",
+      "Воронеж",
+      "Екатеринбург",
+      "Ижевск",
+      "Иркутск",
+      "Казань",
+      "Кемерово",
+      "Краснодар",
+      "Красноярск",
+      "Липецк",
+      "Набережные Челны",
+      "Новокузнецк",
+      "Нижний Новгород",
+      "Новокузнецк",
+      "Новосибирск",
+      "Омск",
+      "Оренбург"
+    ];
+	    $( "#tags" ).autocomplete({
+	      source: availableTags
+   	 	});
+  	});
+
+  	$("#show-btn").click(function(){
+  		if($(".city-list").hasClass("overflow")) {
+  			$(".city-list").removeClass("overflow");
+  			$("#show-btn").text("Показать все города");
+  		} else {
+  			$(".city-list").addClass("overflow");
+  			$("#show-btn").text("Скрыть");
+  		}
+  		
+  	});
 	//фильтры товаров
 	
 	

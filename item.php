@@ -12,6 +12,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />	
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -115,7 +116,7 @@
 			<div class="b-wrap clearfix">
 				<div class="b-topmenu-help">
 					<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
-					<a href="#" class="b-topmenu-callback">Заказать звонок</a>
+					<a href="#" class="b-topmenu-callback fancy" data-block="#b-callback">Заказать звонок</a>
 				</div>				
 				<a href="#" class="b-topmenu-basket">
 					<span class="b-top-basket-name">КОРЗИНА</span>
@@ -133,7 +134,7 @@
 			<div class="b-wrap">
 				<a href="main.html" class="b-logo"><span>Yamme</span></a>
 				<div class="b-head-city">
-					Город доставки: <a class="b-choose-city" href="#"><span>Москва</span></a>
+					Город доставки: <a class="b-choose-city fancy" href="#" data-block="#b-city"><span>Москва</span></a>
 				</div>
 				<div class="b-head-features">
 					<ul>
@@ -323,7 +324,7 @@
 								<span>Доставка по городу Москва <b>400</b> руб.</span>
 							</div>
 							<div class="b-item-special">
-								<span class="item-special-show">Специальная гарантия</span>
+								<a href="#" class="item-special-show fancy" data-block="#b-text-popup">Специальная гарантия</a>
 							</div>
 							<div class="b-item-choose">
 								<div class="b-item-colors clearfix">
@@ -602,12 +603,12 @@
 			</div>
 			<form action="kitsend.php" method="POST" id="b-form-1" data-block="#buy-one-click">
 				<p>Вы можете купить букет по телефону. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
-				<div class="clearfix">
-					<label class="left" for="name-oneclick">Ваше имя:</label>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="name-oneclick">Ваше имя:</label>
 					<input class="right" type="text" id="name-oneclick" name="name" required/>
 				</div>
-				<div class="clearfix">
-					<label class="left" for="tel-oneclick">Номер телефона:</label>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
 					<input class="right" type="text" id="tel-oneclick" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Покупка в один клик"/>
@@ -615,11 +616,109 @@
 			</form>
 		</div>
 	</div>
-	<div id="b-popup-2">
-		<div class="b-thanks b-popup">
-			<h3>Спасибо!</h3>
-			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+	<div id="b-callback">
+		<div class="for_all b-popup" >
+			<h3 class="popup-title">Заказать звонок</h3>
+			<form action="kitsend.php" method="POST" id="b-form-2" data-block="#b-callback">
+				<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="name-callback">Ваше имя:</label>
+					<input class="right" type="text" id="name-callback" name="name" required/>
+				</div>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="tel-callback">Номер телефона:</label>
+					<input class="right" type="text" id="tel-callback" name="phone" required/>
+				</div>
+				<input type="hidden" name="subject" value="Обратный звонок"/>
+				<input type="submit" class="ajax btn btn-g" value="Заказать">
+			</form>
+		</div>
+	</div>
+	<div id="b-city">
+		<div class="for_all b-popup b-city">
+			<h3 class="popup-title">Выбор города</h3>
+			<div class="b-city-cont">
+				<div class="cur-city clearfix">
+					<h3 class="left">Ваш город - Москва?</h3>
+					<a class="left" href="#" onclick="$.fancybox.close(); return false;">Да</a>
+				</div>
+				<h4>Если нет - выберите из списка</h4>
+				<div class="city-list">
+					<ul class="clearfix">
+						<li class="active"><a rel="nofollow" href="http://yamme.ru">Москва</a></li>
+						<li><a rel="nofollow" href="http://spb.yamme.ru">Санкт-Петербург</a></li>
+						<li><a rel="nofollow" href="http://astrakhan.yamme.ru">Астрахань</a></li>
+						<li><a rel="nofollow" href="http://barnaul.yamme.ru">Барнаул</a></li>
+						<li><a rel="nofollow" href="http://vladivostok.yamme.ru">Владивосток</a></li>
+						<li><a rel="nofollow" href="http://volgograd.yamme.ru">Волгоград</a></li>
+						<li><a rel="nofollow" href="http://voronezh.yamme.ru">Воронеж</a></li>
+						<li><a rel="nofollow" href="http://ekaterinburg.yamme.ru">Екатеринбург</a></li>
+						<li><a rel="nofollow" href="http://izhevsk.yamme.ru">Ижевск</a></li>
+						<li><a rel="nofollow" href="http://irkutsk.yamme.ru">Иркутск</a></li>
+						<li><a rel="nofollow" href="http://kazan.yamme.ru">Казань</a></li>
+						<li><a rel="nofollow" href="http://kemerovo.yamme.ru">Кемерово</a></li>
+						<li><a rel="nofollow" href="http://krasnodar.yamme.ru">Краснодар</a></li>
+						<li><a rel="nofollow" href="http://krs.yamme.ru">Красноярск</a></li>
+						<li><a rel="nofollow" href="http://lipetsk.yamme.ru">Липецк</a></li>
+						<li><a rel="nofollow" href="http://naberezhnyechelny.yamme.ru">Набережные Челны</a></li>
+						<li><a rel="nofollow" href="http://nn.yamme.ru">Нижний Новгород</a></li>
+						<li><a rel="nofollow" href="http://novokuznetsk.yamme.ru">Новокузнецк</a></li>
+						<li><a rel="nofollow" href="http://nsk.yamme.ru">Новосибирск</a></li>
+						<li><a rel="nofollow" href="http://omsk.yamme.ru">Омск</a></li>
+						<li><a rel="nofollow" href="http://Orenburg.yamme.ru">Оренбург</a></li>
+						<li><a rel="nofollow" href="http://penza.yamme.ru">Пенза</a></li>
+						<li><a rel="nofollow" href="http://perm.yamme.ru">Пермь</a></li>
+						<li><a rel="nofollow" href="http://rostov-na-donu.yamme.ru">Ростов-на-Дону</a></li>
+						<li><a rel="nofollow" href="http://ryazan.yamme.ru">Рязань</a></li>
+						<li><a rel="nofollow" href="http://samara.yamme.ru">Самара</a></li>
+						<li><a rel="nofollow" href="http://saratov.yamme.ru">Саратов</a></li>
+						<li><a rel="nofollow" href="http://tolyatti.yamme.ru">Тольятти</a></li>
+						<li><a rel="nofollow" href="http://tomsk.yamme.ru">Томск</a></li>
+						<li><a rel="nofollow" href="http://tyumen.yamme.ru">Тюмень</a></li>
+						<li><a rel="nofollow" href="http://ulyanovsk.yamme.ru">Ульяновск</a></li>
+						<li><a rel="nofollow" href="http://ufa.yamme.ru">Уфа</a></li>
+						<li><a rel="nofollow" href="http://khabarovsk.yamme.ru">Хабаровск</a></li>
+						<li><a rel="nofollow" href="http://chelyabinsk.yamme.ru">Челябинск</a></li>
+						<li><a rel="nofollow" href="http://yaroslavl.yamme.ru">Ярославль</a></li>
+						<li><a rel="nofollow" href="http://abakan.yamme.ru">Абакан</a></li>
+						<li><a rel="nofollow" href="http://anapa.yamme.ru">Анапа</a></li>
+						<li><a rel="nofollow" href="http://pyshma.yamme.ru">Верхняя Пышма</a></li>
+						<li><a rel="nofollow" href="http://gelendzhik.yamme.ru">Геленджик</a></li>
+						<li><a rel="nofollow" href="http://dnepropetrovsk.yamme.ru">Днепропетровск</a></li>
+						<li><a rel="nofollow" href="http://dubna.yamme.ru">Дубна</a></li>
+						<li><a rel="nofollow" href="http://eisk.yamme.ru">Ейск</a></li>
+						<li><a rel="nofollow" href="http://zelenograd.yamme.ru">Зеленоград</a></li>
+						<li><a rel="nofollow" href="http://neftekamsk.yamme.ru">Нефтекамск</a></li>
+						<li><a rel="nofollow" href="http://noviy-urengoy.yamme.ru">Новый Уренгой</a></li>
+						<li><a rel="nofollow" href="http://reutov.yamme.ru">Реутов</a></li>
+						<li><a rel="nofollow" href="http://solnechnogorsk.yamme.ru">Солнечногорск</a></li>
+						<li><a rel="nofollow" href="http://tuapse.yamme.ru">Туапсе</a></li>
+						<li><a rel="nofollow" href="http://uhta.yamme.ru">Ухта</a></li>
+						<li><a rel="nofollow" href="http://chehov.yamme.ru">Чехов</a></li>
+	                </ul>
+	            </div>      
+			</div>
+			<div class="show-btn clearfix">
+	           	<a class="right" href="#" id="show-btn">Показать все города</a>
+	        </div>
+	        <div class="b-city-select-cont">
+	        	<label for="tags">Или укажите в поле:</label>
+	           	<input id="tags">
+	           	<a href="#">Выбрать</a>
+	        </div>
+</div>
+		</div>
+	</div>
+	<div id="b-text-popup">
+		<div class="for_all b-popup">
+			<h3 class="popup-title">Текст</h3>
+				<div class="b-text">
+					<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
+					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+					<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
+				</div>
+				
+			</form>
 		</div>
 	</div>
 	<div id="b-popup-error">
@@ -640,6 +739,7 @@
 <script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/item.js"></script>
