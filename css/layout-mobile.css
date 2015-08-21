@@ -1,7 +1,8 @@
 html, body {
 	min-width: 750px;
 	height: 100%;
-	font-size: 20px;
+	font-size: 24px;
+	-webkit-text-size-adjust: none;
 	line-height: 30px;
 }	
 a
@@ -59,7 +60,8 @@ a
 /* topmenu */	
 .b-topmenu
 {
-	min-height: 51px;
+	padding: 15px 0px 15px;
+	min-height: 0px;
 }
 	.b-topmenu a
 	{
@@ -75,11 +77,11 @@ a
 		}
 	.b-topmenu-help
 	{
-		padding-top: 11px;
+		padding-top: 2px;
 	}	
 		.topmenu-tel
 		{
-			font-size: 24px;
+			font-size: 30px;
 			line-height: 29px;
 			margin-right: 15px;
 		}
@@ -89,15 +91,15 @@ a
 		.b-topmenu-callback
 		{
 			display: none;
-			font-size: 20px;
+			font-size: 24px;
 		}
 			.b-topmenu-callback:hover
 			{
 			}
 	.b-topmenu-links
 	{
-		padding-top: 19px;
-		font-size: 18px;
+		padding-top: 9px;
+		font-size: 20px;
 		line-height: 16px;	
 		padding-right: 0px;
 	}	
@@ -129,7 +131,7 @@ a
 		}
 		.b-top-basket-name
 		{
-			font-size: 20px;
+			font-size: 24px;
 			letter-spacing: 1px;
 			line-height: 16px;
 			padding-left: 41px;			
@@ -150,8 +152,9 @@ a
 			}
 .b-header
 {
-	padding-top: 30px;
-	min-height: 89px;
+	font-size: 0px;
+	padding: 30px 0px;
+	min-height: 0px;
 }
 		a.b-logo
 		{
@@ -167,12 +170,15 @@ a
 			}
 	.b-head-city
 	{
+		font-size: 24px;
 		margin-top: -7px;
-		left: 380px;
-	}
+		left: auto;
+	
+		right: 20px;
+}
 		.b-choose-city
 		{
-			font-size: 20px;
+			font-size: 24px;
 			margin-left: 5px;
 			line-height: 15px;
 		}
@@ -299,7 +305,7 @@ a
 					}
 				.b-nav-phone .topmenu-tel
 				{
-					font-size: 20px;
+					font-size: 24px;
 					line-height: 24px;
 					margin-right: 0px;
 				}
@@ -405,6 +411,7 @@ a
 /* Main Structure */		
 .b-aside
 {
+	display: none;
 	width: 280px;
 	margin-right: 20px;
 }	
@@ -428,9 +435,9 @@ a
 		margin-bottom: 0;
 		font-size: 11px;		
 		letter-spacing: 1px;
-		line-height: 13px;		
-		padding: 13px 36px 12px 36px;
-		font-size: 12px;
+		line-height: 30px;		
+		padding: 13px 50px 12px 50px;
+		font-size: 24px;
 	}
 		.btn:hover
 		{
@@ -459,7 +466,7 @@ a
 .b-security
 {
 	padding: 0px 0 0 90px;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 18px;
 	margin-bottom: 37px;
 }
@@ -469,6 +476,7 @@ a
 }
 	.b-filter-group
 	{
+		display: none;
 		margin-bottom: 17px;
 	}
 		.b-filter-group label
@@ -511,7 +519,7 @@ a
 	}
 		.b-review-item
 		{
-			font-size: 20px;
+			font-size: 24px;
 			line-height: 20px;
 		}
 			.b-review-from
@@ -539,6 +547,7 @@ a
 }
 	.b-banner-gallery
 	{
+		display: none;
 		margin-bottom: 30px;
 		margin-bottom: 40px;
 	}
@@ -561,22 +570,22 @@ a
 	}
 		.b-catalog-list li
 		{
-			width: 280px;
-			margin-left: 20px;
+			width: 340px;
+			margin-left: 18px;
 			margin-bottom: 40px;				
 		}
 		.b-catalog-item
 		{
-			font-size: 20px;
+			font-size: 24px;
 		}
 			.b-cat-pic
 			{
 			}
 				.b-cat-pic span
 				{
-					font-size: 18px;
+					font-size: 28px;
 					padding-top: 9px;
-					line-height: 22px;
+					line-height: 38px;
 					margin-bottom: 5px;
 				}
 				.b-cat-pic:hover span
@@ -601,13 +610,13 @@ a
 				.b-item-price
 				{
 					padding-top: 7px;
-					font-size: 28px;
-					line-height: 24px;
+					font-size: 40px;
+					line-height: 40px;
 				}
 					.b-item-price small
 					{
-						font-size: 20px;
-						margin-right: 10px;
+						font-size: 35px;
+						margin-right: 15px;
 					}
 						.b-item-price small:after
 						{
@@ -622,26 +631,26 @@ a
 					}
 			.b-discount
 			{
-				width: 46px;
-				height: 46px;
-				font-size: 16px;
-				line-height: 46px;
+				width: 80px;
+				height: 80px;
+				font-size: 30px;
+				line-height: 84px;
 				right: 0px;
 				top: 0px;
 			}
 			.b-hit
 			{
-				width: 46px;
-				height: 45px;
-				font-size: 14px;
+				width: 80px;
+				height: 80px;
+				font-size: 30px;
 				padding-top: 1px;
-				line-height: 46px;
+				line-height: 82px;
 				right: 0px;
 				top: 0px;
 			}
 			.discount .b-hit
 			{
-				top: 32px;
+				top: 60px;
 			}
 	.b-catalog-refresh
 	{
@@ -650,7 +659,7 @@ a
 	}	
 		.b-more-items
 		{
-			font-size: 20px;
+			font-size: 24px;
 			letter-spacing: 2px;
 			line-height: 16px;
 		}
@@ -671,21 +680,24 @@ a
 	}
 		.b-seo-text h1
 		{
-			font-size: 24px;
-			line-height: 29px;
+			max-height: 10000px;
+			font-size: 28px;
+			line-height: 40px;
 			margin-bottom: .8em;
 		}
 		.b-seo-text h2
 		{
-			font-size: 24px;
-			line-height: 29px;
+			max-height: 10000px;
+			font-size: 28px;
+			line-height: 40px;
 			margin-bottom: .8em;
 		}
 		.b-seo-text p
 		{
-			font-size: 20px;
+			max-height: 10000px;
+			font-size: 24px;
 			margin-bottom: 1.5em;
-			line-height: 20px;
+			line-height: 38px;
 		}
 /* item */
 .item
@@ -1100,7 +1112,7 @@ a
 .b-footer
 {
 	width: 100%;
-	margin-top: -334px;
+	margin-top: -330px;
 	min-height: 290px;
 	padding-top: 44px;
 }
@@ -1114,20 +1126,24 @@ a
 		}
 			.b-menu-list > li
 			{
-				width: 24%;
+				width: 100% !important;
+				display: none;
 				margin-bottom: 30px;
+			}
+			.b-menu-list > li.b-f-contacts{
+				display: block;
 			}
 			.b-menu-list h3
 			{
-				font-size: 14px;
+				font-size: 24px;
 				letter-spacing: 2px;
 				margin-bottom: 0.8em;
 				line-height: 17px;
 			}
 		.b-menu-wrap
 		{
-			font-size: 20px;
-			line-height: 26px;
+			font-size: 24px;
+			line-height: 38px;
 		}
 			.b-menu-wrap li
 			{
@@ -1148,8 +1164,8 @@ a
 		} 
 	.b-paraweb-copy
 	{
-		left: 30px;
-		bottom:5px;
+		left: 20px;
+		bottom: -40px;
 	}
 /* auth */
 .g-recaptcha
