@@ -91,6 +91,32 @@
         return false;
     });
 
+    $('.count').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+    $(".count").keyup(function(){
+        if($(this).val()=='0') $(this).val("1");
+    });
+    $(".count").focusout(function(){
+        if($(this).val()=='') $(this).val("1");
+    });
+    $(".plus").click(function(){
+        var input = $(this).closest(".count-cont").find("input");
+        count = input.val()*1;
+        if(count<999) {
+            input.val(count+1);
+        }
+    });
+    $(".minus").click(function(){
+        var input = $(this).closest(".count-cont").find("input");
+        count = input.val()*1;
+        if(count>1) {
+            input.val(count-1);
+        }
+    });
+
 
 })(jQuery, jQuery(document), jQuery(window));
 
