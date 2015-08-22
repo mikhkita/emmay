@@ -142,7 +142,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<div class="b-wrap">
 				<div class="b-logo"><span>Yamme</span></div>
 				<div class="b-head-city">
-					Город доставки: <a class="b-choose-city" href="#"><span>Москва</span></a>
+					Город<font> доставки</font>: <a class="b-choose-city" href="#"><span>Санкт-Петербург</span></a>
 				</div>
 				<div class="b-head-features">
 					<ul>

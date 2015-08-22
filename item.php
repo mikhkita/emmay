@@ -269,7 +269,7 @@
 		<div class="b-container b-main-about">
 			<div class="b-wrap clearfix">			
 				<ul>
-					<li><a href="#">О нас</a></li>
+					<li><a href="fancy" >О нас</a></li>
 					<li><a href="#">Способы оплаты</a></li>
 					<li><a href="#">Способы доставки</a></li>
 					<li><a href="#">Гарантии Yamme</a></li>
@@ -716,7 +716,6 @@
 					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
 					<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
 				</div>
-				
 			</form>
 		</div>
 	</div>
