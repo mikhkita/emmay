@@ -79,6 +79,31 @@ $(document).ready(function(){
 		});
 	});
 
+	$(".fancy-ajax").each(function(){
+		var $this = $(this);
+		$this.fancybox({
+			padding : 0,
+			type : "ajax",
+			helpers: {
+	         	overlay: {
+	            	locked: true 
+	         	}
+	      	},
+			beforeShow: function(){
+				
+			},
+			afterShow: function(){
+				
+			},
+			beforeClose: function(){
+				
+			},
+			afterClose: function(){
+				
+			}
+		});
+	});
+
 	$(".b-go").click(function(){
 		var block = $( $(this).attr("data-block") ),
 			off = $(this).attr("data-offset")||0;

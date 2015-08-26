@@ -59,7 +59,10 @@
     this.affixed = affix
     this.unpin = affix == 'bottom' ? position.top - scrollTop : null
 
-    this.$element.removeClass(reset).addClass('affix' + (affix ? '-' + affix : ''))
+    this.$element.removeClass(reset).addClass('affix' + (affix ? '-' + affix : ''));
+    if( this.$element.attr("data-child") && $(this.$element.attr("data-child")).length ){
+      $(this.$element.attr("data-child")).removeClass(reset).addClass('affix' + (affix ? '-' + affix : ''));
+    }
   }
 
 

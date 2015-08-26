@@ -21,6 +21,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<meta name="description" content="">
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -103,17 +104,17 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li><a href="#">КОРЗИНЫ</a></li>
 						</ul>
 					</li>			
-					<li class="b-menu-item">
+					<li class="b-menu-item b-menu-item-search">
 						<form action="">
 							<input class="top-menu-search" type="Search" placeholder="search" value="" />
 							<button class="top-menu-searcher" type="button"><span></span></button>
 						</form>
 					</li>
 					<li class="b-menu-item">
-						<p>© 2009-2015 yamme.ru</p>
 						<p><span class="b-menu-phone"><a href="tel://8-800-775-93-00">8 (800) 775-93-80</a> - Круглосуточно</span></p>
 						<p>Группа <a href="http://vk.com/yammeflowers">Вконтакте</a></p>
 						<p>Напишите нам: <a href="mailtp:info@yamme.ru">info@yamme.ru</a></p>
+						<p>© 2009-2015 yamme.ru</p>
 					</li>
 				</ul>
 			</div>
@@ -122,6 +123,42 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div class="b-allwrap">	
 		<div class="b-container b-topmenu">
 			<div class="b-wrap clearfix">
+				<div class="b-cart-menu-cont">
+					<div class="b-cart-menu">
+						<h3 class="popup-title">Корзина</h3>
+						<ul class="b-cart-items">
+							<li class="clearfix">
+								<a href="#"><img src="i/basket-table.jpg" alt="" class="left"></a>
+								<div class="b-desc right">
+									<a href="#">Букет из 11 красных роз</a>
+									<h4>5 200 руб.</h4>
+									<span class="b-cart-item-count">2шт.</span>
+								</div>
+								<a href="#" class="close-button"></a>
+							</li>
+							<li class="clearfix">
+								<img src="i/basket-table.jpg" alt="" class="left">
+								<div class="b-desc right">
+									<a href="#">Букет из 11 красных роз</a>
+									<h4>5 200 руб.</h4>
+								</div>
+								<a href="#" class="close-button"></a>
+							</li>
+							<li class="clearfix">
+								<img src="i/basket-table.jpg" alt="" class="left">
+								<div class="b-desc right">
+									<a href="#">Букет из 11 красных роз</a>
+									<h4>5 200 руб.</h4>
+								</div>
+								<a href="#" class="close-button"></a>
+							</li>
+						</ul>
+						<div class="b-cart-bottom clearfix">
+							<div class="b-total-price left">10 400 <span class="rub">руб.</span></div>
+							<a href="#" class="btn btn-g right"><span>Оформить</span></a>
+						</div>
+					</div>
+				</div>
 				<div class="b-topmenu-help">
 					<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
 					<a href="#" class="b-topmenu-callback">Заказать звонок</a>
@@ -142,7 +179,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<div class="b-wrap">
 				<div class="b-logo"><span>Yamme</span></div>
 				<div class="b-head-city">
-					Город<font> доставки</font>: <a class="b-choose-city" href="#"><span>Санкт-Петербург</span></a>
+					Город<font> доставки</font>: <a class="b-choose-city fancy" href="#" data-block="#b-city"><span>Санкт-Петербург</span></a>
 				</div>
 				<div class="b-head-features">
 					<ul>
@@ -154,52 +191,66 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			</div>
 		</div>
 		<div class="b-container b-navigation">
-			<div class="b-container b-nav" data-spy="affix" data-offset-top="181" data-offset-bottom="200">
+			<div class="b-container b-nav" data-spy="affix" data-child=".b-cart-menu" data-offset-top="181" data-offset-bottom="200">
 				<div class="b-wrap">	
+					<div class="b-mobile-nav clearfix">
+						<a href="#" class="b-burger-button burger-link left"></a>
+						<div class="b-phone">
+							<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
+							<span class="b-nav-phone-time">24 ЧАСА 7 ДНЕЙ В НЕДЕЛЮ</span>
+						</div>
+						<a href="#" class="b-small-cart-icon right fancy" data-block=".b-cart-menu"></a>
+					</div>
 					<div class="b-nav-block">
 						<ul class="b-nav-list">
 							<li class="dropdown drop-mobile">
 								<a href="#">ЦВЕТЫ</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/rozy/">Розы</a></li>
-									<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
-									<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
-									<li><a href="/catalog/gerbery/">Герберы</a></li>
-									<li><a href="/catalog/lilii/">Лилии</a></li>
-									<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
-									<li><a href="/catalog/piony/">Пионы</a></li>
-									<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
-									<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
-								</ul>	
+								<div class="b-submenu">
+									<ul class="clearfix">
+										<li><a href="/catalog/rozy/">Розы</a></li>
+										<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
+										<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
+										<li><a href="/catalog/gerbery/">Герберы</a></li>
+										<li><a href="/catalog/lilii/">Лилии</a></li>
+										<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
+										<li><a href="/catalog/piony/">Пионы</a></li>
+										<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
+										<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
+									</ul>	
+								</div>
 							</li>
 							<li><a href="#">БУКЕТЫ</a></li>
 							<li class="dropdown drop-mobile"><a href="#">ПОВОД</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
-									<li><a href="/catalog/8-marta/">8 марта</a></li>
-									<li><a href="/catalog/babushke/">Бабушке</a></li>
-									<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
-									<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
-									<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
-									<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
-									<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
-									<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
-									<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
-									<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
-								</ul>
+								<div class="b-submenu">
+									<ul class="clearfix">
+										<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
+										<li><a href="/catalog/8-marta/">8 марта</a></li>
+										<li><a href="/catalog/babushke/">Бабушке</a></li>
+										<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
+										<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
+										<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
+										<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
+										<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
+										<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
+										<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
+										<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
+									</ul>
+								</div>
 							</li>
 							<li><a href="#">ПОДАРКИ</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
-									<li><a href="/catalog/konfety/">Конфеты</a></li>
-									<li><a href="/catalog/mishki/">Мишки</a></li>
-									<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
-								</ul>
+								<div class="b-submenu">
+									<ul class="clearfix">
+										<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
+										<li><a href="/catalog/konfety/">Конфеты</a></li>
+										<li><a href="/catalog/mishki/">Мишки</a></li>
+										<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
+									</ul>
+								</div>
 							</li>
 							<li><a href="#">Розы</a></li>
 							<li><a href="#">Все букеты</a></li>
 						</ul>
-					</div>	
+					</div>		
 					<div class="b-nav-search">
 					<form action="">
 						<input class="top-menu-search" type="Search" placeholder="search" value="" />
@@ -258,7 +309,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<p><a href="#">Оформить заказ</a></p>
 					</div>
 				</div>
-				<div class="b-container b-subblock">
+				<!-- <div class="b-container b-subblock">
 					<div class="b-wrap b-menu-1">
 						<ul class="b-submenu">
 							<li class="active"><a href="/catalog/rozy/">Розы</a></li>
@@ -272,19 +323,19 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
 						</ul>
 					</div>
-				</div>
+				</div> -->
 			</div>			
 		</div>
 		<div class="b-container b-main-about">
 			<div class="b-wrap clearfix">			
 				<ul>
-					<li><a href="#">О нас</a></li>
-					<li><a href="#">Способы оплаты</a></li>
-					<li><a href="#">Способы доставки</a></li>
-					<li><a href="#">Гарантии Yamme</a></li>
-					<li><a href="#">Свежие цветы</a></li>
-					<li><a href="#">Вопросы и ответы</a></li>
-					<li><a href="#">Возврат</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >О нас</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы оплаты</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы доставки</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Гарантии Yamme</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Свежие цветы</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Вопросы и ответы</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Возврат</a></li>
 				</ul>
 			</div>
 		</div>
@@ -440,7 +491,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<ul class="b-catalog-list">
 							<li>
 								<div class="b-catalog-item">
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Яркие краски (9 роз)</span>
 									</a>
@@ -455,7 +506,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							</li>
 							<li>
 								<div class="b-catalog-item">
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Букет из 15 белых роз</span>
 									</a>
@@ -471,7 +522,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li>
 								<div class="b-catalog-item discount">
 									<div class="b-discount">20%</div>									
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Микс из лилий и ирисов</span>
 									</a>
@@ -488,7 +539,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 								<div class="b-catalog-item discount hit">
 									<div class="b-discount">20%</div>
 									<div class="b-hit">ХИТ</div>
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Букет 101 красная роза</span>
 									</a>
@@ -503,7 +554,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							</li>
 							<li>
 								<div class="b-catalog-item">
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>LOVE YOU</span>
 									</a>
@@ -518,7 +569,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							</li>
 							<li>
 								<div class="b-catalog-item">
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Букет из 15 белых роз</span>
 									</a>
@@ -533,7 +584,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							</li>
 							<li>
 								<div class="b-catalog-item">
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Сюрприз из 9 роз</span>
 									</a>
@@ -548,7 +599,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							</li>
 							<li>
 								<div class="b-catalog-item">
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Комплимент из 9 роз</span>
 									</a>
@@ -563,7 +614,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							</li>
 							<li>
 								<div class="b-catalog-item">
-									<a class="b-cat-pic" href="#">
+									<a class="b-cat-pic" href="item.php">
 										<img alt="" src="i/t/t1.jpg" />
 										<span>Букет из 11 красных роз</span>
 									</a>
@@ -663,6 +714,148 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 	</div>	
 </div>
+<div style="display:none;">
+	<div id="buy-one-click">
+		<div class="for_all b-popup" >
+			<h3 class="popup-title">Покупка в один клик</h3>
+			<div class="popup-desc clearfix">
+				<div class="left popup-img">
+					<img src="i/popup-img.jpg" alt="">
+				</div>
+				<div class="left popup-text">
+					<h3>Букет из 11 красных роз</h3>
+					<h4>Букет в виде сердца.<br>Длина 50-70 см. Бутон 5-7 с...</h4>
+					<h5><b>2600</b> руб.</h5>
+					<h6>Доставка по городу Москва <span>400</span> руб.</h6>
+				</div>
+			</div>
+			<form action="kitsend.php" method="POST" id="b-form-1" data-block="#buy-one-click">
+				<p>Вы можете купить букет по телефону. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="name-oneclick">Ваше имя:</label>
+					<input class="right" type="text" id="name-oneclick" name="name" required/>
+				</div>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
+					<input class="right" type="text" id="tel-oneclick" name="phone" required/>
+				</div>
+				<input type="hidden" name="subject" value="Покупка в один клик"/>
+				<input type="submit" class="ajax btn btn-g" value="Заказать">
+			</form>
+		</div>
+	</div>
+	<div id="b-callback">
+		<div class="for_all b-popup" >
+			<h3 class="popup-title">Заказать звонок</h3>
+			<form action="kitsend.php" method="POST" id="b-form-2" data-block="#b-callback">
+				<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="name-callback">Ваше имя:</label>
+					<input class="right" type="text" id="name-callback" name="name" required/>
+				</div>
+				<div class="clearfix input-cont">
+					<label class="left input-title" for="tel-callback">Номер телефона:</label>
+					<input class="right" type="text" id="tel-callback" name="phone" required/>
+				</div>
+				<input type="hidden" name="subject" value="Обратный звонок"/>
+				<input type="submit" class="ajax btn btn-g" value="Заказать">
+			</form>
+		</div>
+	</div>
+	<div id="b-city">
+		<div class="for_all b-popup b-city">
+			<h3 class="popup-title">Выбор города</h3>
+			<div class="b-city-cont">
+				<div class="cur-city clearfix">
+					<h3 class="left">Ваш город - Москва?</h3>
+					<a class="left" href="#" onclick="$.fancybox.close(); return false;">Да</a>
+				</div>
+				<h4>Если нет - выберите из списка</h4>
+				<div class="city-list">
+					<ul class="clearfix">
+						<li class="active"><a rel="nofollow" href="http://yamme.ru">Москва</a></li>
+						<li><a rel="nofollow" href="http://spb.yamme.ru">Санкт-Петербург</a></li>
+						<li><a rel="nofollow" href="http://astrakhan.yamme.ru">Астрахань</a></li>
+						<li><a rel="nofollow" href="http://barnaul.yamme.ru">Барнаул</a></li>
+						<li><a rel="nofollow" href="http://vladivostok.yamme.ru">Владивосток</a></li>
+						<li><a rel="nofollow" href="http://volgograd.yamme.ru">Волгоград</a></li>
+						<li><a rel="nofollow" href="http://voronezh.yamme.ru">Воронеж</a></li>
+						<li><a rel="nofollow" href="http://ekaterinburg.yamme.ru">Екатеринбург</a></li>
+						<li><a rel="nofollow" href="http://izhevsk.yamme.ru">Ижевск</a></li>
+						<li><a rel="nofollow" href="http://irkutsk.yamme.ru">Иркутск</a></li>
+						<li><a rel="nofollow" href="http://kazan.yamme.ru">Казань</a></li>
+						<li><a rel="nofollow" href="http://kemerovo.yamme.ru">Кемерово</a></li>
+						<li><a rel="nofollow" href="http://krasnodar.yamme.ru">Краснодар</a></li>
+						<li><a rel="nofollow" href="http://krs.yamme.ru">Красноярск</a></li>
+						<li><a rel="nofollow" href="http://lipetsk.yamme.ru">Липецк</a></li>
+						<li><a rel="nofollow" href="http://naberezhnyechelny.yamme.ru">Набережные Челны</a></li>
+						<li><a rel="nofollow" href="http://nn.yamme.ru">Нижний Новгород</a></li>
+						<li><a rel="nofollow" href="http://novokuznetsk.yamme.ru">Новокузнецк</a></li>
+						<li><a rel="nofollow" href="http://nsk.yamme.ru">Новосибирск</a></li>
+						<li><a rel="nofollow" href="http://omsk.yamme.ru">Омск</a></li>
+						<li><a rel="nofollow" href="http://Orenburg.yamme.ru">Оренбург</a></li>
+						<li><a rel="nofollow" href="http://penza.yamme.ru">Пенза</a></li>
+						<li><a rel="nofollow" href="http://perm.yamme.ru">Пермь</a></li>
+						<li><a rel="nofollow" href="http://rostov-na-donu.yamme.ru">Ростов-на-Дону</a></li>
+						<li><a rel="nofollow" href="http://ryazan.yamme.ru">Рязань</a></li>
+						<li><a rel="nofollow" href="http://samara.yamme.ru">Самара</a></li>
+						<li><a rel="nofollow" href="http://saratov.yamme.ru">Саратов</a></li>
+						<li><a rel="nofollow" href="http://tolyatti.yamme.ru">Тольятти</a></li>
+						<li><a rel="nofollow" href="http://tomsk.yamme.ru">Томск</a></li>
+						<li><a rel="nofollow" href="http://tyumen.yamme.ru">Тюмень</a></li>
+						<li><a rel="nofollow" href="http://ulyanovsk.yamme.ru">Ульяновск</a></li>
+						<li><a rel="nofollow" href="http://ufa.yamme.ru">Уфа</a></li>
+						<li><a rel="nofollow" href="http://khabarovsk.yamme.ru">Хабаровск</a></li>
+						<li><a rel="nofollow" href="http://chelyabinsk.yamme.ru">Челябинск</a></li>
+						<li><a rel="nofollow" href="http://yaroslavl.yamme.ru">Ярославль</a></li>
+						<li><a rel="nofollow" href="http://abakan.yamme.ru">Абакан</a></li>
+						<li><a rel="nofollow" href="http://anapa.yamme.ru">Анапа</a></li>
+						<li><a rel="nofollow" href="http://pyshma.yamme.ru">Верхняя Пышма</a></li>
+						<li><a rel="nofollow" href="http://gelendzhik.yamme.ru">Геленджик</a></li>
+						<li><a rel="nofollow" href="http://dnepropetrovsk.yamme.ru">Днепропетровск</a></li>
+						<li><a rel="nofollow" href="http://dubna.yamme.ru">Дубна</a></li>
+						<li><a rel="nofollow" href="http://eisk.yamme.ru">Ейск</a></li>
+						<li><a rel="nofollow" href="http://zelenograd.yamme.ru">Зеленоград</a></li>
+						<li><a rel="nofollow" href="http://neftekamsk.yamme.ru">Нефтекамск</a></li>
+						<li><a rel="nofollow" href="http://noviy-urengoy.yamme.ru">Новый Уренгой</a></li>
+						<li><a rel="nofollow" href="http://reutov.yamme.ru">Реутов</a></li>
+						<li><a rel="nofollow" href="http://solnechnogorsk.yamme.ru">Солнечногорск</a></li>
+						<li><a rel="nofollow" href="http://tuapse.yamme.ru">Туапсе</a></li>
+						<li><a rel="nofollow" href="http://uhta.yamme.ru">Ухта</a></li>
+						<li><a rel="nofollow" href="http://chehov.yamme.ru">Чехов</a></li>
+	                </ul>
+	            </div>      
+			</div>
+			<div class="show-btn clearfix">
+	           	<a class="right" href="#" id="show-btn">Показать все города</a>
+	        </div>
+	        <div class="b-city-select-cont">
+	        	<label for="tags" class="desktop-label">Или укажите в поле:</label>
+	        	<label for="tags" class="mobile-label">Если нет - укажите в поле:</label>
+	           	<input id="tags">
+	           	<a href="#">Выбрать</a>
+	        </div>
+		</div>
+	</div>
+	<div id="b-text-popup">
+		<div class="for_all b-popup">
+			<h3 class="popup-title">Текст</h3>
+				<div class="b-text">
+					<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
+					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+					<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="b-popup-error">
+		<div class="b-thanks b-popup">
+			<h3>Ошибка отправки!</h3>
+			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
+			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+		</div>
+	</div>
+</div>
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
@@ -673,7 +866,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
-
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 

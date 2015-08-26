@@ -1,3 +1,9 @@
+<?
+
+$useragent=$_SERVER['HTTP_USER_AGENT'];
+$mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i',$useragent)||preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i',substr($useragent,0,4)))
+
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>	
@@ -7,6 +13,10 @@
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <? if( $mobile ): ?>
+	<meta name="viewport" content="width=750, user-scalable=no">
+	<? endif; ?>
 	
 	<meta name="description" content="">
 
@@ -44,7 +54,6 @@
 	<div class="popup-item popup-wrap">
 	</div>
 </div>	
-	 
 <div id="all" class="page-main">	
 	<div class="b-aside-nav">	
 		<span class="b-nav-burger-span close-menu"><span class="b-nav-burger-ico"></span></span>
@@ -52,60 +61,62 @@
 			<div class="b-aside-nav-wrap">
 				<ul class="b-menu-list">
 					<li class="b-menu-item">
-						<ul>
-							<li class="dropdown drop-mobile">
-								<a href="#">ЦВЕТЫ</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/rozy/">Розы</a></li>
-									<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
-									<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
-									<li><a href="/catalog/gerbery/">Герберы</a></li>
-									<li><a href="/catalog/lilii/">Лилии</a></li>
-									<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
-									<li><a href="/catalog/piony/">Пионы</a></li>
-									<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
-									<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>
-								</ul>	
-							</li>
-							<li><a href="#">БУКЕТЫ</a></li>
-							<li class="dropdown drop-mobile"><a href="#">ПОВОД</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
-									<li><a href="/catalog/8-marta/">8 марта</a></li>
-									<li><a href="/catalog/babushke/">Бабушке</a></li>
-									<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
-									<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
-									<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
-									<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
-									<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
-									<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
-									<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
-									<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
-								</ul>
-							</li>
-							<li><a href="#">ПОДАРКИ</a>
-								<ul>
-									<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
-									<li><a href="/catalog/konfety/">Конфеты</a></li>
-									<li><a href="/catalog/mishki/">Мишки</a></li>
-									<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
-								</ul>
-							</li>
-							<li><a href="#">СЕРДЦА</a></li>
-							<li><a href="#">КОРЗИНЫ</a></li>
-						</ul>
+						<div class="suvlak-side">
+							<ul class="ss-nav-cat">
+								<li class="dropdown ss-nav-cat-1 drop-mobile">
+									<a href="#">ЦВЕТЫ</a>
+									<ul class="b-submenu">
+										<li><a href="/catalog/rozy/">Розы</a></li>
+										<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
+										<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
+										<li><a href="/catalog/gerbery/">Герберы</a></li>
+										<li><a href="/catalog/lilii/">Лилии</a></li>
+										<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
+										<li><a href="/catalog/piony/">Пионы</a></li>
+										<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
+										<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
+									</ul>	
+								</li>
+								<li><a href="#">БУКЕТЫ</a></li>
+								<li class="dropdown ss-nav-cat-1 drop-mobile"><a href="#">ПОВОД</a>
+									<ul class="b-submenu">
+										<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
+										<li><a href="/catalog/8-marta/">8 марта</a></li>
+										<li><a href="/catalog/babushke/">Бабушке</a></li>
+										<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
+										<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
+										<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
+										<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
+										<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
+										<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
+										<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
+										<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
+									</ul>
+								</li>
+								<li class="ss-nav-cat-1"><a href="#">ПОДАРКИ</a>
+									<ul>
+										<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
+										<li><a href="/catalog/konfety/">Конфеты</a></li>
+										<li><a href="/catalog/mishki/">Мишки</a></li>
+										<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
+									</ul>
+								</li>
+								<li><a href="#">СЕРДЦА</a></li>
+								<li><a href="#">КОРЗИНЫ</a></li>
+							</ul>
+						</div>
 					</li>			
-					<li class="b-menu-item">
+					<li class="b-menu-item b-menu-item-search">
 						<form action="">
 							<input class="top-menu-search" type="Search" placeholder="search" value="" />
 							<button class="top-menu-searcher" type="button"><span></span></button>
 						</form>
 					</li>
 					<li class="b-menu-item">
-						<p>© 2009-2015 yamme.ru</p>
 						<p><span class="b-menu-phone"><a href="tel://8-800-775-93-00">8 (800) 775-93-80</a> - Круглосуточно</span></p>
 						<p>Группа <a href="http://vk.com/yammeflowers">Вконтакте</a></p>
 						<p>Напишите нам: <a href="mailtp:info@yamme.ru">info@yamme.ru</a></p>
+						<p>© 2009-2015 yamme.ru</p>
 					</li>
 				</ul>
 			</div>
@@ -114,6 +125,42 @@
 	<div class="b-allwrap">	
 		<div class="b-container b-topmenu">
 			<div class="b-wrap clearfix">
+				<div class="b-cart-menu-cont">
+					<div class="b-cart-menu">
+						<h3 class="popup-title">Корзина</h3>
+						<ul class="b-cart-items">
+							<li class="clearfix">
+								<a href="#"><img src="i/basket-table.jpg" alt="" class="left"></a>
+								<div class="b-desc right">
+									<a href="#">Букет из 11 красных роз</a>
+									<h4>5 200 руб.</h4>
+									<span class="b-cart-item-count">2шт.</span>
+								</div>
+								<a href="#" class="close-button"></a>
+							</li>
+							<li class="clearfix">
+								<img src="i/basket-table.jpg" alt="" class="left">
+								<div class="b-desc right">
+									<a href="#">Букет из 11 красных роз</a>
+									<h4>5 200 руб.</h4>
+								</div>
+								<a href="#" class="close-button"></a>
+							</li>
+							<li class="clearfix">
+								<img src="i/basket-table.jpg" alt="" class="left">
+								<div class="b-desc right">
+									<a href="#">Букет из 11 красных роз</a>
+									<h4>5 200 руб.</h4>
+								</div>
+								<a href="#" class="close-button"></a>
+							</li>
+						</ul>
+						<div class="b-cart-bottom clearfix">
+							<div class="b-total-price left">10 400 <span class="rub">руб.</span></div>
+							<a href="#" class="btn btn-g right"><span>Оформить</span></a>
+						</div>
+					</div>
+				</div>
 				<div class="b-topmenu-help">
 					<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
 					<a href="#" class="b-topmenu-callback fancy" data-block="#b-callback">Заказать звонок</a>
@@ -132,9 +179,9 @@
 		</div>	
 		<div class="b-container b-header">
 			<div class="b-wrap">
-				<a href="main.html" class="b-logo"><span>Yamme</span></a>
+				<a href="main.php" class="b-logo"><span>Yamme</span></a>
 				<div class="b-head-city">
-					Город доставки: <a class="b-choose-city fancy" href="#" data-block="#b-city"><span>Москва</span></a>
+					Город<font> доставки</font>: <a class="b-choose-city fancy" href="#" data-block="#b-city"><span>Санкт-Петербург</span></a>
 				</div>
 				<div class="b-head-features">
 					<ul>
@@ -146,47 +193,61 @@
 			</div>
 		</div>
 		<div class="b-container b-navigation">
-			<div class="b-container b-nav" data-spy="affix" data-offset-top="181" data-offset-bottom="200">
+			<div class="b-container b-nav" data-spy="affix" data-child=".b-cart-menu" data-offset-top="181" data-offset-bottom="200">
 				<div class="b-wrap">	
+					<div class="b-mobile-nav clearfix">
+						<a href="#" class="b-burger-button burger-link left"></a>
+						<div class="b-phone">
+							<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
+							<span class="b-nav-phone-time">24 ЧАСА 7 ДНЕЙ В НЕДЕЛЮ</span>
+						</div>
+						<a href="#" class="b-small-cart-icon right fancy" data-block=".b-cart-menu"></a>
+					</div>
 					<div class="b-nav-block">
 						<ul class="b-nav-list">
 							<li class="dropdown drop-mobile">
 								<a href="#">ЦВЕТЫ</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/rozy/">Розы</a></li>
-									<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
-									<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
-									<li><a href="/catalog/gerbery/">Герберы</a></li>
-									<li><a href="/catalog/lilii/">Лилии</a></li>
-									<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
-									<li><a href="/catalog/piony/">Пионы</a></li>
-									<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
-									<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
-								</ul>	
+								<div class="b-submenu">
+									<ul class="clearfix">
+										<li><a href="/catalog/rozy/">Розы</a></li>
+										<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
+										<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
+										<li><a href="/catalog/gerbery/">Герберы</a></li>
+										<li><a href="/catalog/lilii/">Лилии</a></li>
+										<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
+										<li><a href="/catalog/piony/">Пионы</a></li>
+										<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
+										<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
+									</ul>	
+								</div>
 							</li>
 							<li><a href="#">БУКЕТЫ</a></li>
 							<li class="dropdown drop-mobile"><a href="#">ПОВОД</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
-									<li><a href="/catalog/8-marta/">8 марта</a></li>
-									<li><a href="/catalog/babushke/">Бабушке</a></li>
-									<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
-									<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
-									<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
-									<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
-									<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
-									<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
-									<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
-									<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
-								</ul>
+								<div class="b-submenu">
+									<ul class="clearfix">
+										<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
+										<li><a href="/catalog/8-marta/">8 марта</a></li>
+										<li><a href="/catalog/babushke/">Бабушке</a></li>
+										<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
+										<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
+										<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
+										<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
+										<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
+										<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
+										<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
+										<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
+									</ul>
+								</div>
 							</li>
 							<li><a href="#">ПОДАРКИ</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
-									<li><a href="/catalog/konfety/">Конфеты</a></li>
-									<li><a href="/catalog/mishki/">Мишки</a></li>
-									<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
-								</ul>
+								<div class="b-submenu">
+									<ul class="clearfix">
+										<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
+										<li><a href="/catalog/konfety/">Конфеты</a></li>
+										<li><a href="/catalog/mishki/">Мишки</a></li>
+										<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
+									</ul>
+								</div>
 							</li>
 							<li><a href="#">Розы</a></li>
 							<li><a href="#">Все букеты</a></li>
@@ -250,7 +311,7 @@
 						<p><a href="#">Оформить заказ</a></p>
 					</div>
 				</div>
-				<div class="b-container b-subblock">
+				<!-- <div class="b-container b-subblock">
 					<div class="b-wrap b-menu-1">
 						<ul class="b-submenu">
 							<li class="active"><a href="/catalog/rozy/">Розы</a></li>
@@ -263,19 +324,19 @@
 							<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>	
 						</ul>
 					</div>
-				</div>
+				</div> -->
 			</div>			
 		</div>
 		<div class="b-container b-main-about">
 			<div class="b-wrap clearfix">			
 				<ul>
-					<li><a href="fancy" >О нас</a></li>
-					<li><a href="#">Способы оплаты</a></li>
-					<li><a href="#">Способы доставки</a></li>
-					<li><a href="#">Гарантии Yamme</a></li>
-					<li><a href="#">Свежие цветы</a></li>
-					<li><a href="#">Вопросы и ответы</a></li>
-					<li><a href="#">Возврат</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >О нас</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы оплаты</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы доставки</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Гарантии Yamme</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Свежие цветы</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Вопросы и ответы</a></li>
+					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Возврат</a></li>
 				</ul>
 			</div>
 		</div>
@@ -702,7 +763,8 @@
 	           	<a class="right" href="#" id="show-btn">Показать все города</a>
 	        </div>
 	        <div class="b-city-select-cont">
-	        	<label for="tags">Или укажите в поле:</label>
+	        	<label for="tags" class="desktop-label">Или укажите в поле:</label>
+	        	<label for="tags" class="mobile-label">Если нет - укажите в поле:</label>
 	           	<input id="tags">
 	           	<a href="#">Выбрать</a>
 	        </div>
@@ -711,12 +773,11 @@
 	<div id="b-text-popup">
 		<div class="for_all b-popup">
 			<h3 class="popup-title">Текст</h3>
-				<div class="b-text">
-					<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
-					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
-					<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
-				</div>
-			</form>
+			<div class="b-text">
+				<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
+				<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+				<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			</div>
 		</div>
 	</div>
 	<div id="b-popup-error">
