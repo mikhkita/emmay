@@ -61,48 +61,50 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<div class="b-aside-nav-wrap">
 				<ul class="b-menu-list">
 					<li class="b-menu-item">
-						<ul>
-							<li class="dropdown drop-mobile">
-								<a href="#">ЦВЕТЫ</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/rozy/">Розы</a></li>
-									<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
-									<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
-									<li><a href="/catalog/gerbery/">Герберы</a></li>
-									<li><a href="/catalog/lilii/">Лилии</a></li>
-									<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
-									<li><a href="/catalog/piony/">Пионы</a></li>
-									<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
-									<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
-								</ul>	
-							</li>
-							<li><a href="#">БУКЕТЫ</a></li>
-							<li class="dropdown drop-mobile"><a href="#">ПОВОД</a>
-								<ul class="b-submenu">
-									<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
-									<li><a href="/catalog/8-marta/">8 марта</a></li>
-									<li><a href="/catalog/babushke/">Бабушке</a></li>
-									<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
-									<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
-									<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
-									<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
-									<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
-									<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
-									<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
-									<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
-								</ul>
-							</li>
-							<li><a href="#">ПОДАРКИ</a>
-								<ul>
-									<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
-									<li><a href="/catalog/konfety/">Конфеты</a></li>
-									<li><a href="/catalog/mishki/">Мишки</a></li>
-									<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
-								</ul>
-							</li>
-							<li><a href="#">СЕРДЦА</a></li>
-							<li><a href="#">КОРЗИНЫ</a></li>
-						</ul>
+						<div class="suvlak-side">
+							<ul class="ss-nav-cat">
+								<li class="dropdown ss-nav-cat-1 drop-mobile">
+									<a href="#">ЦВЕТЫ</a>
+									<ul class="b-submenu">
+										<li><a href="/catalog/rozy/">Розы</a></li>
+										<li><a href="/catalog/alstromerii/">Альстромерии</a></li>
+										<li><a href="/catalog/gvozdiki/">Гвоздики</a></li>
+										<li><a href="/catalog/gerbery/">Герберы</a></li>
+										<li><a href="/catalog/lilii/">Лилии</a></li>
+										<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
+										<li><a href="/catalog/piony/">Пионы</a></li>
+										<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
+										<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
+									</ul>	
+								</li>
+								<li><a href="#">БУКЕТЫ</a></li>
+								<li class="dropdown ss-nav-cat-1 drop-mobile"><a href="#">ПОВОД</a>
+									<ul class="b-submenu">
+										<li><a href="/catalog/14-fevralya/">14 февраля</a></li>
+										<li><a href="/catalog/8-marta/">8 марта</a></li>
+										<li><a href="/catalog/babushke/">Бабушке</a></li>
+										<li><a href="/catalog/bukety-na-novyy-god/">Букеты на новый год</a></li>
+										<li><a href="/catalog/den-rozhdeniya/">День рождения</a></li>
+										<li><a href="/catalog/dlya-muzhchin/">Для мужчины</a></li>
+										<li><a href="/catalog/lyubimoy-dochke/">Любимой дочке</a></li>
+										<li><a href="/catalog/na-vypisku-iz-roddoma/">На выписку из роддома</a></li>	
+										<li><a href="/catalog/na-pervoe-svidani/">На первое свидание</a></li>
+										<li><a href="/catalog/podarok-kolleg/">Подарок коллеге</a></li>
+										<li><a href="/catalog/podarki-na-svadbu/">Свадебные букеты</a></li><li><a href="/catalog/syurpriz-devushke/">Сюрприз девушке</a></li>
+									</ul>
+								</li>
+								<li class="ss-nav-cat-1"><a href="#">ПОДАРКИ</a>
+									<ul>
+										<li><a href="/catalog/vozdushnye-shary/">Воздушные шары</a></li>
+										<li><a href="/catalog/konfety/">Конфеты</a></li>
+										<li><a href="/catalog/mishki/">Мишки</a></li>
+										<li><a href="/catalog/fruktovye-korziny/">Фруктовые корзины</a></li>
+									</ul>
+								</li>
+								<li><a href="#">СЕРДЦА</a></li>
+								<li><a href="#">КОРЗИНЫ</a></li>
+							</ul>
+						</div>
 					</li>			
 					<li class="b-menu-item b-menu-item-search">
 						<form action="">
@@ -161,7 +163,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="b-topmenu-help">
 					<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
-					<a href="#" class="b-topmenu-callback">Заказать звонок</a>
+					<a href="#" class="b-topmenu-callback fancy" data-block="#b-callback">Заказать звонок</a>
 				</div>				
 				<a href="#" class="b-topmenu-basket">
 					<span class="b-top-basket-name">КОРЗИНА</span>

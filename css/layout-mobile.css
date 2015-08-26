@@ -243,7 +243,7 @@ a
 			display: none !important;
 		}
 		label.mobile-label{
-			display: block;
+			display: block !important;
 		}
 	.b-city .b-city-select-cont a{
 		line-height: 22px;
@@ -270,7 +270,9 @@ a
 		margin: auto;
 		max-width: 980px;
 		padding: 0 20px;
-	}
+	
+		/* padding-bottom: 50px; */
+}
 		.b-wrap .b-wrap
 		{
 			padding: 0px !important;
@@ -1204,7 +1206,10 @@ a
 					.rub
 					{
 						font-size: 32px;
-					}
+					
+						position: relative;
+						left: 10px;
+}
 			.b-discount
 			{
 				width: 140px;
@@ -1726,13 +1731,469 @@ a
 				.b-paginator li.active a:hover
 				{
 				}	
+.payment-nav {
+    margin-bottom: 30px;
+}
+	.payment-nav .b-wrap p{
+		width: 33%;
+		/* max-width: 497px; */
+		height: 30px;
+		margin-right: 1.5%;
+	}	
+		.b-payment-nav-cont{
+    padding-top: 40px;
+		}
+		.b-payment-nav-cont:before {
+		    font-size: 0px;	    
+			
+		    top: 60px;	    
+			height: 2px;
+		    width: 100%;
+		}
+	
+		.payment-nav .b-wrap p .step-num{    
+				    
+				    
+			
+		
+			z-index: 10;
+		    font-size: 28px;     padding-top: 3px;     line-height: 32px;     height: 40px;     width: 40px;
+}	
+
+		.payment-nav .b-wrap p .step-title {
+			left: -28px;
+			padding-left: 70px;
+			padding-right: 25px;
+			font-size: 20px;
+			line-height: 24px;
+			top: 3px;
+		
+			font-size: 30px;     margin-left: 10px;     margin-top: 5px;
+}
+	.payment-nav .b-wrap p:nth-child(2){
+		width: auto;
+		max-width: 532px;
+	}
+	.payment-nav .b-wrap p:last-child{
+		width: 21.5%;
+		margin-right: 0;
+	}
+		.payment-nav .b-wrap p:last-child:before {
+		}
+		.payment-nav .b-wrap p:last-child .step-title {
+			padding-right: 0;
+		}
+		.payment-nav .b-wrap p.active .step-num{                    
+		}
+		.payment-nav .b-wrap p.active .step-title {
+		
+}
+		.payment-nav .b-wrap p.complete:before {
+		}
+		.payment-nav .b-wrap p.complete .step-num{
+		}
+		.payment-nav .b-wrap p.complete .step-title {
+		}
+
+.basket {
+    padding-bottom: 70px;
+
+}
+	.basket .b-wrap {
+
+	}
+		.basket .b-wrap h3{
+			margin-bottom: 35px;
+		
+			font-size: 32px;
+			padding-top: 30px;
+}
+		.basket .b-wrap table{
+			width: 100%;
+			margin-bottom: 80px;
+		}
+			.basket .b-wrap table tr:first-child {
+			}
+				.basket .b-wrap table tr th {
+					font-size: 24px;
+					line-height: 16px;
+					padding: 14px 0 17px;
+				}
+				.basket .b-wrap table tr th:first-child {
+					padding-left: 15px;
+				}
+				.basket .b-wrap table tr td{
+					height: 160px;
+				}
+				.basket .b-wrap table .item-title > div{
+				}
+					.basket .b-wrap table .item-title > div .img-cont img {
+						max-height: 100px;
+						max-width: 100px;
+					}
+					.basket .b-wrap table .item-title > div h4{
+						padding: 0px 10px;
+					}
+					.basket .b-wrap table .item-title > div .img-cont,.basket .b-wrap table .item-title > div h4{
+						vertical-align: middle;
+					
+						font-size: 28px;
+						line-height: 30px;
+}
+				.basket .b-wrap table tr td:nth-child(1){
+					width: 54%;
+				}
+				.basket .b-wrap table tr td:nth-child(2){
+					width: 20%;
+				}
+				.basket .b-wrap table tr td:nth-child(3){
+					font-size: 28px;
+					line-height: 22px;
+					width: 22%;
+				}
+				.basket .b-wrap table tr td:nth-child(4){
+					width: 10%;
+					font-size: 18px;
+					line-height: 22px;
+					padding-left: 25px;
+				}
+				.basket .b-wrap table tr td:nth-child(4) span{
+					font-size: 0px;
+					cursor: pointer;
+				}
+				.basket .b-wrap table tr td:nth-child(4) span:before{
+					font-size: 0px;
+					width: 28px;
+					background-size: 28px;
+					height: 28px;
+					left: -27px;
+					top: -15px;
+				}
+				.count-cont {
+				    width: 130px;
+				}
+					.count-cont span{
+						width: 44px;
+						height: 50px;
+						cursor: pointer;
+						padding-top: 3px;
+						padding-left: 2px;
+						border-radius: 40px 0 0 40px;
+						
+					}
+					.count-cont span.plus {
+						padding-top: 7px;
+						padding-right: 7px;
+						border-radius: 0px 40px 40px 0px;
+					}
+						.count-cont span:hover{
+							background-color: #38BB49;
+						}
+						.count-cont span:after{
+							position: absolute;
+							font-size: 30px;
+							width: 40px;
+							height: 30px;
+							text-align: center;
+							font-weight: 500;
+							font-family: "Helvetica Neue";
+							color: #BCBCBC;
+						}
+						.count-cont span.minus:after{
+							top: -1px;
+							left: 3px;
+							content: "-";
+							font-size: 60px;
+							font-weight: 300;
+						}
+						.count-cont span.plus:after{
+							top: 1px;
+							left: -1px;
+							content: "+";
+						}
+							.count-cont span:hover:after{
+								color: #FFF;
+							}
+						.count-cont input{
+							width: 42px;
+							height: 50px;
+							text-align: center;
+							font-family: "ProximaNova-SemiBold";
+							font-size: 18px;
+							line-height: 22px;
+							padding-top: 2px;	
+							border: none;
+							border-left: 1px solid #E9E9E9;
+							border-right: 1px solid #E9E9E9;
+							box-sizing: border-box;
+						}
+
+		.basket .b-wrap .basket-bot {
+		
+		}
+			.basket-bot>.left{
+				width: 45%;
+			}
+			.basket-bot>.right{
+				/*margin-left: 20px;*/
+				width: 100%;
+			}
+			.basket .b-wrap .basket-bot .addition {
+				width: 100%;
+			}
+				.basket .b-wrap .basket-bot .addition > div {
+					margin-bottom: 50px;
+				}
+				.basket .b-wrap .basket-bot .addition label{
+					width: auto;
+					font-size: 28px;
+					line-height: 40px;
+					margin-right: 19px;
+				
+					margin-bottom: 10px;
+}
+				.basket .b-wrap .basket-bot .addition textarea{
+					width: 100%;
+					height: 140px;
+					resize: none;
+					padding: 10px 10px 12px 12px;
+				}
+				.basket .b-wrap .basket-bot .addition input[type=text] {
+					width: 350px;
+					padding: 10px 10px 9px;
+				}
+				.basket .b-wrap .basket-bot .addition a {
+					font-size: 28px;
+					line-height: 41px;
+					width: 205px;
+					padding: 9px;
+				}
+			.total > div{
+				width: 100%;
+				padding: 33px 37px 43px 23px;
+				margin-bottom: 30px;
+			}
+			.total h4 {
+				font-size: 35px;
+				line-height: 40px;
+			}
+				.total h4 span {
+					font-size: 40px;
+					line-height: 34px;
+				}
+				.total h4 span .rubl {
+					font-size: 24px;
+					line-height: 16px;
+				
+				
+					position: relative;
+					left: 7px;
+}
+			.total h5 {
+				font-size: 28px;
+				line-height: 35px;
+				margin-top: 4px;
+			}	
+				.total h5 span{
+					font-size: 28px;
+					line-height: 24px;
+				}
+				.total h5 span .rubl{
+					font-size: 16px;
+					line-height: 18px;
+				
+					position: relative;
+					left: 5px;
+}
+			.total .btn-g {
+				width: auto;
+				font-size: 28px;
+				line-height: 17px;
+				padding: 26px 30px 23px;
+				margin-top: 11px;
+			}
+			.total h6{
+				font-size: 28px;
+				line-height: 24px;
+				margin-left: 50px;
+			}
+				.total h6:before {
+					font-size: 0px;
+					width: 32px;
+					height: 31px;
+					left: -50px;
+					top: -3px;
+				}
+				.total h3 {
+					font-size: 14px;
+					max-width: 290px;
+					margin-top: 18px;
+					margin-left: 18px;
+					margin-bottom: 23px;
+					line-height: 16px;
+				
+}
+					.total h3:before {
+						font-size: 38px;
+						left: -16px;
+						top: -6px;
+						line-height: 45px;
+					}
+
+				.total a {
+					font-size: 14px;
+					line-height: 17px;
+				}
+					.total a:hover{
+					}		
+			
+.flower-add {
+    padding-bottom: 40px;
+
+}
+	.flower-add .b-wrap{
+	}
+	.flower-add .b-wrap h3{
+   		font-size: 28px;
+   		margin-bottom: 10px;
+	
+   		line-height: 40px;
+}
+	.flower-add .b-wrap ul{
+	}
+		.flower-add .b-wrap ul li{
+			width: 310px;
+			padding: 20px;
+			margin-top: 20px;
+		}
+			.flower-add .b-wrap ul li .left{
+				width: 100%;
+			
+				float: none !important;
+}
+				.flower-add .b-wrap ul li .left img{
+					width: 100%;
+				}
+			.flower-add .b-wrap ul li .right{
+				width: 100%;
+			
+				text-align: center;
+				float: none !important;
+				/* padding-top: 10px; */
+}
+			.flower-add .b-wrap ul li .right h4{
+				font-size: 32px;
+				line-height: 40px;
+				margin-bottom: 7px;
+			
+				padding-top: 10px;
+}
+			.flower-add .b-wrap ul li .right h5{
+				font-size: 36px;
+				line-height: 55px;		
+				margin-bottom: 12px;
+			}
+				.flower-add .b-wrap ul li .right h5 span{
+					font-size: 24px;
+					position: relative;
+					line-height: 21px;
+				
+					left: 7px;
+}
+			.flower-add .b-wrap ul li .right a{
+				width: auto;
+				font-size: 28px;
+				line-height: 40px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				padding: 12px 40px 11px;
+			}
+				.flower-add .b-wrap ul li .right a:hover {
+				}
+.order {
+
+}
+	.order .b-wrap {
+		max-width: 652px;
+		padding-bottom: 30px;
+	}
+		.order .b-wrap .order-item{
+			margin-bottom: 30px;
+		}
+			.order .b-wrap .order-item h3{
+    			margin-bottom: 20px;	
+    			height: 22px;
+			}
+
+				.order .b-wrap .order-item h3:after{
+				    font-size: 0px;		    
+	    			top: 10px;
+				    height: 2px;
+				    width: 100%;
+				}
+				.order .b-wrap .order-item h3 span{
+    				padding-right: 18px;    
+    				z-index: 100;
+
+				}
+			.order .b-wrap .order-item .input-cont {
+				margin-bottom: 10px;
+			}
+				.order .b-wrap .order-item .input-cont label{
+					font-size: 18px;
+					line-height: 22px;
+				}
+				.order .b-wrap .order-item .input-cont input{
+					width: 466px;
+					background-position-x: 97%; 
+				}
+				.order .b-wrap .order-item .input-cont .city{
+					font-size: 14px;
+					left: 0;
+					line-height: 17px;
+					top: 38px;
+				}
+					.order .b-wrap .order-item .input-cont .city:hover {
+					}
+			.order .b-wrap .order-item .check-cont {
+				margin-bottom: 10px;
+				margin-left: 187px;
+			}
+				.check-cont input {
+				}
+				 .check-cont input:checked + label .checked {
+				}
+				.check-cont label {
+					cursor: pointer; 
+				}
+					.check-cont label .default {
+						width: 18px;
+						height: 18px;
+					}
+					.check-cont label .checked {
+						width: 20px;
+						height: 20px;
+					}
+					.check-cont label h4 {
+						font-size: 16px;
+						line-height: 20px;
+						margin-left: 15px;
+					}
+	.order .b-wrap .total{
+		width: 100%;
+	}
+		.order .b-wrap .total > div{
+			width: 100%;
+			padding-bottom: 20px;
+    		padding-left: 35px;
+		}
 				
 /* footer */	
 .b-footer
 {
 	width: 100%;
 	margin-top: -330px;
-	min-height: 310px;
+	min-height: 0px;
 	padding-top: 44px;
 	max-height: 10000px;
 }
@@ -1741,6 +2202,7 @@ a
 }
 	.b-footer .b-container
 	{
+    padding-bottom: 75px;
 	}
 		.b-footer .b-menu-list
 		{
@@ -1755,7 +2217,8 @@ a
 			}
 			.b-menu-list > li.b-f-contacts{
 				display: block;
-			}
+			
+}
 			.b-menu-list h3
 			{
 				font-size: 32px;

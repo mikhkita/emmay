@@ -3,7 +3,9 @@
 
     var MENUPX = 1280;
 
-    var topMenuHeight = 62
+    var topMenuHeight = 62;
+
+    $(".b-issue").attr("data-default",$(".b-issue").val());
 
     var resizePort = function () {
 		winW = $window.width();
@@ -32,6 +34,8 @@
             "width":winW,
             "margin-left":$(".b-wrap").offset().left*-1
         });
+        if( $(".b-issue").length )
+            $(".b-issue").val(( winW < 1200 )?$(".b-issue").attr("data-value"):$(".b-issue").attr("data-default"));
     };
     $window.resize(function () {
         resizePort();
@@ -72,7 +76,7 @@
     $(".b-cart-menu .close-button").click(function(){
         $(this).parents("li").remove();
         if( !checkCart() ){
-            if( winW < 768 ){
+            if( winW > 768 ){
                 toggleCartMenu(true);
             }else{
                 $.fancybox.close();

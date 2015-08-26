@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* fonts */
 @font-face {
 	font-family:'ProximaNova-Semibold';
@@ -420,8 +421,8 @@ textarea:-moz-placeholder {
 			background-color: #2DA73D;
 			color: #fff;
 		}
-		.mobile-label{
-			display: none;
+		label.mobile-label{
+			display: none !important;
 		}
 	.b-city .b-city-select-cont a{
 		line-height: 22px;
@@ -2520,7 +2521,10 @@ textarea:-moz-placeholder {
 		position: relative;
 		font-family: "ProximaNova-Bold";
 	}	
-		.payment-nav .b-wrap p:before {
+		.b-payment-nav-cont{
+			position: relative;
+		}
+		.b-payment-nav-cont:before {
 			position: absolute;
 		    content: "s";
 		    font-size: 0px;	    
@@ -2543,12 +2547,14 @@ textarea:-moz-placeholder {
 		    line-height: 20px;	    
 			height: 30px;	    
 			width: 30px;
-		}	
+		
+			z-index: 10;
+}	
 
 		.payment-nav .b-wrap p .step-title {
 			position: absolute;
-			left: 30px;
-			padding-left: 12px;
+			left: -21px;
+			padding-left: 62px;
 			padding-right: 25px;
 			font-size: 20px;
 			line-height: 24px;
@@ -2557,7 +2563,7 @@ textarea:-moz-placeholder {
 			background-color: #fff;
 		}
 	.payment-nav .b-wrap p:nth-child(2){
-		width: 46%;
+		width: auto;
 		max-width: 532px;
 	}
 	.payment-nav .b-wrap p:last-child{
@@ -2667,6 +2673,7 @@ textarea:-moz-placeholder {
 					font-size: 0px;
 					width: 14px;
 					height: 14px;
+					background-size: 14px;
 					left: -24px;
 					top: 4px;
 					background-image: url("../i/cross-del.png");
@@ -2678,6 +2685,7 @@ textarea:-moz-placeholder {
 				    width: 106px;
 				}
 					.count-cont span{
+						position: relative;
 						width: 32px;
 						height: 30px;
 						display: block;
@@ -2699,24 +2707,30 @@ textarea:-moz-placeholder {
 						.count-cont span:hover{
 							background-color: #38BB49;
 						}
-						.count-cont span i {
-							background-image: url("../i/count-sprite.png");
-							background-position: 0px 50%;
-							width: 11px;
-							height: 3px;
-							display: inline-block;
+						.count-cont span:after{
+							position: absolute;
+							font-size: 20px;
+							width: 30px;
+							height: 30px;
+							text-align: center;
+							font-weight: 500;
+							font-family: "Helvetica Neue";
+							color: #BCBCBC;
 						}
-						.count-cont span.plus i{
-							background-position: -22px 50%;
-							width: 11px;
-							height: 11px;
+						.count-cont span.minus:after{
+							top: 2px;
+							left: 3px;
+							content: "-";
+							font-size: 38px;
+							font-weight: 300;
 						}
-							.count-cont span:hover i {
-								background-position: -11px 50%;
-							}
-							.count-cont span.plus:hover i{
-								
-								background-position: -33px 50%;
+						.count-cont span.plus:after{
+							top: 2px;
+							left: -1px;
+							content: "+";
+						}
+							.count-cont span:hover:after{
+								color: #FFF;
 							}
 						.count-cont input{
 							width: 42px;
@@ -2735,6 +2749,13 @@ textarea:-moz-placeholder {
 		.basket .b-wrap .basket-bot {
 		
 		}
+			.basket-bot>.left{
+				width: 45%;
+			}
+			.basket-bot>.right{
+				/*margin-left: 20px;*/
+				width: 52%;
+			}
 			.basket .b-wrap .basket-bot .addition {
 				/*width: 44%;*/
 			}
@@ -2779,7 +2800,7 @@ textarea:-moz-placeholder {
 					color: #444444;
 				}
 			.total > div{
-				width: 629px;
+				width: 100%;
 				padding: 33px 37px 43px 23px;
 				box-sizing:border-box;
 				border: 1px solid #E3E3E3;
@@ -2824,10 +2845,10 @@ textarea:-moz-placeholder {
 					color: #575757;				
 				}
 			.total .btn-g {
-				width: 279px;
+				width: auto;
 				font-size: 14px;
 				line-height: 17px;
-				padding: 18px 0;
+				padding: 18px 30px;
 				margin-top: 10px;
 			}
 			.total h6{
@@ -3263,7 +3284,24 @@ textarea:-moz-placeholder {
 	.b-item-gallery-arrow.right-arrow{
 		right: -30px;
 	}
+	.basket .b-wrap .basket-bot .addition input[type=text]{
+		width: 190px;
+	}
+	.basket .b-wrap .basket-bot .addition textarea{
+		width: 300px;
+	}
+	.total h6 {
+	    font-size: 19px;
+	    margin-left: 40px;
+	}
 }
+
+@media screen and (max-width: 1230px){
+	.free-card
+	{
+		width: 100px;
+	}
+}	
 
 @media screen and (min-width: 1240px){
 	.b-cart-menu.affix{
