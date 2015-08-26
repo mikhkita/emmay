@@ -670,7 +670,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
-					<input class="right" type="text" id="tel-oneclick" name="phone" required/>
+					<input class="right phone" type="text" id="tel-oneclick" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Покупка в один клик"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">
@@ -688,7 +688,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-callback">Номер телефона:</label>
-					<input class="right" type="text" id="tel-callback" name="phone" required/>
+					<input class="right phone" type="text" id="tel-callback" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Обратный звонок"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">

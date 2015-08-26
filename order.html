@@ -280,11 +280,11 @@
 		</div>
 		<div class="b-container payment-nav">
 			<div class="b-wrap clearfix">
-				<p class="active">
+				<p class="complete">
 				<span class="step-num">1</span>
 				<span class="step-title">Корзина</span>
 				</p>
-				<p>
+				<p class="active">
 				<span class="step-num">2</span>
 				<span class="step-title">Оформление</span>
 				</p>
@@ -294,190 +294,82 @@
 				</p>
 			</div>
 		</div>
-		<div class="b-container basket">
+		<div class="b-container order">
 			<div class="b-wrap clearfix">
-				<h3 class="title">ТОВАРЫ В КОРЗИНЕ:</h3>
 				<form action="#">
-				<table>
-					<tbody>
-						<tr>
-						    <th>Название</th>
-						    <th>Количество</th>
-						    <th>Цена</th>
-						    <th></th>
-					    </tr>
-					    <tr>
-					   		<td class="item-title">
-					   			<div>
-					   				<div class="img-cont">
-							   			<img src="i/basket-table.jpg">	   			
-						   			</div>
-						   			<h4 class="sub-title">Букет из 11 красных роз</h4>
-						   		</div>
-					   		</td>
-					   		<td>
-					   			<div class="count-cont clearfix">
-									<span class="minus left" onselectstart="return false;"><i onselectstart="return false;"></i></span>	
-									<input class="left count" name="count1" maxlength="3" value="1">
-									<span class="plus right" onselectstart="return false;"><i onselectstart="return false;"></i></span>
-								</div>
-					   		</td>
-					   		<td>1 580 руб.</td>
-					   		<td><span>Удалить</span></td>
-					    </tr>
-					    <tr>
-					   		<td class="item-title">
-					   			<div>
-					   				<div class="img-cont">
-							   			<img src="i/basket-table.jpg">	   			
-						   			</div>
-						   			<h4 class="sub-title">Букет из 11 красных роз</h4>
-						   		</div>
-					   		</td>
-					   		<td>
-					   			<div class="count-cont clearfix">
-									<span class="minus left" onselectstart="return false;"><i onselectstart="return false;"></i></span>	
-									<input class="left count" name="count2" maxlength="3" value="1">
-									<span class="plus right" onselectstart="return false;"><i onselectstart="return false;"></i></span>
-								</div>
-					   		</td>
-					   		<td>1 580 руб.</td>
-					   		<td><span>Удалить</span></td>
-					    </tr>
-					    <tr>
-					   		<td class="item-title">
-					   			<div>
-					   				<div class="img-cont">
-							   			<img src="i/basket-table.jpg">	   			
-						   			</div>
-						   			<h4 class="sub-title">Букет из 11 красных роз</h4>
-						   		</div>
-					   		</td>
-					   		<td>
-					   			<div class="count-cont clearfix">
-									<span class="minus left" onselectstart="return false;"><i onselectstart="return false;"></i></span>	
-									<input class="left count" name="count3" maxlength="3" value="1">
-									<span class="plus right" onselectstart="return false;"><i onselectstart="return false;"></i></span>
-								</div>
-					   		</td>
-					   		<td>1 580 руб.</td>
-					   		<td><span>Удалить</span></td>
-					    </tr>
-					</tbody>
-				</table>
-				<div class="basket-bot clearfix">
-					<div class="addition left">
-						<div class="clearfix">
-							<label class="left">Бесплатная открытка</label>
-							<textarea class="right" name="" placeholder="Введите текст поздравления. Если открытка не нужна, то оставьте поле пустым"></textarea>
-						</div>
-						<div class="clearfix">
-							<label class="left">Промо-код</label>
-							<a href="#" class="right">Применить</a>
-							<input class="right" type="text">
-						</div>
+				<div class="order-item">
+					<h3><span class="title">Ваши данные:</span></h3>
+					<div class="input-cont clearfix">
+						<label class="left">Как вас зовут?</label>
+						<input class="right" type="text" name="name">
 					</div>
-					<div class="total right">
+					<div class="input-cont clearfix">
+						<label class="left">Ваш телефон*</label>
+						<input class="right phone" type="text" name="phone" required>
+					</div>
+					<div class="input-cont clearfix">
+						<label class="left">E-mail*</label>
+						<input class="right" type="text" name="email" placeholder="primer@mail.ru">
+						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+					</div>
+					<div class="check-cont clearfix">
+						<input type="checkbox" id="1" name="self" value="self">
+                        <label class="clearfix" for="1">
+                            <span class="checked"></span>
+                            <span class="default"></span>   
+                            <h4>Я - заказчик, получаю букет сам</h4>
+                        </label>
+					</div>
+				</div>
+				<div class="order-item">
+					<h3><span class="title">ПОЛУЧАТЕЛЬ:</span></h3>
+					<div class="input-cont clearfix">
+						<label class="left">Имя и фамилия*</label>
+						<input class="right" type="text" name="name2" required>
+					</div>
+					<div class="input-cont clearfix">
+						<label class="left">Телефон*</label>
+						<input class="right phone" type="text" name="phone2" required>
+					</div>
+				</div>
+				<div class="order-item">
+					<h3><span class="title">О доставке:</span></h3>
+					<div class="input-cont clearfix">
+						<label class="left">Адрес: Москва</label>
+						<textarea class="right" name="city"></textarea>
+						<a class="city fancy" href="#" data-block="#b-city">Изменить город</a>
+					</div>
+					<div class="input-cont clearfix">
+						<label class="left">Дата доставки</label>
+						<input class="right" type="text" name="date">
+					</div>
+					<div class="input-cont clearfix">
+						<label class="left">Время</label>
+						<input class="right" type="text" name="time">
+					</div>
+					<div class="input-cont clearfix">
+						<label class="left">Комментарий</label>
+						<textarea class="right" name="city"></textarea>
+					</div>
+				</div>
+				<div class="total right">
 						<div class="clearfix">
 							<div class="left">
 								<h4>Сумма заказа <span>2540<span class="rubl">руб.</span></span></h4>
 								<h5>из них за доставку <span>400<span class="rubl">руб.</span></span></h5>
 							</div>
 							<input type="submit" class="btn btn-g right" value="Перейти к оформлению">
+							<div class="left">
+								<h3>При заказе в отдаленные районы стоимость доставки уточните у менеджера</h3>
+								<a href="#">Вернуться в корзину</a>
+							</div>
 						</div>
-						<h6 >Нужна помощь? Позвоните нам! 8 (800) 775-93-80</h6>
+						<h6>Нужна помощь? Позвоните нам! 8 (800) 775-93-80</h6>
 					</div>
-				</div>
 				</form>
 			</div>
 		</div>
-		<div class="b-container flower-add">
-			<div class="b-wrap clearfix">
-				<h3 class="title">ПРИЯТНЫЕ ДОПОЛНЕНИЯ К БУКЕТУ</h3>
-				<ul>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<div class="left">
-							<img src="i/ballon.jpg" alt="">
-						</div>
-						<div class="right">
-							<h4>Воздушные шары (5шт)</h4>
-							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
+		
 	</div>
 </div>
 <div class="all-overlay"></div>

@@ -16,18 +16,23 @@ $(document).ready(function(){
 		return rePhone.test(value);
 	});
 
-	$(".ajax").parents("form").each(function(){
+	$("form").each(function(){
 		$(this).validate({
 			rules: {
 				email: 'email',
-				phone: 'customPhone'
+				phone: 'customPhone',
+				phone2: 'customPhone'
 			}
 		});
-		if( $(this).find("input[name=phone]").length ){
-			$(this).find("input[name=phone]").mask(tePhone,{placeholder:"_"});
+		if( $(this).find("input.phone").length ){
+			$(this).find("input.phone").mask(tePhone,{placeholder:"_"});
 		}
 		$("input[type=text]").blur(function(){
-			$(this).valid();
+			if($(this).val()!="") {
+				$(this).valid();	
+			} else {
+				$(this).removeClass("error valid");
+			}	
 		});
 	});
 
