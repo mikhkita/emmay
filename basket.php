@@ -447,7 +447,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 								<h4>Сумма заказа <span>2540<span class="rubl">руб.</span></span></h4>
 								<h5>из них за доставку <span>400<span class="rubl">руб.</span></span></h5>
 							</div>
-							<input type="submit" class="btn btn-g right b-issue" data-value="Оформить" value="Перейти к оформлению">
+							<input type="submit" class="btn btn-g right b-issue" data-width="1200" data-value="Оформить" value="Перейти к оформлению">
 						</div>
 						<h6 >Нужна помощь? Позвоните нам! 8 (800) 775-93-80</h6>
 					</div>

@@ -35,7 +35,9 @@
             "margin-left":$(".b-wrap").offset().left*-1
         });
         if( $(".b-issue").length )
-            $(".b-issue").val(( winW < 1200 )?$(".b-issue").attr("data-value"):$(".b-issue").attr("data-default"));
+            $(".b-issue").each(function(){
+                $(this).val(( winW < $(this).attr("data-width")*1 )?$(this).attr("data-value"):$(this).attr("data-default"));
+            });
     };
     $window.resize(function () {
         resizePort();
@@ -275,9 +277,6 @@
                 });
                 $('html').addClass('suvlak-menu');
                 mwInner.css('top', - scrollTop);
-                blindSuvlak.show().transit({
-                    opacity: 0.4
-                }, 200);
             };
         });
         $('.suvlak-close').click(function() {
@@ -294,16 +293,8 @@
                 });
             });
             wndw.scrollTop( - scrollTop);
-            blindSuvlak.transit({
-                opacity: 0
-            }, 200, function() {
-                blindSuvlak.hide();
-            });
             // header.css('top','');
             isSuvlak = false;
-        });
-        blindSuvlak.click(function() {
-            $('.suvlak-close').triggerHandler('click');
         });
     });
 
