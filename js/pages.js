@@ -298,5 +298,45 @@
         });
     });
 
+    $(".tooltip-close").click(function() {
+        $(this).closest(".tooltip").fadeOut();
+    });
+
+    $(".pay-desc").find("."+$(".pay-type .active").attr("id")).show();
+    $(".pay-type div").click(function(){
+        $(".pay-type div").removeClass("active");
+        $(".pay-desc > div").hide();
+        $(".pay-desc").find("."+$(this).attr("id")).show();
+        $(this).addClass("active");
+    });
+
+    $("#promo-butt").click(function(){
+        event.preventDefault();
+        if($("#promo-code").val() != "") {
+            $.ajax({
+                type: "POST",
+                url: "ajax/promo-code.php",
+                data:  $("#promo-code").serialize(),
+                success: function(msg){
+                    $("#promo-code").removeClass("error valid");
+                    if(msg == '1') {
+                        $("#promo-code").addClass("valid");
+                    }else{
+                        $("#promo-code").addClass("error");
+                    }
+                }
+            });
+        }
+    });
+   
+    $( ".date" ).datepicker({
+        onClose: function() {
+            $( ".date" ).valid();
+        }
+    });
+    $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+    
+
+    
 })(jQuery, jQuery(document), jQuery(window));
 

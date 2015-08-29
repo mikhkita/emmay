@@ -16,9 +16,14 @@ $(document).ready(function(){
 		return rePhone.test(value);
 	});
 
+	$.validator.addMethod('myDate', function (value) {
+		return date.test(value);
+	});
+
 	$("form").each(function(){
 		$(this).validate({
 			rules: {
+				date: 'myDate',
 				email: 'email',
 				phone: 'customPhone',
 				phone2: 'customPhone'
@@ -27,8 +32,8 @@ $(document).ready(function(){
 		if( $(this).find("input.phone").length ){
 			$(this).find("input.phone").mask(tePhone,{placeholder:"_"});
 		}
-		$("input[type=text]").blur(function(){
-			if($(this).val()!="") {
+		$("input[type=text],input[type=number]").blur(function(){
+			if($(this).val()!="" && $(this).attr("id")!="promo-code") {
 				$(this).valid();	
 			} else {
 				$(this).removeClass("error valid");

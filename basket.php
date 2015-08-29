@@ -342,8 +342,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container payment-nav">
 			<div class="b-wrap clearfix">
-				<div class="b-payment-nav-cont">
-					<p class="clearfix active">
+				<div class="b-payment-nav-cont step-1">
+					<p class="clearfix">
 						<span class="step-num">1</span>
 						<span class="step-title">Корзина</span>
 					</p>
@@ -437,8 +437,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</div>
 						<div class="clearfix">
 							<label class="left promokod">Промо-код</label>
-							<a href="#" class="right">Применить</a>
-							<input class="right" type="text">
+							<a id="promo-butt" href="#" class="right">Применить</a>
+							<input id="promo-code" class="right" type="text" name="promo-code">
 						</div>
 					</div>
 					<div class="total right">

@@ -342,12 +342,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container payment-nav">
 			<div class="b-wrap clearfix">
-				<div class="b-payment-nav-cont">
-					<p class="clearfix complete">
+				<div class="b-payment-nav-cont step-2">
+					<p class="clearfix">
 						<span class="step-num">1</span>
 						<span class="step-title">Корзина</span>
 					</p>
-					<p class="clearfix active">
+					<p class="clearfix">
 						<span class="step-num">2</span>
 						<span class="step-title">Оформление</span>
 					</p>
@@ -373,7 +373,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">E-mail*</label>
-						<input class="right" type="text" name="email" placeholder="primer@mail.ru">
+						<input class="right" type="text" name="email" placeholder="primer@mail.ru" required>
 						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
 					</div>
 					<div class="check-cont clearfix">
@@ -405,7 +405,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Дата доставки</label>
-						<input class="right" type="text" name="date">
+						<input class="date right" type="text" name="date">
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Время</label>
@@ -649,6 +649,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/datepicker-ru.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 
