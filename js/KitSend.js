@@ -30,10 +30,8 @@ $(document).ready(function(){
 		if( $(this).find("input.phone").length ){
 			$(this).find("input.phone").mask(tePhone,{placeholder:"_"});
 		}
-		$("input[type=text],input[type=number]").blur(function(){
-			if($(this).val()!="" && $(this).attr("id")!="promo-code") {
-				$(this).valid();	
-			} else {
+		$("input[type=text]").blur(function(){
+			if((!$(this).prop("required") && $(this).val()=="") || $(this).attr("id")=="promo-code") {
 				$(this).removeClass("error valid");
 			}	
 		});

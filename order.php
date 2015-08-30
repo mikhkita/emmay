@@ -409,7 +409,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Время</label>
-						<input class="right" type="text" name="time">
+						<input class="time right" type="text" name="time" placeholder="до 11, после 14, утром">
+						<select class="time right" type="text" name="time-type">
+							<option selected value="Указать время">Указать время</option>
+							<option value="Уточнить у получателя">Уточнить у получателя</option>
+						</select>
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Комментарий</label>
@@ -642,7 +646,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
-<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="js/jquery.royalslider.min.js"></script>

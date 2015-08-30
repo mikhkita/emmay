@@ -95,7 +95,7 @@ label.error{
 	display: none !important;
 }
 
-input,textarea {
+input,textarea,select {
 	font-family: "ProximaNova-Bold";
 	font-size: 18px;
 	line-height: 22px;
@@ -118,14 +118,15 @@ input.valid {
 	background-image: url("../i/valid.png") !important;
 	
 }
-input::-webkit-input-placeholder {
+
+input::-webkit-input-placeholder,select::-webkit-select-placeholder {
 	font-family: "ProximaNova-Bold";
-	font-size: 18px;
+	font-size: 16px;
 	color: #C2C2C2;
 }
-input:-moz-placeholder {
+input:-moz-placeholder,select:-moz-placeholder {
 	font-family: "ProximaNova-Bold";
-	font-size: 18px;
+	font-size: 16px;
 	color: #C2C2C2;
 	
 }
@@ -161,11 +162,12 @@ textarea:-moz-placeholder {
 	line-height: 22px;
 	cursor: pointer;
 }
-.input-cont input,.input-cont textarea {
+.input-cont input,.input-cont textarea,.input-cont select {
 	box-sizing:border-box;
 	border: 1px solid #E2E2E2;
 	border-radius: 5px;
 	padding: 10px 42px 8px 17px;
+	background-color: #fff;
 }
 .input-cont textarea {
 	height: 110px;
@@ -173,7 +175,20 @@ textarea:-moz-placeholder {
 	resize: none;
     padding: 10px 10px 12px 12px;
 }
-
+.input-cont select {
+	/*for WebKit*/
+	-webkit-appearance: none;
+	/* for FF */
+	-moz-appearance: none;
+	text-indent: 0.01px; 
+	text-overflow: '';
+	/* for IE */
+	-ms-appearance: none;
+	appearance: none!important;
+	background-image: url('../i/select-arrow.png');
+  	background-position-y: 55%;
+  	font-size: 15px;
+}
 .tooltip {
 	position: absolute;
 	font-size: 14px;
@@ -1779,6 +1794,7 @@ textarea:-moz-placeholder {
 		margin-left: -20px;
 		position: relative;
 		font-size: 0px;
+		min-height: 422px;
 	}
 		.b-catalog-list li
 		{
@@ -2835,7 +2851,7 @@ textarea:-moz-placeholder {
 					box-sizing: border-box;
 					padding: 7px 10px 6px;
 				}
-				.basket .b-wrap .basket-bot .addition a {
+				.basket .b-wrap .basket-bot .addition button[type=button] {
 					font-family: "ProximaNova-Bold";
 					font-size: 14px;
 					line-height: 17px;
@@ -3060,6 +3076,7 @@ textarea:-moz-placeholder {
 					box-sizing: border-box;
 					background-position-x: 97%; 
 				}
+
 				.order .b-wrap .order-item .input-cont .city{
 					font-size: 14px;
 					position: absolute;
@@ -3073,6 +3090,11 @@ textarea:-moz-placeholder {
 					.order .b-wrap .order-item .input-cont .city:hover {
 						border-bottom: 1px dotted #fff;
 					}
+				.order .b-wrap .order-item .input-cont .time {
+					width: 225px;
+					margin-left: 16px;
+					background-position-x: 93%;
+				}
 			.order .b-wrap .order-item .check-cont {
 				margin-bottom: 10px;
 				margin-left: 187px;

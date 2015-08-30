@@ -437,7 +437,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</div>
 						<div class="clearfix">
 							<label class="left promokod">Промо-код</label>
-							<a id="promo-butt" href="#" class="right">Применить</a>
+							<button type="button" id="promo-butt" class="right">Применить</button>
 							<input id="promo-code" class="right" type="text" name="promo-code">
 						</div>
 					</div>

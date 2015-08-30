@@ -350,6 +350,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						этом в течении 24 часов.
 					</div>
 					<div class="b-filters">
+						<form action="ajax/filter.php" id="filter-form">
+						<input type="hidden" name="page" value="1">
 						<div class="b-filter-group f-group-1">
 							<h3>БУКЕТ ИЗ:</h3>
 							<label class="active" for="filter-1-1">Все</label><input type="radio" hidden name="filter-1" value="1-1" id="filter-1-1"/>
@@ -392,6 +394,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<label for="filter-5-4">ДЕТСКИЕ БУКЕТЫ</label><input type="radio" hidden name="filter-5" value="5-4" id="filter-5-4"/>
 							<label for="filter-5-5">ДЛЯ ПОЖИЛЫХ</label><input type="radio" hidden name="filter-5" value="5-5" id="filter-5-5"/>
 						</div>
+						</form>
 					</div>
 					
 					<div class="b-photos-block">

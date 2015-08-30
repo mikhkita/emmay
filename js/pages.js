@@ -311,16 +311,17 @@
     });
 
     $("#promo-butt").click(function(){
-        event.preventDefault();
         if($("#promo-code").val() != "") {
             $.ajax({
                 type: "POST",
                 url: "ajax/promo-code.php",
                 data:  $("#promo-code").serialize(),
                 success: function(msg){
+                    alert(msg);
                     $("#promo-code").removeClass("error valid");
                     if(msg == '1') {
                         $("#promo-code").addClass("valid");
+                        $("#promo-code,#promo-butt").prop("disabled",true);
                     }else{
                         $("#promo-code").addClass("error");
                     }
@@ -330,18 +331,75 @@
     });
    
     
+    if($('#datepicker').length) {
+        $('#datepicker').appendDtpicker({
+            "dateOnly": true,
+            "locale": "ru",
+            "calendarMouseScroll": false,
+            "futureOnly": true,
+            "firstDayOfWeek": 1,
+            "closeOnSelected" : true,
+            "autodateOnStart": false
+            
+        });
+    }
 
-    $('#datepicker').appendDtpicker({
-        "dateOnly": true,
-        "locale": "ru",
-        "calendarMouseScroll": false,
-        "futureOnly": true,
-        "firstDayOfWeek": 1,
-        "closeOnSelected" : true,
-        "autodateOnStart": false
+    function filter_ajax(first) {
+        $.ajax({
+            type: "POST",
+            url: $("#filter-form").attr("action"),
+            data:  $("#filter-form").serialize(),
+            beforeSend: function() {
+                $(".b-catalog-refresh").addClass("preloading").show();
+                if(first) {
+                    $(".b-catalog-list").empty();
+                    $(".b-catalog-refresh").hide();
+                }
+                
+            },
+            success: function(msg){
+                var obj = jQuery.parseJSON( msg ),discount="",discount_val="",hit="",hit_val="",old_price="";
+                
+                if(obj.result == "success") {
+                    $(obj.items).each(function( index, item ){
+                        if(item.discount) {
+                            discount = "discount";
+                            discount_val = '<div class="b-discount">'+item.discount+'%</div>';
+                        }
+                        if(item.hit) {
+                            hit = "hit";
+                            hit_val = '<div class="b-hit">ХИТ</div>';
+                        } 
+                        if(item.old_price) {
+                            old_price = '<small>'+item.old_price+'</small>';
+                        } 
+                        var str = '<li><div class="b-catalog-item '+discount+' '+hit+'">'+discount_val+hit_val+'<a class="b-cat-pic" href="'+item.url+'"><img alt="" src="'+item.image+'"><span>'+item.name+'</span></a><p>'+item.desc+'</p><div class="b-buy"><a href="#" class="btn btn-g"><span>Купить</span></a><p class="b-item-price">'+old_price+'<span>'+item.price+'</span><span class="rub">руб.</span></p></div></div></li>';
+
+                        $(".b-catalog-list").append(str);
+                        discount="",discount_val="",hit="",hit_val="",old_price="";
+                    });
+                }
+                if(obj.page) {
+                    $("input[name=page]").val(obj.page);
+                    $(".b-catalog-refresh").show();
+                } else {
+                    $(".b-catalog-refresh").hide();
+                }
+            },
+            complete: function() {
+                $(".b-catalog-refresh").removeClass("preloading");
+            }
+        });
+    }
+    $(".b-filters input[type=radio]").change(function(){ 
+        filter_ajax(true);
         
     });
-
+    
+    $(".b-catalog-refresh").click(function(){
+        filter_ajax();
+        return false;
+    });
 
     
 })(jQuery, jQuery(document), jQuery(window));
