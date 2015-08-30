@@ -361,7 +361,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-container basket">
 			<div class="b-wrap clearfix">
 				<h3 class="title">ТОВАРЫ В КОРЗИНЕ:</h3>
-				<form action="#">
+				<form action="order.php">
 				<table>
 					<tbody>
 						<tr>

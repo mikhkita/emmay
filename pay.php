@@ -345,12 +345,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<div class="b-wrap clearfix">
 				<div class="b-payment-nav-cont step-3">
 					<p class="clearfix">
-						<span class="step-num">1</span>
-						<span class="step-title">Корзина</span>
+						<a href="basket.php"><span class="step-num">1</span>
+						<span class="step-title">Корзина</span></a>
 					</p>
 					<p class="clearfix">
-						<span class="step-num">2</span>
-						<span class="step-title">Оформление</span>
+						<a href="order.php"><span class="step-num">2</span>
+						<span class="step-title">Оформление</span></a>
 					</p>
 					<p class="clearfix">
 						<span class="step-num">3</span>
@@ -366,6 +366,19 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="b-payment-cont clearfix">
 					<form action="#">
+					<div class="b-payment-cont-right">
+						<h2 class="title">ДАННЫЕ ЗАКАЗА</h2>
+						<div class="pay-data">
+							<div class="input-cont">
+								<label for="order-number">Номер заказа:</label>
+								<input id="order-number" type="text" name="order-number" required>
+							</div>
+							<div class="input-cont">
+								<label for="summ">Сумма:</label>
+								<input id="summ" type="number" name="summ" min="1" max="999999" required>
+							</div>
+						</div>	
+					</div>
 					<div class="b-payment-cont-left">
 						<h2 class="title">СПОСОБ ОПЛАТЫ</h2>
 						<div class="pay-type-cont">
@@ -402,19 +415,6 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="b-payment-cont-right">
-						<h2 class="title">ДАННЫЕ ЗАКАЗА</h2>
-						<div class="pay-data">
-							<div class="input-cont">
-								<label for="order-number">Номер заказа:</label>
-								<input id="order-number" type="text" name="order-number" required>
-							</div>
-							<div class="input-cont">
-								<label for="summ">Сумма:</label>
-								<input id="summ" type="number" name="summ" min="1" max="999999" required>
-							</div>
-						</div>	
 					</div>
 					</form>
 				</div>

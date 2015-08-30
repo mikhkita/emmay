@@ -344,8 +344,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<div class="b-wrap clearfix">
 				<div class="b-payment-nav-cont step-2">
 					<p class="clearfix">
-						<span class="step-num">1</span>
-						<span class="step-title">Корзина</span>
+						<a href="basket.php"><span class="step-num">1</span>
+						<span class="step-title">Корзина</span></a>
 					</p>
 					<p class="clearfix">
 						<span class="step-num">2</span>
@@ -360,7 +360,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container order">
 			<div class="b-wrap clearfix">
-				<form action="#">
+				<form action="pay.php">
 				<div class="order-item">
 					<h3><span class="title">Ваши данные:</span></h3>
 					<div class="input-cont clearfix">
@@ -425,7 +425,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<input type="submit" class="btn btn-g right b-issue" data-width="768" data-value="Оформить" value="Перейти к оформлению">
 							<div class="left">
 								<h3>При заказе в отдаленные районы стоимость доставки уточните у менеджера</h3>
-								<a href="#">Вернуться в корзину</a>
+								<a href="basket.php">Вернуться в корзину</a>
 							</div>
 						</div>
 						<h6>Нужна помощь? Позвоните нам! 8 (800) 775-93-80</h6>

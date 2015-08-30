@@ -3128,14 +3128,12 @@ textarea:-moz-placeholder {
 }
 	.b-payment .b-wrap {
     	text-align: center;	
-    	padding-top: 100px;
+    	padding-top: 20px;
     	padding-bottom: 100px;
     	max-width: 950px;
 	}
 		.b-payment .b-wrap .tooltip-cont {
-			position: absolute;
-			top: 15px;
-		
+			margin-bottom: 30px;
 		}
 			.b-payment .b-wrap .tooltip{
 				position: relative;
@@ -3162,9 +3160,9 @@ textarea:-moz-placeholder {
 				margin-bottom: 19px;
 			}	
 			.b-payment .b-wrap .b-payment-cont-left {
-				float: left;
+				float: right;
 				width: 650px;
-
+				margin-right: 19px;
 				
 			}
 				.b-payment .b-wrap .b-payment-cont-left .pay-type-cont {
@@ -3233,6 +3231,8 @@ textarea:-moz-placeholder {
 						}
 					
 			.b-payment .b-wrap .b-payment-cont-right {
+				position: relative;
+				left: -2px;
 				float: right;
 				width: 280px;
 			}
@@ -3479,6 +3479,9 @@ textarea:-moz-placeholder {
 	.total h6 {
 	    font-size: 19px;
 	    margin-left: 40px;
+	}
+	.email-tooltip{
+		display: none;
 	}
 }
 

@@ -501,7 +501,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Компактный букет из 9 ярких роз
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -516,7 +516,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -532,7 +532,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-p"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-p"><span>Купить</span></a>
 										<p class="b-item-price"><small>2900</small><span>2320</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -549,7 +549,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										с маленьким описанием
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><small>2900</small><span>2320</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -564,7 +564,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -579,7 +579,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -594,7 +594,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										9 розовых роз. Длина 40-60 см. Бутон 5-7 см.
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><span>1390</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -609,7 +609,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Милый букет в европейском стиле. Длина 40-60 см.
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><span>1390</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -624,7 +624,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Свежие красные розы. Длина 50-70 см. Бутон 5-7 см.
 									</p>
 									<div class="b-buy">
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 										<p class="b-item-price"><span>1580</span><span class="rub">руб.</span></p>
 									</div>
 								</div>

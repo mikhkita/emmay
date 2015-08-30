@@ -483,7 +483,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</p>
 									<div class="b-buy">
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 									</div>
 								</div>
 							</div>

@@ -1748,7 +1748,13 @@ a
 			
 		    top: 71px;	    
 			height: 2px;
-		    width: 100%;
+		    width: 50%;
+		}
+		.b-payment-nav-cont:after {
+		    font-size: 0px;	    
+			top: 71px;	    
+			height: 2px;
+		    width: 50%;
 		}
 	
 		.payment-nav .b-wrap p .step-num{    
@@ -2212,7 +2218,131 @@ a
 			padding-bottom: 20px;
     		padding-left: 35px;
 		}
+.b-payment {
+
+}
+	.b-payment .b-wrap {
+    	padding-top: 20px;
+    	padding-bottom: 100px;
+    	max-width: 950px;
+	}
+		.b-payment .b-wrap .tooltip-cont {
+			margin-bottom: 30px;
+		}
+			.b-payment .b-wrap .tooltip{
+				max-width: 100%;
+				font-size: 25px;
+				padding: 15px 20px;
+				padding-right: 50px;
+			
+				line-height: 30px;
+}
+				.b-payment .b-wrap .tooltip .tooltip-close {
+					width: 24px;
+					height: 26px;
+					right: 18px;
+					top: 18px;
+				}
+		.b-payment .b-wrap .b-payment-cont {
+		}
+			.b-payment .b-wrap .b-payment-cont h2 {
+				margin-bottom: 19px;
+			
+				font-size: 32px;
+				line-height: 50px;
+}	
+			.b-payment .b-wrap .b-payment-cont-left {
+				width: 714px;
+
 				
+			
+				margin-right: 0px;
+				padding-top: 30px;
+}
+				.b-payment .b-wrap .b-payment-cont-left .pay-type-cont {
+					width: 100%;
+				}
+					.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type {			
+					    height: 90px;
+					}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type > div{
+							width: 49%;	
+							height: 80px;
+							padding-top: 20px;
+						}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type > div.active {
+							height: 91px;
+						}
+
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type .right{
+							padding-top: 26px;
+							right: 0px;
+						}
+					.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc{
+						padding: 25px 30px 25px 20px;
+					}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc >div{
+						}	
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc h3 {
+							font-size: 28px;
+							line-height: 40px;
+							margin-bottom: 9px;
+						
+							text-align: left;
+}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc p {
+							font-size: 28px;
+							line-height: 40px;
+							margin-bottom: 27px;
+						}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc .clearfix{
+							text-align: center;
+						}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc .left,
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc .right{
+							float: none !important;
+						}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc img{
+							width: 100%;
+						}
+						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc .btn-g {
+						    margin-top: 24px;					
+						    width: auto;
+						    font-size: 28px;
+						    padding: 24px 50px 22px;
+						
+						    display: inline-block;
+						    margin-bottom: 10px;
+}
+
+input.btn.btn-g.right {}
+					
+			.b-payment .b-wrap .b-payment-cont-right {
+				width: 100%;
+			
+				margin-top: 10px;
+				left: 0px;
+}
+				.b-payment .b-wrap .b-payment-cont-right .pay-data {
+					width: 100%;
+					padding: 22px 32px 18px;
+				}
+				.b-payment .b-wrap .b-payment-cont-right .pay-data .input-cont {
+    				margin-bottom: 10px;
+
+					}
+					.b-payment .b-wrap .b-payment-cont-right .pay-data label {
+						margin-top: 0;
+						margin-bottom: 4px;
+					
+						font-size: 28px;
+						line-height: 40px;
+}
+					.b-payment .b-wrap .b-payment-cont-right .pay-data input {
+						width: 100%;
+					
+						padding: 25px 10px;
+}					
 /* footer */	
 .b-footer
 {
