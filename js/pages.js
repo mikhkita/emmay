@@ -329,13 +329,19 @@
         }
     });
    
-    $( ".date" ).datepicker({
-        onClose: function() {
-            $( ".date" ).valid();
-        }
-    });
-    $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
     
+
+    $('#datepicker').appendDtpicker({
+        "dateOnly": true,
+        "locale": "ru",
+        "calendarMouseScroll": false,
+        "futureOnly": true,
+        "firstDayOfWeek": 1,
+        "closeOnSelected" : true,
+        "autodateOnStart": false
+        
+    });
+
 
     
 })(jQuery, jQuery(document), jQuery(window));

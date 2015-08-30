@@ -94,29 +94,29 @@ b {
 label.error{
 	display: none !important;
 }
-input.date {
-	background-image: url("../i/date.png");
-	background-repeat: no-repeat;
-}
 
-input.error,textarea.error{
-	border: 1px solid #EABEC4 !important;
-	background-color: #FFF6F6;
-	background-image: url("../i/cross-error.png");
-}
-
-input.valid {
-	border: 1px solid #A3D499 !important;
-	background-color: #fff;
-	background-image: url("../i/valid.png");
-	
-}
 input,textarea {
 	font-family: "ProximaNova-Bold";
 	font-size: 18px;
 	line-height: 22px;
 	background-repeat: no-repeat;
 	background-position: 94% 50%;
+}
+input.date {
+	background-image: url("../i/date.png");
+}
+
+input.error{
+	border: 1px solid #EABEC4 !important;
+	background-color: #FFF6F6 !important;
+	background-image: url("../i/cross-error.png") !important;
+}
+
+input.valid {
+	border: 1px solid #A3D499 !important;
+	background-color: #fff !important;
+	background-image: url("../i/valid.png") !important;
+	
 }
 input::-webkit-input-placeholder {
 	font-family: "ProximaNova-Bold";

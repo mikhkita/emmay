@@ -22,7 +22,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="css/jquery.simple-dtpicker.css" />		
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -360,7 +360,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container order">
 			<div class="b-wrap clearfix">
-				<form action="pay.php">
+				<form action="#">
 				<div class="order-item">
 					<h3><span class="title">Ваши данные:</span></h3>
 					<div class="input-cont clearfix">
@@ -405,7 +405,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Дата доставки</label>
-						<input class="date right" type="text" name="date">
+						<input class="date right" type="text" name="date" id="datepicker" value="">
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Время</label>
@@ -642,14 +642,14 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
-<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/datepicker-ru.js"></script>
+<script type="text/javascript" src="js/jquery.simple-dtpicker.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 

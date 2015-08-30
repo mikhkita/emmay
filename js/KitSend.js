@@ -16,14 +16,12 @@ $(document).ready(function(){
 		return rePhone.test(value);
 	});
 
-	$.validator.addMethod('myDate', function (value) {
-		return date.test(value);
-	});
-
 	$("form").each(function(){
 		$(this).validate({
 			rules: {
-				date: 'myDate',
+				date : {
+                	date : false
+            	},
 				email: 'email',
 				phone: 'customPhone',
 				phone2: 'customPhone'
