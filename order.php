@@ -409,8 +409,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Время</label>
-						<input class="time right" type="text" name="time" placeholder="до 11, после 14, утром">
-						<select class="time right" type="text" name="time-type">
+						<input class="time right" type="text" name="time" placeholder="до 11, после 14, утром" id="time-detail">
+						<select class="time left" name="time-type" id="time-select">
 							<option selected value="Указать время">Указать время</option>
 							<option value="Уточнить у получателя">Уточнить у получателя</option>
 						</select>

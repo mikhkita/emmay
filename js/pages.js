@@ -412,13 +412,16 @@
     }
 
     $(".b-filters input[type=radio]").change(function(){ 
-        filter_ajax(true);
-        
+        filter_ajax(true);    
     });
     
     $(".b-catalog-refresh").click(function(){
         filter_ajax();
         return false;
+    });
+
+    $("#time-select").change(function(){ 
+        if($("#time-select option").eq(1).prop("selected")) $("#time-detail").hide(); else $("#time-detail").show();
     });
 
     
