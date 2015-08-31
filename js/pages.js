@@ -421,7 +421,7 @@
     });
 
     $("#time-select").change(function(){ 
-        if($("#time-select option").eq(1).prop("selected")) $("#time-detail").hide(); else $("#time-detail").show();
+        if($("#time-select option").eq(1).prop("selected")) $("#time-detail").hide().val("").removeClass("error valid"); else $("#time-detail").show();
     });
 
     
