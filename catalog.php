@@ -354,45 +354,72 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<input type="hidden" name="page" value="1">
 						<div class="b-filter-group f-group-1">
 							<h3>БУКЕТ ИЗ:</h3>
-							<label class="active" for="filter-1-1">Все</label><input type="radio" hidden name="filter-1" value="1-1" id="filter-1-1"/>
-							<label for="filter-1-2">РОЗЫ</label><input type="radio" hidden name="filter-1" value="1-2" id="filter-1-2"/>
-							<label for="filter-1-3">ТЮЛЬПАНЫ</label><input type="radio" hidden name="filter-1" value="1-3" id="filter-1-3"/>
-							<label for="filter-1-4">ИРИСЫ</label><input type="radio" hidden name="filter-1" value="1-4" id="filter-1-4"/>
-							<label for="filter-1-5">ГЕРБЕРЫ</label><input type="radio" hidden name="filter-1" value="1-5" id="filter-1-5"/>
+							<input type="radio" checked hidden name="filter-1" value="1-1" id="filter-1-1"/>
+							<label class="active" for="filter-1-1">Все</label>
+							<input type="radio" hidden name="filter-1" value="1-2" id="filter-1-2"/>
+							<label for="filter-1-2">РОЗЫ</label>
+							<input type="radio" hidden name="filter-1" value="1-3" id="filter-1-3"/>
+							<label for="filter-1-3">ТЮЛЬПАНЫ</label>
+							<input type="radio" hidden name="filter-1" value="1-4" id="filter-1-4"/>
+							<label for="filter-1-4">ИРИСЫ</label>
+							<input type="radio" hidden name="filter-1" value="1-5" id="filter-1-5"/>
+							<label for="filter-1-5">ГЕРБЕРЫ</label>
 						</div>
 						<div class="b-filter-group f-group-2">
 							<h3>ПО ЦЕНЕ:</h3>
-							<label class="active" for="filter-2-1">Все</label><input type="radio" hidden name="filter-2" value="2-1" id="filter-2-1"/>
-							<label for="filter-2-2">ОТ 2000 ₽</label><input type="radio" hidden name="filter-2" value="2-2" id="filter-2-2"/>
-							<label for="filter-2-3">ОТ 2000 ДО 3000 ₽</label><input type="radio" hidden name="filter-2" value="2-3" id="filter-2-3"/>
-							<label for="filter-2-4">ОТ 3000 ДО 5000 ₽</label><input type="radio" hidden name="filter-2" value="2-4" id="filter-2-4"/>
-							<label for="filter-2-5">ОТ 5000 ₽</label><input type="radio" hidden name="filter-2" value="2-5" id="filter-2-5"/>
+							<input type="radio" checked hidden name="filter-2" value="2-1" id="filter-2-1"/>
+							<label class="active" for="filter-2-1">Все</label>
+							<input type="radio" hidden name="filter-2" value="2-2" id="filter-2-2"/>
+							<label for="filter-2-2">ОТ 2000 ₽</label>
+							<input type="radio" hidden name="filter-2" value="2-3" id="filter-2-3"/>
+							<label for="filter-2-3">ОТ 2000 ДО 3000 ₽</label>
+							<input type="radio" hidden name="filter-2" value="2-4" id="filter-2-4"/>
+							<label for="filter-2-4">ОТ 3000 ДО 5000 ₽</label>
+							<input type="radio" hidden name="filter-2" value="2-5" id="filter-2-5"/>
+							<label for="filter-2-5">ОТ 5000 ₽</label>
 						</div>
 						<div class="b-filter-group f-group-3">
 							<h3>ПО СОБЫТИЮ:</h3>
-							<label class="active" for="filter-3-1">Все</label><input type="radio" hidden name="filter-3" value="3-1" id="filter-3-1"/>
-							<label for="filter-3-2">СВАДЬБА</label><input type="radio" hidden name="filter-3" value="3-2" id="filter-3-2"/>
-							<label for="filter-3-3">ДЛЯ БАБУШКИ</label><input type="radio" hidden name="filter-3" value="3-3" id="filter-3-3"/>
-							<label for="filter-3-4">ДЛЯ МАМЫ</label><input type="radio" hidden name="filter-3" value="3-4" id="filter-3-4"/>
-							<label for="filter-3-5">РУКОВОДИТЕЛЮ</label><input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
-							<label for="filter-3-5">8 МАРТА</label><input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
-							<label for="filter-3-5">ДЕНЬ РОЖДЕНИЯ</label><input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
+							<input type="radio" checked hidden name="filter-3" value="3-1" id="filter-3-1"/>
+							<label class="active" for="filter-3-1">Все</label>
+							<input type="radio" hidden name="filter-3" value="3-2" id="filter-3-2"/>
+							<label for="filter-3-2">СВАДЬБА</label>
+							<input type="radio" hidden name="filter-3" value="3-3" id="filter-3-3"/>
+							<label for="filter-3-3">ДЛЯ БАБУШКИ</label>
+							<input type="radio" hidden name="filter-3" value="3-4" id="filter-3-4"/>
+							<label for="filter-3-4">ДЛЯ МАМЫ</label>
+							<input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
+							<label for="filter-3-5">РУКОВОДИТЕЛЮ</label>
+							<input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
+							<label for="filter-3-5">8 МАРТА</label>
+							<input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
+							<label for="filter-3-5">ДЕНЬ РОЖДЕНИЯ</label>
 						</div>						
 						<div class="b-filter-group f-group-4">
 							<h3>ПО ЦВЕТУ:</h3>
-							<label class="active" for="filter-4-1">Все</label><input type="radio" hidden name="filter-4" value="4-1" id="filter-4-1"/>
-							<label for="filter-4-2">КРАСНЫЙ</label><input type="radio" hidden name="filter-4" value="4-2" id="filter-4-2"/>
-							<label for="filter-4-3">ЖЕЛТЫЙ</label><input type="radio" hidden name="filter-4" value="4-3" id="filter-4-3"/>
-							<label for="filter-4-4">БЕЛЫЙ</label><input type="radio" hidden name="filter-4" value="4-4" id="filter-4-4"/>
-							<label for="filter-4-5">РОЗОВЫЙ</label><input type="radio" hidden name="filter-4" value="4-5" id="filter-4-5"/>
+							<input type="radio" hidden checked name="filter-4" value="4-1" id="filter-4-1"/>
+							<label class="active" for="filter-4-1">Все</label>
+							<input type="radio" hidden name="filter-4" value="4-2" id="filter-4-2"/>
+							<label for="filter-4-2">КРАСНЫЙ</label>
+							<input type="radio" hidden name="filter-4" value="4-3" id="filter-4-3"/>
+							<label for="filter-4-3">ЖЕЛТЫЙ</label>
+							<input type="radio" hidden name="filter-4" value="4-4" id="filter-4-4"/>
+							<label for="filter-4-4">БЕЛЫЙ</label>
+							<input type="radio" hidden name="filter-4" value="4-5" id="filter-4-5"/>
+							<label for="filter-4-5">РОЗОВЫЙ</label>
 						</div>
 						<div class="b-filter-group f-group-5">
 							<h3>КОМУ:</h3>
-							<label class="active" for="filter-5-1">Все</label><input type="radio" hidden name="filter-5" value="5-1" id="filter-5-1"/>
-							<label for="filter-5-2">МУЖЧИНЕ</label><input type="radio" hidden name="filter-5" value="5-2" id="filter-5-2"/>
-							<label for="filter-5-3">ЖЕНЩИНЕ</label><input type="radio" hidden name="filter-5" value="5-3" id="filter-5-3"/>
-							<label for="filter-5-4">ДЕТСКИЕ БУКЕТЫ</label><input type="radio" hidden name="filter-5" value="5-4" id="filter-5-4"/>
-							<label for="filter-5-5">ДЛЯ ПОЖИЛЫХ</label><input type="radio" hidden name="filter-5" value="5-5" id="filter-5-5"/>
+							<input type="radio" checked hidden name="filter-5" value="5-1" id="filter-5-1"/>
+							<label class="active" for="filter-5-1">Все</label>
+							<input type="radio" hidden name="filter-5" value="5-2" id="filter-5-2"/>
+							<label for="filter-5-2">МУЖЧИНЕ</label>
+							<input type="radio" hidden name="filter-5" value="5-3" id="filter-5-3"/>
+							<label for="filter-5-3">ЖЕНЩИНЕ</label>
+							<input type="radio" hidden name="filter-5" value="5-4" id="filter-5-4"/>
+							<label for="filter-5-4">ДЕТСКИЕ БУКЕТЫ</label>
+							<input type="radio" hidden name="filter-5" value="5-5" id="filter-5-5"/>
+							<label for="filter-5-5">ДЛЯ ПОЖИЛЫХ</label>
 						</div>
 						</form>
 					</div>
@@ -822,6 +849,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
+<script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 

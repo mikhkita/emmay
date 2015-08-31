@@ -1,4 +1,8 @@
 (function ($, $document, $window) {
+    var progress = new KitProgress("#f98411",2);
+
+    progress.endDuration = 0.1;
+
     var winW = 0;
 
     var MENUPX = 1280;
@@ -345,6 +349,9 @@
     }
 
     function filter_ajax(first) {
+        progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
+        progress.start(1.5);
+
         $.ajax({
             type: "POST",
             url: $("#filter-form").attr("action"),
@@ -352,41 +359,45 @@
             beforeSend: function() {
                 $(".b-catalog-refresh").addClass("preloading").show();
                 if(first) {
-                    $(".b-catalog-list").empty();
                     $(".b-catalog-refresh").hide();
                 }
                 
             },
             success: function(msg){
-                var obj = jQuery.parseJSON( msg ),discount="",discount_val="",hit="",hit_val="",old_price="";
-                
-                if(obj.result == "success") {
-                    $(obj.items).each(function( index, item ){
-                        if(item.discount) {
-                            discount = "discount";
-                            discount_val = '<div class="b-discount">'+item.discount+'%</div>';
-                        }
-                        if(item.hit) {
-                            hit = "hit";
-                            hit_val = '<div class="b-hit">ХИТ</div>';
-                        } 
-                        if(item.old_price) {
-                            old_price = '<small>'+item.old_price+'</small>';
-                        } 
-                        var str = '<li><div class="b-catalog-item '+discount+' '+hit+'">'+discount_val+hit_val+'<a class="b-cat-pic" href="'+item.url+'"><img alt="" src="'+item.image+'"><span>'+item.name+'</span></a><p>'+item.desc+'</p><div class="b-buy"><a href="#" class="btn btn-g"><span>Купить</span></a><p class="b-item-price">'+old_price+'<span>'+item.price+'</span><span class="rub">руб.</span></p></div></div></li>';
+                $(".b-catalog-list").fadeOut(300,function(){
+                    $(".b-catalog-list").empty();
+                    var obj = jQuery.parseJSON( msg ),discount="",discount_val="",hit="",hit_val="",old_price="";
+                    
+                    if(obj.result == "success") {
+                        $(obj.items).each(function( index, item ){
+                            if(item.discount) {
+                                discount = "discount";
+                                discount_val = '<div class="b-discount">'+item.discount+'%</div>';
+                            }
+                            if(item.hit) {
+                                hit = "hit";
+                                hit_val = '<div class="b-hit">ХИТ</div>';
+                            } 
+                            if(item.old_price) {
+                                old_price = '<small>'+item.old_price+'</small>';
+                            } 
+                            var str = '<li><div class="b-catalog-item '+discount+' '+hit+'">'+discount_val+hit_val+'<a class="b-cat-pic" href="'+item.url+'"><img alt="" src="'+item.image+'"><span>'+item.name+'</span></a><p>'+item.desc+'</p><div class="b-buy"><a href="#" class="btn btn-g"><span>Купить</span></a><p class="b-item-price">'+old_price+'<span>'+item.price+'</span><span class="rub">руб.</span></p></div></div></li>';
 
-                        $(".b-catalog-list").append(str);
-                        discount="",discount_val="",hit="",hit_val="",old_price="";
-                    });
-                }
-                if(obj.page) {
-                    $("input[name=page]").val(obj.page);
-                    $(".b-catalog-refresh").show();
-                } else {
-                    $(".b-catalog-refresh").hide();
-                }
+                            $(".b-catalog-list").append(str);
+                            discount="",discount_val="",hit="",hit_val="",old_price="";
+                        });
+                    }
+                    $(".b-catalog-list").fadeIn(300);
+                    if(obj.page) {
+                        $("input[name=page]").val(obj.page);
+                        $(".b-catalog-refresh").show();
+                    } else {
+                        $(".b-catalog-refresh").hide();
+                    }
+                });
             },
             complete: function() {
+                progress.end();
                 $(".b-catalog-refresh").removeClass("preloading");
             }
         });

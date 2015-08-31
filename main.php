@@ -351,6 +351,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						этом в течении 24 часов.
 					</div>
 					<div class="b-filters">
+						<form action="ajax/filter.php" id="filter-form">
+						<input type="hidden" name="page" value="1">
 						<div class="b-filter-group f-group-1">
 							<h3>БУКЕТ ИЗ:</h3>
 							<input type="radio" checked hidden name="filter-1" value="1-1" id="filter-1-1"/>
@@ -389,10 +391,10 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<label for="filter-3-4">ДЛЯ МАМЫ</label>
 							<input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
 							<label for="filter-3-5">РУКОВОДИТЕЛЮ</label>
-							<input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
-							<label for="filter-3-5">8 МАРТА</label>
-							<input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
-							<label for="filter-3-5">ДЕНЬ РОЖДЕНИЯ</label>
+							<input type="radio" hidden name="filter-3" value="3-6" id="filter-3-6"/>
+							<label for="filter-3-6">8 МАРТА</label>
+							<input type="radio" hidden name="filter-3" value="3-7" id="filter-3-7"/>
+							<label for="filter-3-7">ДЕНЬ РОЖДЕНИЯ</label>
 						</div>						
 						<div class="b-filter-group f-group-4">
 							<h3>ПО ЦВЕТУ:</h3>
@@ -420,6 +422,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<input type="radio" hidden name="filter-5" value="5-5" id="filter-5-5"/>
 							<label for="filter-5-5">ДЛЯ ПОЖИЛЫХ</label>
 						</div>
+						</form>
 					</div>
 					
 					<div class="b-photos-block">
@@ -870,6 +873,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
+<script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
