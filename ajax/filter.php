@@ -1,5 +1,5 @@
 <?
-	$arr = array( 'result' => "success", 'more' => true,'page' => 2,
+	$arr = array( 'result' => "success", 'more' => false,'page' => 2,
 		'items' => array(
 			0 => array('name' => 'name1', 'desc'=>'desc1', 'price'=> 111, 'discount'=> '10', 'old_price'=> 110, 'image' => 'i/t/t1.jpg', 'url' => "#"),
 			1 => array('name' => 'name2', 'desc'=>'desc2', 'price'=> 222, 'hit'=>true, 'old_price'=> 220, 'image' => 'i/t/t1.jpg', 'url' => "#"),

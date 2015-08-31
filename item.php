@@ -419,8 +419,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</p>
 								</div>
 								<div class="b-item-buy">
-									<a href="#" class="btn btn-g"><span>КУПИТЬ</span></a>
-									<a href="#" class="buy-one-click fancy" data-block="#buy-one-click"><span>Покупка в один клик</span></a>
+									<a href="basket.php" class="btn btn-g"><span>КУПИТЬ</span></a>
+									<a href="basket.php" class="buy-one-click fancy" data-block="#buy-one-click"><span>Покупка в один клик</span></a>
 								</div>
 							</div>
 						</div>
@@ -500,7 +500,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</p>
 									<div class="b-buy">
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 									</div>
 								</div>
 							</div>
@@ -521,7 +521,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</p>
 									<div class="b-buy">
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 									</div>
 								</div>
 							</div>
@@ -538,7 +538,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</p>
 									<div class="b-buy">
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 									</div>
 								</div>
 							</div>
@@ -559,7 +559,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</p>
 									<div class="b-buy">
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 									</div>
 								</div>
 							</div>
@@ -576,7 +576,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</p>
 									<div class="b-buy">
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
-										<a href="#" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 									</div>
 								</div>
 							</div>
