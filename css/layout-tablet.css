@@ -790,7 +790,9 @@ a
 			}
 			.b-item-cost{
 				font-size: 48px;
+				font-family: "ProximaNova-Bold";
 				line-height: 58px;
+				font-weight: 300;
 				padding-top: 1px;
 			}
 				.b-item-cost h4{
@@ -1007,6 +1009,8 @@ a
 	.b-catalog-relative h3{
 		padding-top: 30px;
 		padding-bottom: 28px;
+		font-family: "ProximaNova-Bold";
+		font-weight: 300;
 		font-size: 18px;
 		line-height: 22px;
 		letter-spacing: 0.26px;
