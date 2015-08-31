@@ -360,7 +360,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container order">
 			<div class="b-wrap clearfix">
-				<form action="#">
+				<form action="pay.php">
 				<div class="order-item">
 					<h3><span class="title">Ваши данные:</span></h3>
 					<div class="input-cont clearfix">
