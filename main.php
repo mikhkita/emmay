@@ -344,12 +344,9 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-container structure">
 			<div class="b-wrap clearfix">
 				<div class="b-aside">
-					<div class="b-security">
-						Бесплатно поменяем<br/>
-						непонравившийся букет.<br/>
-						Просто сообщите нам об<br/>
-						этом в течении 24 часов.
-					</div>
+					<h1>
+						Доставка цветов и заказ букетов в Городе
+					</h1>
 					<div class="b-filters">
 						<form action="ajax/filter.php" id="filter-form">
 						<input type="hidden" name="page" value="1">
