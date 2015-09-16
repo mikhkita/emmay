@@ -366,12 +366,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<div class="input-cont clearfix">
 						<label class="left">Как вас зовут?</label>
 						<input class="right" type="text" name="name">
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+						
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Ваш телефон*</label>
 						<input class="right phone" type="text" name="phone" required>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+						<div class="tooltip email-tooltip">Вы можете оформить анонимную доставку. Напишите об этом в комментарии к заказу</div>
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">E-mail*</label>
@@ -392,12 +392,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<div class="input-cont clearfix">
 						<label class="left">Имя и фамилия*</label>
 						<input class="right" type="text" name="name2" required>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+						
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Телефон*</label>
 						<input class="right phone" type="text" name="phone2" required>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+						
 					</div>
 				</div>
 				<div class="order-item">
@@ -406,12 +406,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<label class="left">Адрес: Москва</label>
 						<textarea class="right" name="city"></textarea>
 						<a class="city fancy" href="#" data-block="#b-city">Изменить город</a>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+						<div class="tooltip email-tooltip">Если вы не знаете точный адрес, или не уверены что получатель будет на месте, мы можем позвонить и согласовать получение заказа и не скажем что это цветы. Доставка в удалённые районы оплачивается дополнительно.</div>
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Дата доставки</label>
 						<input class="date right" type="text" name="date" id="datepicker" value="">
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+						
 					</div>
 					<div class="input-cont clearfix">
 						<label class="left">Время</label>
@@ -427,7 +427,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<div class="input-cont clearfix">
 						<label class="left">Комментарий</label>
 						<textarea class="right" name="city"></textarea>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
+						
 					</div>
 				</div>
 				<div class="total right">

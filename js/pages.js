@@ -321,7 +321,6 @@
                 url: "ajax/promo-code.php",
                 data:  $("#promo-code").serialize(),
                 success: function(msg){
-                    alert(msg);
                     $("#promo-code").removeClass("error valid");
                     if(msg == '1') {
                         $("#promo-code").addClass("valid");
@@ -429,10 +428,10 @@
     });
 
     $(".input-cont input,.input-cont textarea").focus(function(){   
-        $(this).closest(".input-cont").find(".email-tooltip").show();
+        $(this).closest(".input-cont").find(".email-tooltip").fadeIn();
     });
     $(".input-cont input,.input-cont textarea").blur(function() {
-        $(".input-cont .email-tooltip:visible").hide();
+        $(".input-cont .email-tooltip:visible").fadeOut();
     });
 
     $("input[name='self']").change(function(){

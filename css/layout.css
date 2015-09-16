@@ -223,7 +223,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	display: none;
 }
 
-input:disabled {
+.input-cont input:disabled {
 	background: #eee!important;
     cursor: default!important;
 }
