@@ -144,6 +144,11 @@ textarea:-moz-placeholder {
 	color: #A0A0A0;
 	font-weight: 400;
 }
+input[placeholder]          {text-overflow:ellipsis;}
+input::-moz-placeholder     {text-overflow:ellipsis;} 
+input:-moz-placeholder      {text-overflow:ellipsis;} 
+input:-ms-input-placeholder {text-overflow:ellipsis;}    
+
 .input-cont input[type=number]::-webkit-textfield-decoration-container { }
 .input-cont input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -189,6 +194,15 @@ textarea:-moz-placeholder {
   	background-position-y: 55%;
   	font-size: 15px;
 }
+.input-cont p.select-tooltip{
+	width: 225px;
+	color: #9C9C9C;
+	display: none;
+} 
+.input-cont .select-tooltip{
+	margin-left: 15px;
+	width: 225px;
+}    
 .tooltip {
 	position: absolute;
 	font-size: 14px;
@@ -203,10 +217,16 @@ textarea:-moz-placeholder {
 	
 }
 .email-tooltip {
-	right: -235px;
+	left: 672px;
 	bottom: 0;
+	width: 215px;
+	display: none;
 }
 
+input:disabled {
+	background: #eee!important;
+    cursor: default!important;
+}
 .fancybox-close {
 	width: 17px;
 	height: 18px;
@@ -331,6 +351,12 @@ textarea:-moz-placeholder {
 		text-align: left;
 		margin-bottom: 15px;
 	}
+#ui-datepicker-div {
+	z-index: 100 !important;
+}
+.text-block {
+
+}
 .b-city {
 	width: 540px;
 }
@@ -405,10 +431,11 @@ textarea:-moz-placeholder {
 		padding: 10px 32px;
 	}	
 		.b-city .show-btn a{
-    		font-size: 15px;
+    		font-size: 14px;
 			color: #2DA73D;
 		    border-bottom: 1px dotted #2DA73D;
 		    text-decoration: none;
+		    display: block;
 		}
 		.b-city .show-btn a:hover{
 			border-bottom: 1px dotted transparent;
@@ -3098,9 +3125,7 @@ textarea:-moz-placeholder {
 					width: 225px;
 					background-position-x: 93%;
 				}
-				.order .b-wrap .order-item .input-cont select.time {
-					margin-left: 131px;
-				}
+
 			.order .b-wrap .order-item .check-cont {
 				margin-bottom: 10px;
 				margin-left: 187px;
@@ -3511,6 +3536,177 @@ textarea:-moz-placeholder {
 	.email-tooltip{
 		display: none;
 	}
+}
+
+.yamme-text-block {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+	line-height: 20px;
+    color: #444;
+    background-color: #fff;
+    letter-spacing: normal;
+    padding-bottom: 40px;
+}
+.yamme-text-block a {
+    background: 0 0;
+    color: #47669E;
+    text-decoration: underline;
+}
+.yamme-text-block a:hover {
+    text-decoration: none;
+}
+
+.yamme-text-block b, .yamme-text-block strong {
+    font-weight: 700;
+}
+.yamme-text-block h1 {
+    margin-bottom: .8em;
+}
+.yamme-text-block img {
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.yamme-text-block .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.yamme-text-block .img-mvertical {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.yamme-text-block .img-rounded {
+    border-radius: 6px;
+}
+.yamme-text-block .img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+.yamme-text-block .img-circle {
+    border-radius: 50%}
+.yamme-text-block hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+.yamme-text-block table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.yamme-text-block td, .yamme-text-block th {
+    padding: 0;
+}
+.yamme-text-block *, .yamme-text-block :after, .yamme-text-block :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.yamme-text-block hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.yamme-text-block .h1, .yamme-text-block .h2, .yamme-text-block .h3, .yamme-text-block .h4, .yamme-text-block .h5, .yamme-text-block .h6, .yamme-text-block h1, .yamme-text-block h2, .yamme-text-block h3, .yamme-text-block h4, .yamme-text-block h5, .yamme-text-block h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: normal!important;
+    color: inherit;
+}
+.yamme-text-block .h1 .small, .yamme-text-block .h1 small, .yamme-text-block .h2 .small, .yamme-text-block .h2 small, .yamme-text-block .h3 .small, .yamme-text-block .h3 small, .yamme-text-block .h4 .small, .yamme-text-block .h4 small, .yamme-text-block .h5 .small, .yamme-text-block .h5 small, .yamme-text-block .h6 .small, .yamme-text-block .h6 small, .yamme-text-block h1 .small, .yamme-text-block h1 small, .yamme-text-block h2 .small, .yamme-text-block h2 small, .yamme-text-block h3 .small, .yamme-text-block h3 small, .yamme-text-block h4 .small, .yamme-text-block h4 small, .yamme-text-block h5 .small, .yamme-text-block h5 small, .yamme-text-block h6 .small, .yamme-text-block h6 small {
+    font-weight: 400;
+    line-height: 1;
+    color: #999;
+}
+.yamme-text-block .h1, .yamme-text-block .h2, .yamme-text-block .h3, .yamme-text-block h1, .yamme-text-block h2, .yamme-text-block h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.yamme-text-block .h1 .small, .yamme-text-block .h1 small, .yamme-text-block .h2 .small, .yamme-text-block .h2 small, .yamme-text-block .h3 .small, .yamme-text-block .h3 small, .yamme-text-block h1 .small, .yamme-text-block h1 small, .yamme-text-block h2 .small, .yamme-text-block h2 small, .yamme-text-block h3 .small, .yamme-text-block h3 small {
+    font-size: 65%}
+.yamme-text-block .h4, .yamme-text-block .h5, .yamme-text-block .h6, .yamme-text-block h4, .yamme-text-block h5, .yamme-text-block h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.yamme-text-block .h4 .small, .yamme-text-block .h4 small, .yamme-text-block .h5 .small, .yamme-text-block .h5 small, .yamme-text-block .h6 .small, .yamme-text-block .h6 small, .yamme-text-block h4 .small, .yamme-text-block h4 small, .yamme-text-block h5 .small, .yamme-text-block h5 small, .yamme-text-block h6 .small, .yamme-text-block h6 small {
+    font-size: 75%}
+.yamme-text-block .h1, .yamme-text-block h1 {
+    font-size: 33px;
+}
+.yamme-text-block .h2, .yamme-text-block h2 {
+    font-size: 28px;
+}
+.yamme-text-block .h3, .yamme-text-block h3 {
+    font-size: 24px;
+}
+.yamme-text-block .h4, .yamme-text-block h4 {
+    font-size: 18px;
+}
+.yamme-text-block .h5, .yamme-text-block h5 {
+    font-size: 14px;
+}
+.yamme-text-block .h6, .yamme-text-block h6 {
+    font-size: 12px;
+}
+.yamme-text-block p {
+    margin: 0 0 10px;
+}
+.yamme-text-block .small, .yamme-text-block small {
+    font-size: 85%}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+.yamme-text-block ol, .yamme-text-block ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.yamme-text-block ol ol, .yamme-text-block ol ul, .yamme-text-block ul ol, .yamme-text-block ul ul {
+    margin-bottom: 0;
+}
+.yamme-text-block .list-unstyled {
+    padding-left: 0!important;
+    list-style: none!important;
+}
+.yamme-text-block .list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}
+.yamme-text-block .list-inline>li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.yamme-text-block .center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:10px; 
+    margin-bottom:10px; 
+    text-align: center;
 }
 
 @media screen and (max-width: 1230px){

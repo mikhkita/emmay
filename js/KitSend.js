@@ -31,7 +31,7 @@ $(document).ready(function(){
 			$(this).find("input.phone").mask(tePhone,{placeholder:"_"});
 		}
 		$("input[type=text]").blur(function(){
-			if((!$(this).prop("required") && $(this).val()=="") || $(this).attr("id")=="promo-code") {
+			if((!$(this).prop("required") && $(this).val()=="") || $(this).attr("id")=="promo-code" || $(this).hasClass("countdate")) {
 				$(this).removeClass("error valid");
 			}	
 		});

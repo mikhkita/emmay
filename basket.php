@@ -382,7 +382,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					   		<td>
 					   			<div class="count-cont clearfix">
 									<span class="minus left" onselectstart="return false;"></span>	
-									<input class="left count" name="count1" maxlength="3" value="1">
+									<input class="left count" type="text" name="count1" maxlength="3" value="1">
 									<span class="plus right" onselectstart="return false;"></span>
 								</div>
 					   		</td>
@@ -401,7 +401,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					   		<td>
 					   			<div class="count-cont clearfix">
 									<span class="minus left" onselectstart="return false;"></span>	
-									<input class="left count" name="count2" maxlength="3" value="1">
+									<input class="left count" type="text" name="count2" maxlength="3" value="1">
 									<span class="plus right" onselectstart="return false;"></span>
 								</div>
 					   		</td>
@@ -420,7 +420,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					   		<td>
 					   			<div class="count-cont clearfix">
 									<span class="minus left" onselectstart="return false;"></span>	
-									<input class="left count" name="count3" maxlength="3" value="1">
+									<input class="left count" type="text" name="count3" maxlength="3" value="1">
 									<span class="plus right" onselectstart="return false;"></span>
 								</div>
 					   		</td>

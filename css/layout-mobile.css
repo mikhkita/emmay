@@ -6,9 +6,9 @@ html, body {
 	line-height: 42px;
 }	
 
-input, textarea {
+input, textarea, select{
     font-family: "ProximaNova-Bold";
-    font-size: 28px;
+    font-size: 28px !important;
     line-height: 40px;
 }
 
@@ -124,9 +124,16 @@ a
 			    font-size: 28px;
 			    margin-top: 21px;
 			}
-			.input-cont input[type=text] {
+			.input-cont input[type=text],.input-cont select {
 			    width: 375px;
 			    padding: 15px 30px 13px 15px;
+			}
+			.input-cont .email-tooltip {
+				display: none !important;
+			}
+			.input-cont p.select-tooltip {
+				font-size: 19px;
+    			line-height: 23px;
 			}
 			.b-popup .b-text .btn-g{
 				margin-top: 10px;

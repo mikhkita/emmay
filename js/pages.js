@@ -233,7 +233,7 @@
             $(".city-list").addClass("overflow");
             $("#show-btn").text("Скрыть");
         }
-        
+        return false;
     });
 
     var suvlakSide = $('.suvlak-side');
@@ -334,19 +334,11 @@
         }
     });
    
-    
-    if($('#datepicker').length) {
-        $('#datepicker').appendDtpicker({
-            "dateOnly": true,
-            "locale": "ru",
-            "calendarMouseScroll": false,
-            "futureOnly": true,
-            "firstDayOfWeek": 1,
-            "closeOnSelected" : true,
-            "autodateOnStart": false
-            
-        });
-    }
+    $( "#datepicker" ).datepicker({
+        onClose: function() {
+            $( "#datepicker" ).valid();
+        }
+    }).datepicker( $.datepicker.regional[ "ru" ] );
 
     function filter_ajax(first) {
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
@@ -420,10 +412,39 @@
         return false;
     });
 
+    function select_tooltip() {
+        for (var i = 0; i <= $("#time-select option").length; i++) {
+            if($("#time-select option").eq(i).prop("selected")) {
+                $("#select-tooltip-2").val("").removeClass("error valid");
+                $(".select-tooltip:visible").hide();
+                $("#select-tooltip-"+i).show();
+            } 
+        };     
+    }
+
+    select_tooltip();
+
     $("#time-select").change(function(){ 
-        if($("#time-select option").eq(1).prop("selected")) $("#time-detail").hide().val("").removeClass("error valid"); else $("#time-detail").show();
+        select_tooltip();
     });
 
+    $(".input-cont input,.input-cont textarea").focus(function(){   
+        $(this).closest(".input-cont").find(".email-tooltip").show();
+    });
+    $(".input-cont input,.input-cont textarea").blur(function() {
+        $(".input-cont .email-tooltip:visible").hide();
+    });
+
+    $("input[name='self']").change(function(){
+        if($(this).prop("checked")){
+            $("input[name='name2'],input[name='phone2']").val("").removeClass("valid error").prop("disabled",true);
+        } else {
+            $("input[name='name2'],input[name='phone2']").prop("disabled",false);
+        }
+        
+    });
+
+    
     
 })(jQuery, jQuery(document), jQuery(window));
 

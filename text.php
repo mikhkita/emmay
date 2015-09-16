@@ -22,7 +22,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />		
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />	
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -340,114 +340,43 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</ul>
 			</div>
 		</div>
-		<div class="b-container payment-nav">
-			<div class="b-wrap clearfix">
-				<div class="b-payment-nav-cont step-2">
-					<p class="clearfix">
-						<a href="basket.php"><span class="step-num">1</span>
-						<span class="step-title">Корзина</span></a>
-					</p>
-					<p class="clearfix">
-						<span class="step-num">2</span>
-						<span class="step-title">Оформление</span>
-					</p>
-					<p class="clearfix">
-						<span class="step-num">3</span>
-						<span class="step-title">Оплата</span>
-					</p>
+
+		<div class="b-container">
+			<div class="b-wrap clearfix">		
+				<div class="yamme-text-block">
+				    <h1>Как сохранить цветы свежими</h1>
+				    <p>Итак, <b>вам подарили</b> <a href="#">букет из роз</a> и вы хотите сохранить их свежесть как можно дольше. Ниже представлены основные способы сохранить свежесть роз как можно дольше:</p>
+				    <p>Роза – капризный цветок, она не любит соседства с другими растениями. Что продлить ее жизнь, необходимо убрать из букета все прочие цветы и веточки и освободить от упаковки.</p>
+				    <img src="i/t/item-1.jpg" class="center-block" alt="">
+				    <p>Обрезать стебли роз необходимо по косой с помощью острой бритвы, ножа, или секатора. Срез нужно делать обязательно под водой, в этом случае канальца, по которым цветок пьет воду, не забьются воздушными пробками.</p>
+				    <div class="center-block">
+				        <img src="i/t/item-1.jpg" alt="">
+				       <img src="i/t/item-1.jpg" alt="">
+				    </div>
+				    <p>Чтобы сохранить цветок, нужно «распушить» его ножом, так поверхность соприкосновения с водой будет больше.</p>
+				    <div class="center-block">
+				       <img src="i/t/item-1.jpg" alt="">
+				       <img src="i/t/item-1.jpg" alt="">
+				       <img src="i/t/item-1.jpg" alt="">
+				    </div>
+				    <p>Вместо ножа можно использовать молоток для того, чтобы расплющить стебель.</p>
+				    <div class="center-block">
+				       <img src="i/t/item-1.jpg" alt="">
+				      <img src="i/t/item-1.jpg" alt="">
+				    </div> 
+				    <p>Оборвите, или обрежьте листья так, чтобы они не соприкасались с водой. Это предпринимается, чтобы избежать процессов гниения в воде.</p>
+				    <img src="i/t/item-1.jpg" class="center-block" alt="">
+				    <p>Для сохранения свежести розы, их можно поместить в специальный раствор, который продаётся в цветочных магазинах. Но он немного отдает хлоркой, поэтому в домашних условиях лучше добавить в воду сахар: на 1 литр воды – 30 грамм.</p>
+				    <img src="i/t/item-1.jpg" class="center-block" alt="">
+				    <p>Для предотвращения гниения в воду также можно добавить каплю моющего средства, розы к химии устойчивы, но вода будет обеззаражена от бактерий. Также для этих целей можно положить на дно вазы серебряное изделие.</p>
+				    <p>Воду, в которой стоят розы, необходимо менять каждый день. При этом косой срез также необходимо обновлять ежедневно.</p>
+				    <p>Полезными для цветов являются водные ванны и опрыскивания, особенно если в помещении работают отопительные приборы, делающие воздух сухим. Летом можно опустить в вазу с розами несколько кубиков льда.</p>
+				    <p>Нельзя оставлять рядом с розами свежие фрукты. Плоды выделяют вещество, усиливающее созревание, оно заставит цветы скинуть лепестки и ускорить процесс созревания семян.</p>
+				    <p>Так же нельзя ставить розы близко с источниками тепла: батареи, плиты, обогреватели.</p>
+				    <p>Следуя этой инструкции вы легко сохраните розы на 7 дней, а возможно и на 10 – 15 дней.</p>
 				</div>
 			</div>
-		</div>
-		<div class="b-container order">
-			<div class="b-wrap clearfix">
-				<form action="pay.php">
-				<div class="order-item">
-					<h3><span class="title">Ваши данные:</span></h3>
-					<div class="input-cont clearfix">
-						<label class="left">Как вас зовут?</label>
-						<input class="right" type="text" name="name">
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-					<div class="input-cont clearfix">
-						<label class="left">Ваш телефон*</label>
-						<input class="right phone" type="text" name="phone" required>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-					<div class="input-cont clearfix">
-						<label class="left">E-mail*</label>
-						<input class="right" type="text" name="email" placeholder="primer@mail.ru" required>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-					<div class="check-cont clearfix">
-						<input type="checkbox" id="self-1" name="self" value="self">
-                        <label class="clearfix" for="self-1">
-                            <span class="checked"></span>
-                            <span class="default"></span>   
-                            <h4>Я - заказчик, получаю букет сам</h4>
-                        </label>
-					</div>
-				</div>
-				<div class="order-item">
-					<h3><span class="title">ПОЛУЧАТЕЛЬ:</span></h3>
-					<div class="input-cont clearfix">
-						<label class="left">Имя и фамилия*</label>
-						<input class="right" type="text" name="name2" required>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-					<div class="input-cont clearfix">
-						<label class="left">Телефон*</label>
-						<input class="right phone" type="text" name="phone2" required>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-				</div>
-				<div class="order-item">
-					<h3><span class="title">О доставке:</span></h3>
-					<div class="input-cont clearfix">
-						<label class="left">Адрес: Москва</label>
-						<textarea class="right" name="city"></textarea>
-						<a class="city fancy" href="#" data-block="#b-city">Изменить город</a>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-					<div class="input-cont clearfix">
-						<label class="left">Дата доставки</label>
-						<input class="date right" type="text" name="date" id="datepicker" value="">
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-					<div class="input-cont clearfix">
-						<label class="left">Время</label>
-						<p class="select-tooltip right" id="select-tooltip-0">Доставка в течение 2-3 часов с момента оплаты</p>
-						<p class="select-tooltip right" id="select-tooltip-1">Мы согласуем время с получателем (и не скажем про цветы)</p>
-						<input class="select-tooltip time right" type="text" name="time" placeholder="до 11, после 14, утром" id="select-tooltip-2">
-						<select class="time right" name="time-type" id="time-select">
-							<option selected value="В ближайщее время">В ближайщее время</option>
-							<option value="Уточнить у получателя">Уточнить у получателя</option>
-							<option value="Указать время">Указать время</option>
-						</select>
-					</div>
-					<div class="input-cont clearfix">
-						<label class="left">Комментарий</label>
-						<textarea class="right" name="city"></textarea>
-						<div class="tooltip email-tooltip">Почта используется только для подтверждения заказа.</div>
-					</div>
-				</div>
-				<div class="total right">
-						<div class="clearfix">
-							<div class="left">
-								<h4>Сумма заказа <span>2540<span class="rubl">руб.</span></span></h4>
-								<h5>из них за доставку <span>400<span class="rubl">руб.</span></span></h5>
-							</div>
-							<input type="submit" class="btn btn-g right b-issue" data-width="768" data-value="Оформить" value="Перейти к оформлению">
-							<div class="left">
-								<h3>При заказе в отдаленные районы стоимость доставки уточните у менеджера</h3>
-								<a href="basket.php">Вернуться в корзину</a>
-							</div>
-						</div>
-						<h6>Нужна помощь? Позвоните нам! 8 (800) 775-93-80</h6>
-					</div>
-				</form>
-			</div>
-		</div>
-		
+		</div>		
 	</div>
 </div>
 <div class="all-overlay"></div>
@@ -663,7 +592,6 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/datepicker-ru.js"></script>
 <script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
