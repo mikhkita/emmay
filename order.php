@@ -419,7 +419,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<p class="select-tooltip right" id="select-tooltip-1">Мы согласуем время с получателем (и не скажем про цветы)</p>
 						<input class="select-tooltip time right" type="text" name="time" placeholder="до 11, после 14, утром" id="select-tooltip-2">
 						<select class="time right" name="time-type" id="time-select">
-							<option selected value="В ближайщее время">В ближайщее время</option>
+							<option selected value="В ближайщее время">В ближайшее время</option>
 							<option value="Уточнить у получателя">Уточнить у получателя</option>
 							<option value="Указать время">Указать время</option>
 						</select>
