@@ -20,9 +20,10 @@
             	progress.end(function(){
             		$(".ajax-container").html(msg);		
             		sliders_init();
-            		history.replaceState(null,null,$("b-container.item").attr("data-href"));
+            		history.pushState(null,null,this.href);
+            		history.replaceState(null,null,$(".b-container.item").attr("data-href"));
                 });
-
+            	
             }
         });
 

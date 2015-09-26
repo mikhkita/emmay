@@ -1,4 +1,4 @@
-﻿<div class="b-container item" data-href="http://ya.git.paraweb.me/new/item1.php">
+﻿<div class="b-container item" data-href="/new/item1.php">
 	<div class="b-wrap clearfix">
 		<div class="b-item-left">
 			<div class="b-breadcrumbs">
