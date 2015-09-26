@@ -1,5 +1,6 @@
+var progress;
 (function ($, $document, $window) {
-    var progress = new KitProgress("#f98411",2);
+    progress = new KitProgress("#f98411",2);
 
     progress.endDuration = 0.1;
 

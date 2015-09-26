@@ -1,6 +1,4 @@
 (function ($, $document, $window) {
-	var progress = new KitProgress("#f98411",2),rsCase1,rsCase2;
-    progress.endDuration = 0.1;
     $("body").on('click',".b-item-gallery-arrow.right-arrow",function(){
     	$(".rsThumbsArrowRight").trigger("click"); return false;
     });
