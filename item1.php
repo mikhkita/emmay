@@ -388,7 +388,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<div class="b-item-special">
 								<a href="#" class="item-special-show fancy" data-block="#b-text-popup">Специальная гарантия</a>
 							</div>
-							<form action="/ajax/detail.php" method="POST" id="item-form">
+							<form action="ajax/detail.php" method="POST" id="item-form">
 							<div class="b-item-choose">
 								<div class="b-item-colors b-radio clearfix">
 									<label for="item-red" class="color-pic first active">
