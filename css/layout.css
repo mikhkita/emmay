@@ -2152,6 +2152,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				font-family: "ProximaNova-Bold";
 				padding-top: 2px;
 			}
+			.b-item-description input[type="radio"] {
+				display: none;
+			}
 			.b-item-cost{
 				font-size: 48px;
 				color: #444444;
@@ -2218,6 +2221,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 						text-decoration: none;
 						color: #444444;
 						position: relative;
+						cursor: pointer;
 					}
 						.b-item-colors .color-pic:before{
 							position: absolute;
@@ -2232,6 +2236,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 						}
 						.b-item-colors .color-pic.active:before{
 							background-color: #38BB49;
+							cursor: default;
 						}
 					.b-item-colors .color-pic:last-child{
 						border-right: 0px;
@@ -2251,6 +2256,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 						margin-bottom: 14px;
 						position: relative;
 						cursor: pointer;
+						display: block;
 					}
 						.b-item-capacity .capacity-item:before{
 							position: absolute;

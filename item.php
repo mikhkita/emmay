@@ -340,6 +340,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</ul>
 			</div>
 		</div>
+		<div class="ajax-container">
 		<div class="b-container item">
 			<div class="b-wrap clearfix">
 				<div class="b-item-left">
@@ -387,42 +388,59 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<div class="b-item-special">
 								<a href="#" class="item-special-show fancy" data-block="#b-text-popup">Специальная гарантия</a>
 							</div>
+							<form action="#" method="POST" id="item-form">
 							<div class="b-item-choose">
-								<div class="b-item-colors clearfix">
-									<a href="#" class="color-pic first">Красные</a>
-									<a href="#" class="color-pic">Белые</a>
-									<a href="#" class="color-pic">Желтые</a>
-									<span href="#" class="color-pic active last">Розовые</span>
-									<a href="#" class="color-pic first">Желтые</a>
-									<a href="#" class="color-pic last">Желтые</a>
+								<div class="b-item-colors b-radio clearfix">
+									<label for="item-red" class="color-pic first active">
+										Красные
+										<input id="item-red" type="radio" name="item-color" value="Красные" checked>
+									</label>
+									<label for="item-white" class="color-pic">
+										Белые
+										<input id="item-white" type="radio" name="item-color" value="Белые">
+									</label>
+									<label for="item-yellow" class="color-pic">
+										Желтые
+										<input id="item-yellow" type="radio" name="item-color" value="Желтые">
+									</label>
+									<label for="item-pink" class="color-pic last">
+										Розовые
+										<input id="item-pink" type="radio" name="item-color" value="Розовые">
+									</label>
 								</div>
 								<div class="b-item-capacity b-radio">
-									<p class="capacity-item active clearfix">
+									<label for="item-12" class="capacity-item active clearfix">
 										<span class="capacity-count">12 роз</span>
 										<span class="capacity-price"><b>2500</b> руб</span>
-									</p>
-									<p class="capacity-item clearfix">
+										<input id="item-12" type="radio" name="item-count" value="12" checked>
+									</label>
+									<label  for="item-15" class="capacity-item clearfix">
 										<span class="capacity-count">15 роз</span>
 										<span class="capacity-price"><b>2900</b> руб</span>
-									</p>
-									<p class="capacity-item clearfix">
+										<input id="item-15" type="radio" name="item-count" value="15">
+									</label>
+									<label for="item-21" class="capacity-item clearfix">
 										<span class="capacity-count">21 роз</span>
 										<span class="capacity-price"><b>3000</b> руб</span>
-									</p>
-									<p class="capacity-item clearfix">
+										<input id="item-21" type="radio" name="item-count" value="21">
+									</label>
+									<label for="item-51" class="capacity-item clearfix">
 										<span class="capacity-count">51 роз</span>
 										<span class="capacity-price"><b>5000</b> руб</span>
-									</p>
-									<p class="capacity-item clearfix">
+										<input id="item-51" type="radio" name="item-count" value="51">
+									</label>
+									<label for="item-101" class="capacity-item clearfix">
 										<span class="capacity-count">101 роз</span>
 										<span class="capacity-price"><b>11100</b> руб</span>
-									</p>
+										<input id="item-101" type="radio" name="item-count" value="101">
+									</label>
 								</div>
 								<div class="b-item-buy">
 									<a href="basket.php" class="btn btn-g"><span>КУПИТЬ</span></a>
 									<a href="basket.php" class="buy-one-click fancy" data-block="#buy-one-click"><span>Покупка в один клик</span></a>
 								</div>
 							</div>
+							</form>
 						</div>
 						<div class="b-paymethods clearfix">
 							<span>Принимаем к оплате:</span>
@@ -584,6 +602,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</ul>
 			    </div>
 		    </div>
+		</div>
 		</div>
 	</div>
 </div>
@@ -799,6 +818,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/history.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>

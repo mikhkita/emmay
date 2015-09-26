@@ -165,10 +165,10 @@
         $(this).find(".b-submenu").stop().slideUp(250).removeClass("opened");
     });
 
-    $(".b-radio>*").click(function(){
+    $("body").on('click',".b-radio>*",function(){
         $(this).parents(".b-radio").find(".active").removeClass("active");
         $(this).addClass("active");
-        return false;
+        // return false;
     });
 
     $('.count').bind("change keyup input click", function() {
@@ -443,6 +443,7 @@
         
     });
 
+    
     
     
 })(jQuery, jQuery(document), jQuery(window));
