@@ -1,0 +1,262 @@
+﻿<div class="b-container item">
+	<div class="b-wrap clearfix">
+		<div class="b-item-left">
+			<div class="b-breadcrumbs">
+				<ul class="clearfix">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Цветы</a></li>
+					<li><a href="#">Розы</a></li>
+				</ul>
+			</div>
+			<div class="b-item-gallery">
+				<div class="b-item-gallery-arrow left-arrow"><a href="#"></a></div>
+				<div class="b-item-gallery-arrow right-arrow"><a href="#"></a></div>
+				<div class="royalSlider rsDefault">
+				   	<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
+					<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+			    </div>
+			</div>
+		</div>
+		<div class="b-item-right">
+			<div class="b-item-description">
+				<div class="b-item-desc-wrap">
+					<span class="item-articul">Артикул: №016</span>
+					<h3>ВЕСЕННЕЕ НАСТРОЕНИЕ</h3>
+					<div class="b-item-cost clearfix">
+						<h4>2600</h4><span class="rub">руб.</span>
+					</div>
+					<div class="b-item-delivery">
+						<span>Доставка по городу Москва <b>400</b> руб.</span>
+					</div>
+					<div class="b-item-special">
+						<a href="#" class="item-special-show fancy" data-block="#b-text-popup">Специальная гарантия</a>
+					</div>
+					<form action="/ajax/detail.php" method="POST" id="item-form">
+					<div class="b-item-choose">
+						<div class="b-item-colors b-radio clearfix">
+							<label for="item-red" class="color-pic first active">
+								Красные
+								<input id="item-red" type="radio" name="item-color" value="Красные" checked>
+							</label>
+							<label for="item-white" class="color-pic">
+								Белые
+								<input id="item-white" type="radio" name="item-color" value="Белые">
+							</label>
+							<label for="item-yellow" class="color-pic">
+								Желтые
+								<input id="item-yellow" type="radio" name="item-color" value="Желтые">
+							</label>
+							<label for="item-pink" class="color-pic last">
+								Розовые
+								<input id="item-pink" type="radio" name="item-color" value="Розовые">
+							</label>
+						</div>
+						<div class="b-item-capacity b-radio">
+							<label for="item-12" class="capacity-item active clearfix">
+								<span class="capacity-count">12 роз</span>
+								<span class="capacity-price"><b>2500</b> руб</span>
+								<input id="item-12" type="radio" name="item-count" value="12" checked>
+							</label>
+							<label  for="item-15" class="capacity-item clearfix">
+								<span class="capacity-count">15 роз</span>
+								<span class="capacity-price"><b>2900</b> руб</span>
+								<input id="item-15" type="radio" name="item-count" value="15">
+							</label>
+							<label for="item-21" class="capacity-item clearfix">
+								<span class="capacity-count">21 роз</span>
+								<span class="capacity-price"><b>3000</b> руб</span>
+								<input id="item-21" type="radio" name="item-count" value="21">
+							</label>
+							<label for="item-51" class="capacity-item clearfix">
+								<span class="capacity-count">51 роз</span>
+								<span class="capacity-price"><b>5000</b> руб</span>
+								<input id="item-51" type="radio" name="item-count" value="51">
+							</label>
+							<label for="item-101" class="capacity-item clearfix">
+								<span class="capacity-count">101 роз</span>
+								<span class="capacity-price"><b>11100</b> руб</span>
+								<input id="item-101" type="radio" name="item-count" value="101">
+							</label>
+						</div>
+						<div class="b-item-buy">
+							<a href="basket.php" class="btn btn-g"><span>КУПИТЬ</span></a>
+							<a href="basket.php" class="buy-one-click fancy" data-block="#buy-one-click"><span>Покупка в один клик</span></a>
+						</div>
+					</div>
+					</form>
+				</div>
+				<div class="b-paymethods clearfix">
+					<span>Принимаем к оплате:</span>
+					<ul class="b-payments clearfix">
+						<li class="vi"></li>
+						<li class="mc"></li>
+						<li class="sb"></li>
+						<li class="wm"></li>
+						<li class="yd"></li>
+						<li class="qw"></li>
+						<li class="hz"></li>
+						<li class="pp"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="b-item-about clearfix">
+				<div class="b-item-kit">
+					<h4>Состав букета:</h4>
+					<ul>
+						<li>15 роз</li>
+						<li>Лента в цвет букета</li>
+					</ul>
+					<div class="b-share-info">
+						
+					</div>
+				</div>
+				<div class="b-item-info">
+					<h4>Описание:</h4>
+					<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
+				</div>						
+			</div>
+			<!-- <div class="b-item-reviews clearfix">
+				<div class="b-review-item">
+		        	<p>Большое спасибо!<br/>
+					Цветы отличные,девушка моя была приятно удивлена. Отправлял из Сургута в Севастополь. Отдельное спасибо менеджеру.	Цветы отличные,девушка моя была приятно удивлена. Отправлял из Сургута в Севастополь. Отдельное спасибо менеджеру.</p>
+
+					<p class="b-review-from">22 Апреля 2015, отзыв от Виталий (Доставка 22.04.15)
+						<br/>К букету: <a href="#">Сюрприз из 9 роз</a></p>
+		        </div>
+			</div> -->
+		</div>
+	</div>
+</div>
+<div class="b-catalog-relative">
+	<h3>ПОХОЖИЕ БУКЕТЫ</h3>
+	<div class="royalSlider rsDefault">
+	    <div class="rsContent">
+	        <ul class="b-catalog-list">
+				<li>
+					<div class="b-catalog-item clearfix">
+						<a href="#" class="b-cat-pic left">
+							<img alt="" src="i/t/t1.jpg" />
+						</a>
+						<div class="right">
+							<span class="b-catalog-list-title">Яркие краски (9 роз)</span>
+							<p>
+								Компактный букет из 9 ярких роз из 9 ярких роз
+							</p>
+							<div class="b-buy">
+								<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+								<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="b-catalog-item clearfix">
+						<a href="#" class="b-cat-pic left">
+							<img alt="" src="i/t/t1.jpg" />
+						</a>
+						<div class="right">
+							<span class="b-catalog-list-title">Яркие краски (9 роз)</span>
+							<p>
+								Компактный букет из 9 ярких роз
+							</p>
+							<div class="b-buy">
+								<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+								<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+	    </div>
+		<div class="rsContent">
+	        <ul class="b-catalog-list">
+				<li>
+					<div class="b-catalog-item clearfix">
+						<a href="#" class="b-cat-pic left">
+							<img alt="" src="i/t/t1.jpg" />
+						</a>
+						<div class="right">
+							<span class="b-catalog-list-title">Яркие краски (9 роз)</span>
+							<p>
+								Компактный букет из 9 ярких роз
+							</p>
+							<div class="b-buy">
+								<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+								<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="b-catalog-item clearfix">
+						<a href="#" class="b-cat-pic left">
+							<img alt="" src="i/t/t1.jpg" />
+						</a>
+						<div class="right">
+							<span class="b-catalog-list-title">Яркие краски (9 роз)</span>
+							<p>
+								Компактный букет из 9 ярких роз
+							</p>
+							<div class="b-buy">
+								<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+								<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+	    </div>
+		<div class="rsContent">
+	        <ul class="b-catalog-list">
+				<li>
+					<div class="b-catalog-item clearfix">
+						<a href="#" class="b-cat-pic left">
+							<img alt="" src="i/t/t1.jpg" />
+						</a>
+						<div class="right">
+							<span class="b-catalog-list-title">Яркие краски (9 роз)</span>
+							<p>
+								Компактный букет из 9 ярких роз
+							</p>
+							<div class="b-buy">
+								<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+								<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="b-catalog-item clearfix">
+						<a href="#" class="b-cat-pic left">
+							<img alt="" src="i/t/t1.jpg" />
+						</a>
+						<div class="right">
+							<span class="b-catalog-list-title">Яркие краски (9 роз)</span>
+							<p>
+								Компактный букет из 9 ярких роз
+							</p>
+							<div class="b-buy">
+								<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+								<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+	    </div>
+    </div>
+</div>
