@@ -18,10 +18,9 @@
             data:  $("#item-form").serialize(),
             success: function(msg){
             	progress.end(function(){
-            		$(".ajax-container").html(msg);			
+            		$(".ajax-container").html(msg);		
             		sliders_init();
-            		history.pushState(null,null,this.href);
-            		history.replaceState(null,null,"http://emmay:88/item1.php");
+            		history.replaceState(null,null,$("b-container.item").attr("data-href"));
                 });
 
             }
