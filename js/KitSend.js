@@ -23,13 +23,13 @@ $(document).ready(function(){
                 	date : false
             	},
 				email: 'email',
-				phone: 'customPhone',
-				phone2: 'customPhone'
+				phone: 'number'
+				// phone2: 'customPhone'
 			}
 		});
-		if( $(this).find("input.phone").length ){
-			$(this).find("input.phone").mask(tePhone,{placeholder:"_"});
-		}
+		// if( $(this).find("input.phone").length ){
+			// $(this).find("input.phone").mask(tePhone,{placeholder:"_"});
+		// }
 		$("input[type=text],textarea").blur(function(){
 			if((!$(this).prop("required") && $(this).val()=="") || $(this).attr("id")=="promo-code" || $(this).hasClass("count")) {
 				$(this).removeClass("error valid");
@@ -61,6 +61,8 @@ $(document).ready(function(){
 	         	}
 	      	},
 			beforeShow: function(){
+				$popup.find(".b-first-step").show();
+				$popup.find(".b-second-step, .b-third-step").hide();
 				$popup.find(".custom-field").remove();
 				if( $this.attr("data-value") ){
 					var name = getNextField($popup.find("form"));
@@ -125,6 +127,49 @@ $(document).ready(function(){
 	$(".fancy-img").fancybox({
 		padding : 0
 	});
+
+	$(".ajax-form").parents("form").submit(function(){
+        if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
+            var $this = $(this),
+                $thanks = $($this.attr("data-block"));
+
+            if( $this.find(".ajax-form").hasClass("blocked") ) return false;
+
+            if( $this.attr("data-beforeAjax") && customHandlers[$this.attr("data-beforeAjax")] ){
+                customHandlers[$this.attr("data-beforeAjax")]($this);
+            }
+
+            $this.find(".ajax-form").addClass("blocked");
+
+            $.ajax({
+                type: $(this).attr("method"),
+                url: $(this).attr("action"),
+                data:  $this.serialize(),
+                success: function(msg){
+                    var $form = $this,
+                        json = JSON.parse(msg);
+
+                    $form.find(".b-first-step").hide();
+
+                    $this.find(".ajax-form").removeClass("blocked");
+
+                    if( json.result == "success" ){
+                        if( json.number ) $form.find(".b-order-number").text(json.number);
+                        $form.find(".b-second-step").show();
+                    }else{
+                        $form.find(".b-third-step").show();
+                    }
+
+                    if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
+                        customHandlers[$this.attr("data-afterAjax")]($this);
+                    }
+
+                    $this.find("input[type=text],textarea").val("").removeClass("error").removeClass("valid");
+                },
+            });
+        }
+        return false;
+    });
 
 	$(".ajax").parents("form").submit(function(){
   		if( $(this).find("input.error,select.error,textarea.error").length == 0 ){

@@ -307,6 +307,25 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 						font-size: 28px;
 						line-height: 34px;
 					}
+					.b-popup .popup-desc .popup-text h5 span{
+						display: inline-block;
+						font-size: 20px;
+						margin-right: 5px;
+						color: #EC5973 !important;						
+						position: relative;
+					}
+					.b-popup .popup-desc .popup-text h5 span:after{
+							position: absolute;
+							content:'';
+							left: -4%;
+							top: -4%;
+							width: 108%;
+							height: 108%;
+							background-image: url('../i/trought.png');
+							background-position: center center;
+							background-size: 100% auto;
+							background-repeat: no-repeat;
+					}
 				.b-popup .popup-desc .popup-text h6{
 					font-size: 14px;
 					line-height: 16px;
@@ -3861,6 +3880,15 @@ h2.b-title {
 			font-weight: 500;
 			text-align: right;
 		}
+.b-second-step p{
+	font-size: 15px !important;
+	text-align: center !important;
+	line-height: 20px !important;
+}
+.b-popup .b-second-step h4{
+	color: #7C7C7C;
+    font-size: 22px;
+}
 @media screen and (max-width: 1230px){
 	.free-card
 	{

@@ -500,7 +500,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Компактный букет из 9 ярких роз из 9 ярких роз
 									</p>
 									<div class="b-buy">
-										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+										<p class="b-item-price"><small>2601</small><span>2600</span><span class="rub">руб.</span></p>
 										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
 									</div>
 								</div>
@@ -677,40 +677,58 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				<div class="left popup-text">
 					<h3>Букет из 11 красных роз</h3>
 					<h4>Букет в виде сердца.<br>Длина 50-70 см. Бутон 5-7 с...</h4>
-					<h5><b>2600</b> руб.</h5>
+					<h5><span>2601</span><b>2600</b> руб.</h5>
 					<h6>Доставка по городу Москва <span>400</span> руб.</h6>
 				</div>
 			</div>
-			<form action="kitsend.php" method="POST" id="b-form-1" data-block="#buy-one-click">
-				<p>Вы можете купить букет по телефону. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
-				<div class="clearfix input-cont">
-					<label class="left input-title" for="name-oneclick">Ваше имя:</label>
-					<input class="right" type="text" id="name-oneclick" name="name" required/>
+			<form action="ajax/ajax-form.php" method="POST" id="b-form-1" data-block="#buy-one-click">
+				<div class="b-first-step">
+					<p>Вы можете купить букет по телефону. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+					<div class="clearfix input-cont">
+						<label class="left input-title" for="name-oneclick">Ваше имя:</label>
+						<input class="right" type="text" id="name-oneclick" name="name" required/>
+					</div>
+					<div class="clearfix input-cont">
+						<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
+						<input class="right phone" type="text" id="tel-oneclick" name="phone" required/>
+					</div>
+					<input type="hidden" name="subject" value="Покупка в один клик"/>
+					<input type="submit" class="ajax-form btn btn-g" value="Заказать">
 				</div>
-				<div class="clearfix input-cont">
-					<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
-					<input class="right phone" type="text" id="tel-oneclick" name="phone" required/>
+				<div class="b-second-step">
+					<p>В ближайшее время менеджер свяжется с вами для подтверждения покупки и обсуждения условий доставки.</p>
+					<h4>Ваш номер заказа: <span class="b-order-number"></span></h4>
 				</div>
-				<input type="hidden" name="subject" value="Покупка в один клик"/>
-				<input type="submit" class="ajax btn btn-g" value="Заказать">
+				<div class="b-third-step">
+					<p>При оформлении заказ произошла ошибка, попробуйте позднее.</p>
+				</div>
 			</form>
 		</div>
 	</div>
 	<div id="b-callback">
 		<div class="for_all b-popup" >
 			<h3 class="popup-title">Заказать звонок</h3>
-			<form action="kitsend.php" method="POST" id="b-form-2" data-block="#b-callback">
-				<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
-				<div class="clearfix input-cont">
-					<label class="left input-title" for="name-callback">Ваше имя:</label>
-					<input class="right" type="text" id="name-callback" name="name" required/>
+			<form action="ajax/ajax-form.php" method="POST" id="b-form-2" data-block="#b-callback">
+				<div class="b-first-step">
+					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+					<div class="clearfix input-cont">
+						<label class="left input-title" for="name-callback">Ваше имя:</label>
+						<input class="right" type="text" id="name-callback" name="name" required/>
+					</div>
+					<div class="clearfix input-cont">
+						<label class="left input-title" for="tel-callback">Номер телефона:</label>
+						<input class="right phone" type="text" id="tel-callback" name="phone" required/>
+					</div>
+					<input type="hidden" name="subject" value="Обратный звонок"/>
+					<input type="submit" class="ajax-form btn btn-g" value="Заказать">
 				</div>
-				<div class="clearfix input-cont">
-					<label class="left input-title" for="tel-callback">Номер телефона:</label>
-					<input class="right phone" type="text" id="tel-callback" name="phone" required/>
+				<div class="b-second-step">
+					<p>В ближайшее время менеджер свяжется с вами. Спасибо!</p>
+					<a href='#' class="btn btn-g" onclick="$.fancybox.close(); return false;" >Закрыть</a>
 				</div>
-				<input type="hidden" name="subject" value="Обратный звонок"/>
-				<input type="submit" class="ajax btn btn-g" value="Заказать">
+				<div class="b-third-step">
+					<p>Произошла ошибка, попробуйте позднее.</p>
+				</div>
 			</form>
 		</div>
 	</div>
