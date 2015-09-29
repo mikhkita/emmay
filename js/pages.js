@@ -340,14 +340,15 @@ var progress;
         }
     }).datepicker( $.datepicker.regional[ "ru" ] );
 
-    function filter_ajax(first) {
+    function filter_ajax(first,filter_change,filter_url) {
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
         progress.start(1.5);
-
+        var filter_data = $("input[name=page]").serialize();
+        if(filter_change) filter_data = data+"&"+$("#filter-form").serialize();
         $.ajax({
             type: "POST",
-            url: $("#filter-form").attr("action"),
-            data:  $("#filter-form").serialize(),
+            url: filter_url,
+            data:  filter_data,
             beforeSend: function() {
                 $(".b-catalog-refresh").addClass("preloading").show();
                 if(first) {
@@ -359,10 +360,10 @@ var progress;
                 if( first ){
                     $(".b-catalog-list").fadeOut(300,function(){
                         $(".b-catalog-list").empty();
-                        generateList(first,msg);
+                        generateList(msg);
                     });
                 }else{
-                    generateList(first,msg);
+                    generateList(msg);
                 }
             },
             complete: function() {
@@ -372,7 +373,7 @@ var progress;
         });
     }
 
-    function generateList(first,msg){
+    function generateList(msg){
         var obj = jQuery.parseJSON( msg ),discount="",discount_val="",hit="",hit_val="",old_price="";
         
         if(obj.result == "success") {
@@ -402,13 +403,15 @@ var progress;
             $(".b-catalog-refresh").hide();
         }
     }
-
+    var filter_change = false;
     $(".b-filters input[type=radio]").change(function(){ 
-        filter_ajax(true);    
+        filter_change = true;
+        $("input[name=page]").val(1);
+        filter_ajax(true,filter_change,$("#filter-form").attr("action"));    
     });
     
-    $(".b-catalog-refresh").click(function(){
-        filter_ajax();
+    $(".b-more-items").click(function(){
+        filter_ajax(false,filter_change,$(this).attr("data-href"));
         return false;
     });
 
