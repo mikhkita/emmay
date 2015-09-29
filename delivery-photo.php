@@ -351,13 +351,17 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</ul>
 					</div>
 					<h2 class="b-title">Фото с доставок</h2>
-					<ul class="delivery-photo">
+					<ul class="delivery-photo append-to">
+						<li><img src="i/t/item-1.jpg"></li>
 						<li><img src="i/t/item-1.jpg"></li>
 						<li><img src="i/t/item-1.jpg"></li>
 						<li><img src="i/t/item-1.jpg"></li>
 						<li><img src="i/t/item-1.jpg"></li>
 						<li><img src="i/t/item-1.jpg"></li>
 					</ul>
+					<div class="b-page-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
+						<a href="#" class="b-more-items" data-last="2" data-href="ajax/delivery.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
+					</div>
 				</div>
 			</div>
 		</div>

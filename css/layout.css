@@ -3777,7 +3777,7 @@ h2.b-title {
 	    letter-spacing: normal!important;
 	    color: #47669E;
 	    margin-bottom: 10px;
-	    display: block;
+	    display: inline-block;
 	}
 	.article-cont h6,.article-cont h5{
 		color: #808080;
@@ -3792,7 +3792,7 @@ h2.b-title {
 		text-align: center;
 	}
 		.review .order-item form{
-			width: 650px;
+			width: 660px;
 			display: inline-block;
 			background-color: #f9f9f9!important;
 			border: 1px solid #F5F5F5;
@@ -3825,7 +3825,7 @@ h2.b-title {
 		margin-right: 0;
 	}
 	.delivery-photo li img {
-		max-width: 100%;
+		width: 100%;
 		border-radius: 5px;
 	}
 
