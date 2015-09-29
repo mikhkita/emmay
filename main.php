@@ -162,7 +162,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							</div>
 						</div>
 					</div>
-					<a href="#" class="b-topmenu-basket">
+					<a href="#" class="b-topmenu-basket empty">
 						<span class="b-top-basket-name">КОРЗИНА</span>
 						<span class="b-top-basket-count">4</span>
 					</a>
@@ -333,13 +333,13 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-container b-main-about">
 			<div class="b-wrap clearfix">			
 				<ul>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >О нас</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы оплаты</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы доставки</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Гарантии Yamme</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Свежие цветы</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Вопросы и ответы</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Возврат</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >О нас</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Способы оплаты</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Способы доставки</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Гарантии Yamme</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Свежие цветы</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Вопросы и ответы</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Возврат</a></li>
 				</ul>
 			</div>
 		</div>

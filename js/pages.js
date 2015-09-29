@@ -57,6 +57,7 @@ var progress;
         open = false;
 
     $("body").on('click',".b-topmenu-basket", function(){
+        if( $(this).hasClass("empty") ) return false;
         toggleCartMenu();
         return false;
     });

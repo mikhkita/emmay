@@ -949,6 +949,13 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			text-decoration: none !important;
 			background-color: #10a43b;
 		}
+		.b-topmenu-basket.empty {
+			cursor: default !important;
+		}
+		.b-topmenu-basket.empty:hover{
+			text-decoration: none !important;
+			background-color: #EC5973;
+		}
 		.b-top-basket-name
 		{
 			font-family: 'ProximaNova-Bold';
@@ -995,6 +1002,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			.b-topmenu-basket:hover .b-top-basket-count
 			{
 				color: #10a43b;
+			}
+			.b-topmenu-basket.empty:hover .b-top-basket-count{
+				color: #EC5973;
 			}
 .b-header
 {
@@ -1249,6 +1259,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				{
 					background-color: #1db847;
 				}
+				.b-navigation .affix .b-topmenu-basket.empty:hover{
+					background: #10a43b;
+				}
 		/* DT */
 		.b-nav-phone
 		{
@@ -1353,7 +1366,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 					}
 						.b-nav-burger-span.active .b-nav-burger-ico
 						{
-							background: #f3f3f3 url('../i/menu-ico_c.png') center center no-repeat;
+							/*background: #f3f3f3 url('../i/menu-ico_c.png') center center no-repeat;*/
 							border: 1px solid #4d4d4d;
 						}
 						.b-nav-burger-span.active .b-nav-burger-ico:after
@@ -1386,7 +1399,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 						.b-aside-nav .close-menu .b-nav-burger-ico
 						{
 							border: 0px !important;
-							background: #fff url('../i/menu-ico_c.png') center center no-repeat;
+							/*background: #fff url('../i/menu-ico_c.png') center center no-repeat;*/
 						}
 /* cart menu */
 .b-cart-menu-cont{
