@@ -1798,7 +1798,8 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				{
 
 				}
-	.b-catalog-refresh.preloading .b-more-ico
+	.b-catalog-refresh.preloading .b-more-ico,
+	.b-page-refresh.preloading .b-more-ico
 	{
 		-webkit-animation: rot 1s infinite linear;
 		   -moz-animation: rot 1s infinite linear;
@@ -1970,6 +1971,12 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				top: 32px;
 			}
 	.b-catalog-refresh
+	{
+		text-align: center;
+		min-height: 40px;
+		margin-bottom: 50px;
+	}	
+	.b-page-refresh
 	{
 		text-align: center;
 		min-height: 40px;

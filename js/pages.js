@@ -419,13 +419,51 @@ var progress;
         filter_change = true;
         $("input[name=PAGEN_1]").val(1);
         filter_ajax(true,filter_change,$("#filter-form").attr("action"));   
-        $(".b-more-items").attr("data-href",$("#filter-form").attr("action")); 
+        $(".b-catalog-refresh .b-more-items").attr("data-href",$("#filter-form").attr("action")); 
     });
     
-    $(".b-more-items").click(function(){
+    $(".b-catalog-refresh .b-more-items").click(function(){
+        if( $(".b-catalog-refresh").hasClass("preloading") ) return false;
+
         filter_ajax(false,filter_change,$(this).attr("data-href"));
         return false;
     });
+
+    $(".b-page-refresh .b-more-items").attr("data-cur",1);
+
+    checkLastPage();
+
+    $(".b-page-refresh .b-more-items").click(function(){
+        if( $(".b-page-refresh").hasClass("preloading") ) return false;
+
+        var url = $(this).attr("data-href");
+
+        $(".b-page-refresh").addClass("preloading");
+
+        $(".b-page-refresh .b-more-items").attr("data-cur",$(".b-page-refresh .b-more-items").attr("data-cur")*1+1);
+        checkLastPage();
+
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: ( (url.split("?").length>1)?"&":"?" )+"PAGEN_1="+$(".b-page-refresh .b-more-items").attr("data-cur"),
+            success: function(msg){
+                progress.end();
+                $(".b-page-refresh").removeClass("preloading");
+                $(".append-to").append(msg);
+            }
+        });
+        return false;
+    });
+
+    function checkLastPage(){
+        if( $(".b-page-refresh .b-more-items").attr("data-cur")*1 >= $(".b-page-refresh .b-more-items").attr("data-last") ){
+            $(".b-page-refresh").hide();
+        }else{
+            $(".b-page-refresh").show();
+        }
+
+    }
 
     function select_tooltip() {
         for (var i = 0; i <= $("#time-select option").length; i++) {

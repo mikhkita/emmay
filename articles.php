@@ -349,7 +349,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li><a href="#">Статьи</a></li>
 						</ul>
 					</div>
-					<div class="yamme-text-block articles">
+					<div class="yamme-text-block articles append-to">
 						<div class="article-cont">
 							<a href="#">Сколько стоит букет из хризантем</a>
 							<h6>25 Июня 2014</h6>
@@ -360,6 +360,9 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<h6>25 Июня 2014</h6>
 							<p>Букет цветов является важным элементом образа любой современной невесты,  который привносит в него особую нотку утонченности, элегантности и нежности. Неудивительно, что многих девушек, собирающихся замуж, интересует вопрос о том, как правильно выбрать букет невесты.</p>
 						</div>
+					</div>
+					<div class="b-page-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
+						<a href="#" class="b-more-items" data-last="3" data-href="ajax/articles.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
 					</div>
 				</div>
 			</div>
