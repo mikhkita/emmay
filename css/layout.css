@@ -106,17 +106,20 @@ input.date {
 	background-image: url("../i/date.png");
 }
 
-input.error{
+input.error,textarea.error{
 	border: 1px solid #EABEC4 !important;
 	background-color: #FFF6F6 !important;
 	background-image: url("../i/cross-error.png") !important;
 }
 
-input.valid {
+input.valid,textarea.valid {
 	border: 1px solid #A3D499 !important;
 	background-color: #fff !important;
 	background-image: url("../i/valid.png") !important;
 	
+}
+textarea.valid,textarea.error {
+	background-image: none !important;
 }
 
 input::-webkit-input-placeholder,select::-webkit-select-placeholder {
@@ -3113,15 +3116,15 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     				background-color: #fff;
 
 				}
-			.order .b-wrap .order-item .input-cont {
+			.order-item .input-cont {
 				margin-bottom: 10px;
 			}
-				.order .b-wrap .order-item .input-cont label{
+				.order-item .input-cont label{
 					font-family: "ProximaNova-Bold";
 					font-size: 18px;
 					line-height: 22px;
 				}
-				.order .b-wrap .order-item .input-cont input{
+				.order-item .input-cont input{
 					width: 466px;
 					box-sizing: border-box;
 					background-position-x: 97%; 
@@ -3654,8 +3657,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     margin-bottom: 10px;
 }
 .yamme-text-block h1 {
-    margin-bottom: .8em;
-    color: #47669E;
+    margin-bottom: 20px;
 }
 .yamme-text-block .h1 .small, .yamme-text-block .h1 small, .yamme-text-block .h2 .small, .yamme-text-block .h2 small, .yamme-text-block .h3 .small, .yamme-text-block .h3 small, .yamme-text-block h1 .small, .yamme-text-block h1 small, .yamme-text-block h2 .small, .yamme-text-block h2 small, .yamme-text-block h3 .small, .yamme-text-block h3 small {
     font-size: 65%}
@@ -3678,10 +3680,10 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     font-size: 18px;
 }
 .yamme-text-block .h5, .yamme-text-block h5 {
-    font-size: 14px;
+    font-size: 16px;
 }
 .yamme-text-block .h6, .yamme-text-block h6 {
-    font-size: 12px;
+    font-size: 13px;
 }
 .yamme-text-block p {
     margin: 0 0 10px;
@@ -3733,7 +3735,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	margin-bottom: 25px;
 }
 .article-cont a{
-		font-size: 28px;
+		font-size: 26px;
 		font-family: inherit;
 	    font-weight: 500;
 	    line-height: 1.1;
@@ -3743,11 +3745,45 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	    margin-bottom: 10px;
 	    display: block;
 	}
-	.article-cont h6{
+	.article-cont h6,.article-cont h5{
 		color: #808080;
 	}
 	.article-cont .article-title {
 		margin-bottom: 0;
+	}
+.review {
+
+}
+	.review h2 {
+		font-size: 28px;
+		margin-top: 20px;
+   		margin-bottom: 20px;
+   		font-family: inherit;
+	    font-weight: 500;
+	    line-height: 1.1;
+	    letter-spacing: normal!important;
+	    color: inherit;
+	}
+	.review .order-item {
+		text-align: center;
+	}
+		.review .order-item form{
+			width: 650px;
+			display: inline-block;
+			background-color: #f9f9f9!important;
+			border: 1px solid #F5F5F5;
+			padding: 20px;
+			border-radius: 5px;
+		}
+			.review .order-item .btn{
+				margin-top: 10px;
+				margin-right: 125px;
+			}
+.review-detail {
+
+}
+	.review-detail h6 {
+		text-align: right;
 	}
 @media screen and (max-width: 1230px){
 	.free-card
