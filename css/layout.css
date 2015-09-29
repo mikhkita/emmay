@@ -3768,7 +3768,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	    color: #47669E;
 	    margin-top: 20px;
 	    margin-bottom: 10px;
-	    display: block;
+	    display: inline-block;
 	}
 	.article-cont h6,.article-cont h5{
 		color: #808080;

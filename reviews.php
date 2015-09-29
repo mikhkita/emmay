@@ -375,7 +375,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container reviews-list">
 			<div class="b-wrap clearfix">
-				<div class="yamme-text-block articles">
+				<div class="yamme-text-block">
 					<h2>Отзывы клиентов</h2>
 					<div class="article-cont">
 						<a href="#">Yamme отзыв от Екатерина (Доставка 25.09.15)</a>
