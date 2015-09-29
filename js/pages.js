@@ -1,5 +1,9 @@
 var progress;
 (function ($, $document, $window) {
+    $(".fancy-ajax").each(function(){
+        $(this).attr("href",$(this).attr("data-href"));
+    });
+
     progress = new KitProgress("#f98411",2);
 
     progress.endDuration = 0.1;
@@ -303,6 +307,12 @@ var progress;
         });
     });
 
+    progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
+
+    $(document).scroll(function(){
+        progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
+    });
+
     $(".tooltip-close").click(function() {
         $(this).closest(".tooltip").fadeOut();
     });
@@ -341,7 +351,6 @@ var progress;
     }).datepicker( $.datepicker.regional[ "ru" ] );
 
     function filter_ajax(first) {
-        progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
         progress.start(1.5);
 
         $.ajax({

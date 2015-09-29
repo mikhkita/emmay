@@ -33,7 +33,7 @@
 	};
     function sliders_init() {
 		// фото с доставок
-		rsCase1 = $('.b-item-gallery').find('.royalSlider').royalSlider({
+		var rsCase = $('.b-item-gallery').find('.royalSlider').royalSlider({
 	    	controlNavigation: 'thumbnails',
 		    autoScaleSlider: true, 
 	//	    autoScaleSliderWidth: 960,     
@@ -58,7 +58,7 @@
 		
 		
 		//похожие товары 
-		rsCase2 = $('.b-catalog-relative').find('.royalSlider').royalSlider({
+		var rsCase = $('.b-catalog-relative').find('.royalSlider').royalSlider({
 	    	keyboardNavEnabled: true,
 	        controlNavigation: 'bullets',
 	        loop: true,

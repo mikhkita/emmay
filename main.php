@@ -125,50 +125,52 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div class="b-allwrap">	
 		<div class="b-container b-topmenu">
 			<div class="b-wrap clearfix">
-				<div class="b-cart-menu-cont">
-					<div class="b-cart-menu">
-						<h3 class="popup-title">Корзина</h3>
-						<ul class="b-cart-items">
-							<li class="clearfix">
-								<a href="#"><img src="i/basket-table.jpg" alt="" class="left"></a>
-								<div class="b-desc right">
-									<a href="#">Букет из 11 красных роз</a>
-									<h4>5 200 руб.</h4>
-									<span class="b-cart-item-count">2шт.</span>
-								</div>
-								<a href="#" class="close-button"></a>
-							</li>
-							<li class="clearfix">
-								<img src="i/basket-table.jpg" alt="" class="left">
-								<div class="b-desc right">
-									<a href="#">Букет из 11 красных роз</a>
-									<h4>5 200 руб.</h4>
-								</div>
-								<a href="#" class="close-button"></a>
-							</li>
-							<li class="clearfix">
-								<img src="i/basket-table.jpg" alt="" class="left">
-								<div class="b-desc right">
-									<a href="#">Букет из 11 красных роз</a>
-									<h4>5 200 руб.</h4>
-								</div>
-								<a href="#" class="close-button"></a>
-							</li>
-						</ul>
-						<div class="b-cart-bottom clearfix">
-							<div class="b-total-price left">10 400 <span class="rub">руб.</span></div>
-							<a href="#" class="btn btn-g right"><span>Оформить</span></a>
+				<div id="minicart">
+					<div class="b-cart-menu-cont">
+						<div class="b-cart-menu">
+							<h3 class="popup-title">Корзина</h3>
+							<ul class="b-cart-items">
+								<li class="clearfix">
+									<a href="#"><img src="i/basket-table.jpg" alt="" class="left"></a>
+									<div class="b-desc right">
+										<a href="#">Букет из 11 красных роз</a>
+										<h4>5 200 руб.</h4>
+										<span class="b-cart-item-count">2шт.</span>
+									</div>
+									<a href="#" class="close-button"></a>
+								</li>
+								<li class="clearfix">
+									<img src="i/basket-table.jpg" alt="" class="left">
+									<div class="b-desc right">
+										<a href="#">Букет из 11 красных роз</a>
+										<h4>5 200 руб.</h4>
+									</div>
+									<a href="#" class="close-button"></a>
+								</li>
+								<li class="clearfix">
+									<img src="i/basket-table.jpg" alt="" class="left">
+									<div class="b-desc right">
+										<a href="#">Букет из 11 красных роз</a>
+										<h4>5 200 руб.</h4>
+									</div>
+									<a href="#" class="close-button"></a>
+								</li>
+							</ul>
+							<div class="b-cart-bottom clearfix">
+								<div class="b-total-price left">10 400 <span class="rub">руб.</span></div>
+								<a href="#" class="btn btn-g right"><span>Оформить</span></a>
+							</div>
 						</div>
 					</div>
+					<a href="#" class="b-topmenu-basket">
+						<span class="b-top-basket-name">КОРЗИНА</span>
+						<span class="b-top-basket-count">4</span>
+					</a>
 				</div>
 				<div class="b-topmenu-help">
 					<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
 					<a href="#" class="b-topmenu-callback fancy" data-block="#b-callback">Заказать звонок</a>
-				</div>				
-				<a href="#" class="b-topmenu-basket">
-					<span class="b-top-basket-name">КОРЗИНА</span>
-					<span class="b-top-basket-count">4</span>
-				</a>			
+				</div>						
 				<div class="b-topmenu-links">
 					<ul>
 						<li><a href="#">СТАТУС ЗАКАЗА</a></li>

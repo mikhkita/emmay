@@ -128,6 +128,10 @@ a
 			    width: 375px;
 			    padding: 15px 30px 13px 15px;
 			}
+			.b-popup .input-cont input[type=text],.b-popup .input-cont select {
+			    width: 375px !important;
+			    padding: 15px 30px 13px 15px;
+			}
 			.input-cont .email-tooltip {
 				display: none !important;
 			}
@@ -2415,6 +2419,11 @@ input.btn.btn-g.right {}
 		left: 20px;
 		bottom: -40px;
 	}
+.basket .b-wrap .basket-bot .addition button[type=button] {
+	font-size: 28px;
+	line-height: 62px;
+	width: 199px;
+}
 /* auth */
 .g-recaptcha
 {
