@@ -354,7 +354,7 @@ var progress;
     function filter_ajax(first,filter_change,filter_url) {
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
         progress.start(1.5);
-        var filter_data = $("input[name=page]").serialize();
+        var filter_data = $("input[name=PAGEN_1]").serialize();
         if(filter_change) filter_data = filter_data+"&"+$("#filter-form").serialize();
         $.ajax({
             type: "POST",
@@ -408,7 +408,7 @@ var progress;
         }
         $(".b-catalog-list").fadeIn(300);
         if(obj.more) {
-            $("input[name=page]").val(obj.page);
+            $("input[name=PAGEN_1]").val(obj.PAGEN_1);
             $(".b-catalog-refresh").show();
         } else {
             $(".b-catalog-refresh").hide();
@@ -417,8 +417,9 @@ var progress;
     var filter_change = false;
     $(".b-filters input[type=radio]").change(function(){ 
         filter_change = true;
-        $("input[name=page]").val(1);
-        filter_ajax(true,filter_change,$("#filter-form").attr("action"));    
+        $("input[name=PAGEN_1]").val(1);
+        filter_ajax(true,filter_change,$("#filter-form").attr("action"));   
+        $(".b-more-items").attr("data-href",$("#filter-form").attr("action")); 
     });
     
     $(".b-more-items").click(function(){
@@ -467,6 +468,11 @@ var progress;
                 $("#minicart").html(msg);
                 $("#minicart .b-cart-menu").attr("class",cart);
                 $("#minicart .b-cart-menu.opened").show();
+                if( $("#minicart .b-topmenu-basket").hasClass("empty") ){
+                    $(".b-topmenu-basket").addClass("empty");
+                }else{
+                    $(".b-topmenu-basket").removeClass("empty");
+                }
                 $(".b-top-basket-count").text($("#minicart .b-top-basket-count").text());
             }
         });
