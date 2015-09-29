@@ -375,7 +375,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container reviews-list">
 			<div class="b-wrap clearfix">
-				<div class="yamme-text-block">
+				<div class="yamme-text-block append-to">
 					<h2>Отзывы клиентов</h2>
 					<div class="article-cont">
 						<a href="#">Yamme отзыв от Екатерина (Доставка 25.09.15)</a>
@@ -389,6 +389,9 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<h6>К букету: Особый из 9 роз</h6>
 						<p>Огромное вам спасибо за работу! Мгновенное реагирование на заказ, сервис и работа всех сотрудников на высоте. Букет счастливая именинница получила уже через 1,5 часа после заказа. При этом доставка была в г. Дербент, куда вообще очень сложно заказать доставку цветов, находясь в Москве. Выбрать легко, оплатить удобно, букет очень красивый, по факту оказался лучше, чем на фото, ещё и воздушные шарики есть в наличии, и всё очень быстро и качественно! Спасибо!</p>
 					</div>
+				</div>
+				<div class="b-page-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
+					<a href="#" class="b-more-items" data-last="3" data-href="ajax/reviews.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
 				</div>
 			</div>
 		</div>
