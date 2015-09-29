@@ -12,7 +12,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
     <title></title>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <? if( $mobile ): ?>
 	<meta name="viewport" content="width=750, user-scalable=no">
@@ -22,7 +22,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />		
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />	
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -340,58 +340,52 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</ul>
 			</div>
 		</div>
-		<div class="b-container review">
-			<div class="b-wrap clearfix">
-				<div class="b-breadcrumbs">
-					<ul class="clearfix">
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">Отзывы</a></li>
+		<div class="ajax-container">
+			<div class="b-container review">
+				<div class="b-wrap clearfix">
+					<div class="b-breadcrumbs">
+						<ul class="clearfix">
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Статьи</a></li>
+							<li><a href="#">Фото с доставок</a></li>
+						</ul>
+					</div>
+					<h2 class="b-title">Фото с доставок</h2>
+					<ul class="delivery-photo append-to">
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
 					</ul>
-				</div>
-				<h2 class="b-title">Оставить свой отзыв</h2>
-				<div class="order-item">
-					<form action="#" method="POST">
-						<div class="input-cont clearfix">
-							<label class="left">Ваше имя*</label>
-							<input class="right" type="text" name="name" required>	
-						</div>
-						<div class="input-cont clearfix">
-							<label class="left">Текст отзыва*</label>
-							<textarea class="right" name="review" required></textarea>	
-						</div>
-						<div class="input-cont clearfix">
-							<label class="left">Название букета</label>
-							<input class="right" type="text" name="flower">	
-						</div>
-						<div class="input-cont clearfix">
-							<input type="hidden" name="captcha_sid" value="">
-							<img class="left" src="i/captcha.jpg" alt="CAPTCHA">
-							<input class="right" type="text" name="captcha" required>	
-						</div>
-						<input type="submit" class="btn btn-g" value="Отправить">
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="b-container reviews-list">
-			<div class="b-wrap clearfix">
-				<div class="yamme-text-block append-to">
-					<h2 class="b-title">Отзывы клиентов</h2>
-					<div class="article-cont">
-						<a href="#">Yamme отзыв от Екатерина (Доставка 25.09.15)</a>
-						<h6>25 Сентября 2015</h6>
-						<h6>К букету:</h6>
-						<p>СПАСИБОЧКИ БОЛЬШОЕ ВАМ ЗА МГНОВЕННОЕ СЧАСТЬЕ РАДОСТЬ ВОСТОРГ СПАСИБО ЗА ПРАЗДНИК УСПЕХОВ И ПРОЦВЕТАНИЯ ВАШЕМУ БИЗНЕСУ</p>
+					<div class="b-page-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
+						<a href="#" class="b-more-items" data-last="2" data-href="ajax/delivery.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
 					</div>
-					<div class="article-cont">
-						<a href="#">Yamme отзыв от Алёна (Доставка 23.09.15)</a>
-						<h6>25 Сентября 2015</h6>
-						<h6>К букету: <a href="#">Особый из 9 роз</a></h6>
-						<p>Огромное вам спасибо за работу! Мгновенное реагирование на заказ, сервис и работа всех сотрудников на высоте. Букет счастливая именинница получила уже через 1,5 часа после заказа. При этом доставка была в г. Дербент, куда вообще очень сложно заказать доставку цветов, находясь в Москве. Выбрать легко, оплатить удобно, букет очень красивый, по факту оказался лучше, чем на фото, ещё и воздушные шарики есть в наличии, и всё очень быстро и качественно! Спасибо!</p>
-					</div>
-				</div>
-				<div class="b-page-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
-					<a href="#" class="b-more-items" data-last="3" data-href="ajax/reviews.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
 				</div>
 			</div>
 		</div>
@@ -480,7 +474,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
-					<input class="right" type="text" id="tel-oneclick" name="phone" required/>
+					<input class="right phone" type="text" id="tel-oneclick" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Покупка в один клик"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">
@@ -498,7 +492,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-callback">Номер телефона:</label>
-					<input class="right" type="text" id="tel-callback" name="phone" required/>
+					<input class="right phone" type="text" id="tel-callback" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Обратный звонок"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">
@@ -583,12 +577,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div id="b-text-popup">
 		<div class="for_all b-popup">
 			<h3 class="popup-title">Текст</h3>
-				<div class="b-text">
-					<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
-					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
-					<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
-				</div>
-			</form>
+			<div class="b-text">
+				<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
+				<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+				<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			</div>
 		</div>
 	</div>
 	<div id="b-popup-error">
@@ -610,10 +603,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/datepicker-ru.js"></script>
-<script type="text/javascript" src="js/KitProgress.js"></script>
+<script type="text/javascript" src="js/history.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
+<script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
+<script type="text/javascript" src="js/item.js"></script>
 
 </body>
 </html>
