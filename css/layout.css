@@ -3655,6 +3655,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 }
 .yamme-text-block h1 {
     margin-bottom: .8em;
+    color: #47669E;
 }
 .yamme-text-block .h1 .small, .yamme-text-block .h1 small, .yamme-text-block .h2 .small, .yamme-text-block .h2 small, .yamme-text-block .h3 .small, .yamme-text-block .h3 small, .yamme-text-block h1 .small, .yamme-text-block h1 small, .yamme-text-block h2 .small, .yamme-text-block h2 small, .yamme-text-block h3 .small, .yamme-text-block h3 small {
     font-size: 65%}
@@ -3728,7 +3729,26 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     margin-bottom:10px; 
     text-align: center;
 }
-
+.article-cont {
+	margin-bottom: 25px;
+}
+.article-cont a{
+		font-size: 28px;
+		font-family: inherit;
+	    font-weight: 500;
+	    line-height: 1.1;
+	    letter-spacing: normal!important;
+	    color: #47669E;
+	    margin-top: 20px;
+	    margin-bottom: 10px;
+	    display: block;
+	}
+	.article-cont h6{
+		color: #808080;
+	}
+	.article-cont .article-title {
+		margin-bottom: 0;
+	}
 @media screen and (max-width: 1230px){
 	.free-card
 	{
