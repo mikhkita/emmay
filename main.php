@@ -137,7 +137,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										<h4>5 200 руб.</h4>
 										<span class="b-cart-item-count">2шт.</span>
 									</div>
-									<a href="#" class="close-button"></a>
+									<a href="#" class="close-button ajax-href" data-href="ajax/basket.php"></a>
 								</li>
 								<li class="clearfix">
 									<img src="i/basket-table.jpg" alt="" class="left">
@@ -145,7 +145,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										<a href="#">Букет из 11 красных роз</a>
 										<h4>5 200 руб.</h4>
 									</div>
-									<a href="#" class="close-button"></a>
+									<a href="#" class="close-button ajax-href" data-href="ajax/basket.php"></a>
 								</li>
 								<li class="clearfix">
 									<img src="i/basket-table.jpg" alt="" class="left">
@@ -153,7 +153,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										<a href="#">Букет из 11 красных роз</a>
 										<h4>5 200 руб.</h4>
 									</div>
-									<a href="#" class="close-button"></a>
+									<a href="#" class="close-button ajax-href" data-href="ajax/basket.php"></a>
 								</li>
 							</ul>
 							<div class="b-cart-bottom clearfix">
@@ -351,7 +351,6 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</h1>
 					<div class="b-filters">
 						<form action="ajax/filter.php" id="filter-form">
-						<input type="hidden" name="page" value="1">
 						<div class="b-filter-group f-group-1">
 							<h3>БУКЕТ ИЗ:</h3>
 							<input type="radio" checked hidden name="filter-1" value="1-1" id="filter-1-1"/>
@@ -422,6 +421,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<label for="filter-5-5">ДЛЯ ПОЖИЛЫХ</label>
 						</div>
 						</form>
+						<input type="hidden" name="page" value="2">
 					</div>
 					
 					<div class="b-photos-block">
@@ -503,7 +503,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Компактный букет из 9 ярких роз
 									</p>
 									<div class="b-buy">
-										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g ajax-href" data-href="ajax/basket.php"><span>Купить</span></a>
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -518,7 +518,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
 									</p>
 									<div class="b-buy">
-										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g ajax-href" data-href="#"><span>Купить</span></a>
 										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -611,7 +611,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										Милый букет в европейском стиле. Длина 40-60 см.
 									</p>
 									<div class="b-buy">
-										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<a href="basket.php" class="btn btn-g" ><span>Купить</span></a>
 										<p class="b-item-price"><span>1390</span><span class="rub">руб.</span></p>
 									</div>
 								</div>
@@ -634,7 +634,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</ul>
 					</div>
 					<div class="b-catalog-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
-						<a href="#" class="b-more-items"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
+						<a href="#" class="b-more-items" data-href="ajax/filter.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
 					</div>
 					<div class="b-seo-text">
 						<h1>Доставка цветов в Москве от интернет-магазина Yamme.ru</h1>
