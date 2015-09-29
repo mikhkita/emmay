@@ -1801,7 +1801,8 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				{
 
 				}
-	.b-catalog-refresh.preloading .b-more-ico
+	.b-catalog-refresh.preloading .b-more-ico,
+	.b-page-refresh.preloading .b-more-ico
 	{
 		-webkit-animation: rot 1s infinite linear;
 		   -moz-animation: rot 1s infinite linear;
@@ -1973,6 +1974,12 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				top: 32px;
 			}
 	.b-catalog-refresh
+	{
+		text-align: center;
+		min-height: 40px;
+		margin-bottom: 50px;
+	}	
+	.b-page-refresh
 	{
 		text-align: center;
 		min-height: 40px;
@@ -2178,6 +2185,24 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				line-height: 58px;
 				padding-top: 1px;
 			}
+				.b-item-cost h4 span{
+					font-size: 32px;
+    				margin-right: 10px;
+    				color: #EC5973 !important;
+    				position: relative;
+				}
+				.b-item-cost h4 span:after{
+					position: absolute;
+				    content: '';
+				    left: -4%;
+				    top: -4%;
+				    width: 108%;
+				    height: 108%;
+				    background-image: url('../i/trought.png');
+				    background-position: center center;
+				    background-size: 100% auto;
+				    background-repeat: no-repeat;
+				}
 				.b-item-cost h4{
 					float: left;
 				}

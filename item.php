@@ -380,7 +380,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<span class="item-articul">Артикул: №016</span>
 							<h3>ВЕСЕННЕЕ НАСТРОЕНИЕ</h3>
 							<div class="b-item-cost clearfix">
-								<h4>2600</h4><span class="rub">руб.</span>
+								<h4><span>9999</span>2600</h4><span class="rub">руб.</span>
 							</div>
 							<div class="b-item-delivery">
 								<span>Доставка по городу Москва <b>400</b> руб.</span>
@@ -436,7 +436,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</label>
 								</div>
 								<div class="b-item-buy">
-									<a href="basket.php" class="btn btn-g"><span>КУПИТЬ</span></a>
+									<a href="basket.php" class="btn btn-g btn-p"><span>КУПИТЬ</span></a>
 									<a href="basket.php" class="buy-one-click fancy" data-block="#buy-one-click"><span>Покупка в один клик</span></a>
 								</div>
 							</div>
