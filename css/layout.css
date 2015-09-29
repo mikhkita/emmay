@@ -3880,12 +3880,14 @@ h2.b-title {
 			font-weight: 500;
 			text-align: right;
 		}
-.b-second-step p{
+.b-second-step p,
+.b-third-step p{
 	font-size: 15px !important;
 	text-align: center !important;
 	line-height: 20px !important;
 }
-.b-popup .b-second-step h4{
+.b-popup .b-second-step h4,
+.b-popup .b-third-step h4{
 	color: #7C7C7C;
     font-size: 22px;
 }
