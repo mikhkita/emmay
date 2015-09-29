@@ -421,7 +421,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<label for="filter-5-5">ДЛЯ ПОЖИЛЫХ</label>
 						</div>
 						</form>
-						<input type="hidden" name="page" value="2">
+						<input type="hidden" name="PAGEN_1" value="2">
 					</div>
 					
 					<div class="b-photos-block">
