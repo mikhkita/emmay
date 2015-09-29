@@ -344,7 +344,7 @@ var progress;
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
         progress.start(1.5);
         var filter_data = $("input[name=page]").serialize();
-        if(filter_change) filter_data = data+"&"+$("#filter-form").serialize();
+        if(filter_change) filter_data = filter_data+"&"+$("#filter-form").serialize();
         $.ajax({
             type: "POST",
             url: filter_url,
