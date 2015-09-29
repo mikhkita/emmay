@@ -3756,6 +3756,16 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     margin-bottom:10px; 
     text-align: center;
 }
+h2.b-title {
+	font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: normal!important;
+    color: inherit;
+    font-size: 33px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .article-cont {
 	margin-bottom: 25px;
 }
@@ -3766,7 +3776,6 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	    line-height: 1.1;
 	    letter-spacing: normal!important;
 	    color: #47669E;
-	    margin-top: 20px;
 	    margin-bottom: 10px;
 	    display: block;
 	}
@@ -3779,16 +3788,6 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .review {
 
 }
-	.review h2 {
-		font-size: 28px;
-		margin-top: 20px;
-   		margin-bottom: 20px;
-   		font-family: inherit;
-	    font-weight: 500;
-	    line-height: 1.1;
-	    letter-spacing: normal!important;
-	    color: inherit;
-	}
 	.review .order-item {
 		text-align: center;
 	}
@@ -3829,6 +3828,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 		max-width: 100%;
 		border-radius: 5px;
 	}
+
 @media screen and (max-width: 1230px){
 	.free-card
 	{

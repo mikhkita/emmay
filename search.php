@@ -22,7 +22,6 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />	
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -54,6 +53,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div class="popup-item popup-wrap">
 	</div>
 </div>	
+	 
 <div id="all" class="page-main">	
 	<div class="b-aside-nav">	
 		<span class="b-nav-burger-span close-menu"><span class="b-nav-burger-ico"></span></span>
@@ -125,50 +125,52 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div class="b-allwrap">	
 		<div class="b-container b-topmenu">
 			<div class="b-wrap clearfix">
-				<div class="b-cart-menu-cont">
-					<div class="b-cart-menu">
-						<h3 class="popup-title">Корзина</h3>
-						<ul class="b-cart-items">
-							<li class="clearfix">
-								<a href="#"><img src="i/basket-table.jpg" alt="" class="left"></a>
-								<div class="b-desc right">
-									<a href="#">Букет из 11 красных роз</a>
-									<h4>5 200 руб.</h4>
-									<span class="b-cart-item-count">2шт.</span>
-								</div>
-								<a href="#" class="close-button"></a>
-							</li>
-							<li class="clearfix">
-								<img src="i/basket-table.jpg" alt="" class="left">
-								<div class="b-desc right">
-									<a href="#">Букет из 11 красных роз</a>
-									<h4>5 200 руб.</h4>
-								</div>
-								<a href="#" class="close-button"></a>
-							</li>
-							<li class="clearfix">
-								<img src="i/basket-table.jpg" alt="" class="left">
-								<div class="b-desc right">
-									<a href="#">Букет из 11 красных роз</a>
-									<h4>5 200 руб.</h4>
-								</div>
-								<a href="#" class="close-button"></a>
-							</li>
-						</ul>
-						<div class="b-cart-bottom clearfix">
-							<div class="b-total-price left">10 400 <span class="rub">руб.</span></div>
-							<a href="#" class="btn btn-g right"><span>Оформить</span></a>
+				<div id="minicart">
+					<div class="b-cart-menu-cont">
+						<div class="b-cart-menu">
+							<h3 class="popup-title">Корзина</h3>
+							<ul class="b-cart-items">
+								<li class="clearfix">
+									<a href="#"><img src="i/basket-table.jpg" alt="" class="left"></a>
+									<div class="b-desc right">
+										<a href="#">Букет из 11 красных роз</a>
+										<h4>5 200 руб.</h4>
+										<span class="b-cart-item-count">2шт.</span>
+									</div>
+									<a href="#" class="close-button ajax-href" data-href="ajax/basket.php"></a>
+								</li>
+								<li class="clearfix">
+									<img src="i/basket-table.jpg" alt="" class="left">
+									<div class="b-desc right">
+										<a href="#">Букет из 11 красных роз</a>
+										<h4>5 200 руб.</h4>
+									</div>
+									<a href="#" class="close-button ajax-href" data-href="ajax/basket.php"></a>
+								</li>
+								<li class="clearfix">
+									<img src="i/basket-table.jpg" alt="" class="left">
+									<div class="b-desc right">
+										<a href="#">Букет из 11 красных роз</a>
+										<h4>5 200 руб.</h4>
+									</div>
+									<a href="#" class="close-button ajax-href" data-href="ajax/basket.php"></a>
+								</li>
+							</ul>
+							<div class="b-cart-bottom clearfix">
+								<div class="b-total-price left">10 400 <span class="rub">руб.</span></div>
+								<a href="#" class="btn btn-g right"><span>Оформить</span></a>
+							</div>
 						</div>
 					</div>
+					<a href="#" class="b-topmenu-basket empty">
+						<span class="b-top-basket-name">КОРЗИНА</span>
+						<span class="b-top-basket-count">4</span>
+					</a>
 				</div>
 				<div class="b-topmenu-help">
 					<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
 					<a href="#" class="b-topmenu-callback fancy" data-block="#b-callback">Заказать звонок</a>
-				</div>				
-				<a href="#" class="b-topmenu-basket">
-					<span class="b-top-basket-name">КОРЗИНА</span>
-					<span class="b-top-basket-count">4</span>
-				</a>			
+				</div>						
 				<div class="b-topmenu-links">
 					<ul>
 						<li><a href="#">СТАТУС ЗАКАЗА</a></li>
@@ -179,7 +181,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>	
 		<div class="b-container b-header">
 			<div class="b-wrap">
-				<a href="main.php" class="b-logo"><span>Yamme</span></a>
+				<div class="b-logo"><span>Yamme</span></div>
 				<div class="b-head-city">
 					Город<font> доставки</font>: <a class="b-choose-city fancy" href="#" data-block="#b-city"><span>Санкт-Петербург</span></a>
 				</div>
@@ -252,7 +254,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li><a href="#">Розы</a></li>
 							<li><a href="#">Все букеты</a></li>
 						</ul>
-					</div>	
+					</div>		
 					<div class="b-nav-search">
 					<form action="">
 						<input class="top-menu-search" type="Search" placeholder="search" value="" />
@@ -321,7 +323,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li><a href="/catalog/lilii/">Лилии</a></li>
 							<li><a href="/catalog/orkhidei/">Орхидеи</a></li>
 							<li><a href="/catalog/piony/">Пионы</a></li>
-							<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>	
+							<li><a href="/catalog/tyulpany/">Тюльпаны</a></li>
+							<li><a href="/catalog/khrizantemy/">Хризантемы</a></li>									
 						</ul>
 					</div>
 				</div> -->
@@ -330,35 +333,247 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-container b-main-about">
 			<div class="b-wrap clearfix">			
 				<ul>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >О нас</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы оплаты</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Способы доставки</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Гарантии Yamme</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Свежие цветы</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Вопросы и ответы</a></li>
-					<li><a href="ajax/text-popup.php" class="fancy-ajax" >Возврат</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >О нас</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Способы оплаты</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Способы доставки</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Гарантии Yamme</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Свежие цветы</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Вопросы и ответы</a></li>
+					<li><a href="#" data-href="ajax/text-popup.php" class="fancy-ajax" >Возврат</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="ajax-container">
-			<div class="b-container review">
-				<div class="b-wrap clearfix">
-					<div class="b-breadcrumbs">
-						<ul class="clearfix">
-							<li><a href="#">Главная</a></li>
-							<li><a href="#">Статьи</a></li>
-							<li><a href="#">Фото с доставок</a></li>
-						</ul>
-					</div>
-					<h2>Фото с доставок</h2>
-					<ul class="delivery-photo">
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
+		<div class="b-container structure">
+			<div class="b-wrap clearfix">
+				<div class="b-breadcrumbs">
+					<ul class="clearfix">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Поиск</a></li>
 					</ul>
 				</div>
+				<h2 class="b-title">Поиск</h2>
+				<div class="b-aside">
+					<h1>
+						Доставка цветов и заказ букетов в Городе
+					</h1>
+							
+					<div class="b-photos-block">
+						<h3><a href="#">ФОТО С ДОСТАВОК</a></h3>
+						<div class="b-photos-gallery">
+							<div class="royalSlider rsDefault">
+							    <div class="rsContent">
+							        <a href="#"><img class="rsImg" src="i/t/r1.jpg" /></a>
+							    </div>
+								<div class="rsContent">
+							        <a href="#"><img class="rsImg" height="400" src="i/t/r1.jpg" /></a>
+							    </div>
+								<div class="rsContent">
+							        <a href="#"><img class="rsImg" src="i/t/r1.jpg" /></a>
+							    </div>
+						    </div>
+						</div>
+					</div>
+					<div class="b-review-block">
+						<h3><a href="#">ОТЗЫВЫ КЛИЕНТОВ</a>:</h3>
+						<div class="b-review-gallery">
+							<div class="royalSlider rsDefault">
+							    <div class="rsContent">
+							        <div class="b-review-item">
+							        	<p>Большое спасибо!<br/>
+										Цветы отличные,девушка моя была приятно удивлена. Отправлял из Сургута в Севастополь. Отдельное спасибо менеджеру.</p>
+
+										<p class="b-review-from">22 Апреля 2015, отзыв от Виталий (Доставка 22.04.15)
+											<br/>К букету: <a href="#">Сюрприз из 9 роз</a></p>
+							        </div>
+							    </div>
+								<div class="rsContent">
+							        <div class="b-review-item">
+							        	<p>Большое спасибо!<br/>
+										Цветы отличные,девушка моя была приятно удивлена. Отправлял из Сургута в Севастополь. Отдельное спасибо менеджеру.	Цветы отличные,девушка моя была приятно удивлена. Отправлял из Сургута в Севастополь. Отдельное спасибо менеджеру.</p>
+
+										<p class="b-review-from">22 Апреля 2015, отзыв от Виталий (Доставка 22.04.15)
+											<br/>К букету: <a href="#">Сюрприз из 9 роз</a></p>
+							        </div>
+							    </div>
+								<div class="rsContent">
+							        <div class="b-review-item">
+							        	<p>Большое спасибо!<br/>
+										Цветы отличные,девушка моя была приятно удивлена. Отправлял из Сургута в Севастополь. Отдельное спасибо менеджеру.</p>
+
+										<p class="b-review-from">22 Апреля 2015, отзыв от Виталий (Доставка 22.04.15)
+											<br/>К букету: <a href="#">Сюрприз из 9 роз</a></p>
+							        </div>
+							    </div>
+						    </div>
+						</div>
+						<p class="tcenter"><a href="#" class="btn btn-y"><span>ВСЕ ОТЗЫВЫ</span></a></p>
+					</div>
+					
+				</div>
+				<div class="b-content">
+					<div class="b-catalog-block">
+						<ul class="b-catalog-list">
+							<li>
+								<div class="b-catalog-item">
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Яркие краски (9 роз)</span>
+									</a>
+									<p>
+										Компактный букет из 9 ярких роз
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g ajax-href" data-href="ajax/basket.php"><span>Купить</span></a>
+										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item">
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Букет из 15 белых роз</span>
+									</a>
+									<p>
+										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g ajax-href" data-href="#"><span>Купить</span></a>
+										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item discount">
+									<div class="b-discount">20%</div>									
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Микс из лилий и ирисов</span>
+									</a>
+									<p>
+										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-p"><span>Купить</span></a>
+										<p class="b-item-price"><small>2900</small><span>2320</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item discount hit">
+									<div class="b-discount">20%</div>
+									<div class="b-hit">ХИТ</div>
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Букет 101 красная роза</span>
+									</a>
+									<p>
+										с маленьким описанием
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<p class="b-item-price"><small>2900</small><span>2320</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item">
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>LOVE YOU</span>
+									</a>
+									<p>
+										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item">
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Букет из 15 белых роз</span>
+									</a>
+									<p>
+										Букет в виде сердца.  Длина 50-70 см. Бутон 5-7 с...
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<p class="b-item-price"><span>2600</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item">
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Сюрприз из 9 роз</span>
+									</a>
+									<p>
+										9 розовых роз. Длина 40-60 см. Бутон 5-7 см.
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<p class="b-item-price"><span>1390</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item">
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Комплимент из 9 роз</span>
+									</a>
+									<p>
+										Милый букет в европейском стиле. Длина 40-60 см.
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g" ><span>Купить</span></a>
+										<p class="b-item-price"><span>1390</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="b-catalog-item">
+									<a class="b-cat-pic" href="item.php">
+										<img alt="" src="i/t/t1.jpg" />
+										<span>Букет из 11 красных роз</span>
+									</a>
+									<p>
+										Свежие красные розы. Длина 50-70 см. Бутон 5-7 см.
+									</p>
+									<div class="b-buy">
+										<a href="basket.php" class="btn btn-g"><span>Купить</span></a>
+										<p class="b-item-price"><span>1580</span><span class="rub">руб.</span></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="b-catalog-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
+						<a href="#" class="b-more-items" data-href="ajax/filter.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>
+					</div>
+					<div class="b-seo-text">
+						<h1>Доставка цветов в Москве от интернет-магазина Yamme.ru</h1>
+						<p>Яркие праздники, трогательные признания в любви, семейные торжества и долгожданные встречи – ни одно из событий не обходится без цветов. Обычай дарить букеты насчитывает несколько столетий. Времена меняются, но традиции остаются прежними. </p>
+
+						<p>Интернет-магазин цветов Yamme.ru поможет вам в выборе подходящей композиции. Мы готовы предложить самые выгодные условия: доступные цены, индивидуальный подход, доставка цветов по городу, широкий выбор материала. Загляните в наш <a href="catalog/bukety/">каталог</a>, и вы оцените изящество и роскошь представленных букетов.</p>
+						<p>Заказ цветов в преддверии праздников избавит вас от утомительных поисков подарка. Мы позаботимся о том, чтобы ваш любимый человек остался доволен преподнесённым букетом. Доставка цветов в любой район Москвы поможет сэкономить время.</p>
+
+						<h2>Заказ цветов в Москве по низким ценам</h2>
+						<p>
+						Цветы на заказ – это возможность получить букет, подобранный в соответствии с вашими пожеланиями. Профессиональные флористы Yamme.ru обладают необходимыми навыками и знаниями для составления самых стильных и эффектных композиций. Мы используем только качественный флористический  материал, поэтому букеты надолго сохранят свою свежесть. Заказ цветов оформляется по телефону или онлайн.  
+						</p>
+						<p>Интернет-магазин цветов Yamme.ru – это высокий стандарт качества, особое внимание и выгодные условия для постоянных клиентов. Мы заменим букет, если он вас не устроит.</p>
+						<p>Доставка цветов в Москве занимает не более 2-х часов. Просто укажите точный адрес и время. Курьерская служба позаботится, чтобы выбранная вами композиция была доставлена точно в срок.</p>
+
+					<p>	Радуйте своих любимых, дарите им букеты и признавайтесь в симпатии. Раскрасьте привычные будни яркими красками. Всё, что для этого нужно – купить цветы.</p>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -446,7 +661,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
-					<input class="right phone" type="text" id="tel-oneclick" name="phone" required/>
+					<input class="right" type="text" id="tel-oneclick" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Покупка в один клик"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">
@@ -464,7 +679,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-callback">Номер телефона:</label>
-					<input class="right phone" type="text" id="tel-callback" name="phone" required/>
+					<input class="right" type="text" id="tel-callback" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Обратный звонок"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">
@@ -549,11 +764,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div id="b-text-popup">
 		<div class="for_all b-popup">
 			<h3 class="popup-title">Текст</h3>
-			<div class="b-text">
-				<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
-				<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
-				<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
-			</div>
+				<div class="b-text">
+					<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
+					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+					<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
+				</div>
+			</form>
 		</div>
 	</div>
 	<div id="b-popup-error">
@@ -566,20 +782,19 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 </div>
 
 <script src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 <script type="text/javascript" src="js/jquery.royalslider.min.js"></script>
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/history.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
-<script type="text/javascript" src="js/item.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>

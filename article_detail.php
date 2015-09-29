@@ -12,7 +12,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
     <title></title>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <? if( $mobile ): ?>
 	<meta name="viewport" content="width=750, user-scalable=no">
@@ -22,7 +22,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />		
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />	
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -340,54 +340,29 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</ul>
 			</div>
 		</div>
-		<div class="b-container review">
-			<div class="b-wrap clearfix">
-				<div class="b-breadcrumbs">
-					<ul class="clearfix">
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">Отзывы</a></li>
-					</ul>
-				</div>
-				<h2 class="b-title">Оставить свой отзыв</h2>
-				<div class="order-item">
-					<form action="#" method="POST">
-						<div class="input-cont clearfix">
-							<label class="left">Ваше имя*</label>
-							<input class="right" type="text" name="name" required>	
-						</div>
-						<div class="input-cont clearfix">
-							<label class="left">Текст отзыва*</label>
-							<textarea class="right" name="review" required></textarea>	
-						</div>
-						<div class="input-cont clearfix">
-							<label class="left">Название букета</label>
-							<input class="right" type="text" name="flower">	
-						</div>
-						<div class="input-cont clearfix">
-							<input type="hidden" name="captcha_sid" value="">
-							<img class="left" src="i/captcha.jpg" alt="CAPTCHA">
-							<input class="right" type="text" name="captcha" required>	
-						</div>
-						<input type="submit" class="btn btn-g" value="Отправить">
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="b-container reviews-list">
-			<div class="b-wrap clearfix">
-				<div class="yamme-text-block articles">
-					<h2 class="b-title">Отзывы клиентов</h2>
-					<div class="article-cont">
-						<a href="#">Yamme отзыв от Екатерина (Доставка 25.09.15)</a>
-						<h6>25 Сентября 2015</h6>
-						<h6>К букету:</h6>
-						<p>СПАСИБОЧКИ БОЛЬШОЕ ВАМ ЗА МГНОВЕННОЕ СЧАСТЬЕ РАДОСТЬ ВОСТОРГ СПАСИБО ЗА ПРАЗДНИК УСПЕХОВ И ПРОЦВЕТАНИЯ ВАШЕМУ БИЗНЕСУ</p>
+		<div class="ajax-container">
+			<div class="b-container">
+				<div class="b-wrap clearfix">
+					<div class="b-breadcrumbs">
+						<ul class="clearfix">
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Статьи</a></li>
+							<li><a href="#">Сколько стоит букет из хризантем</a></li>
+						</ul>
 					</div>
-					<div class="article-cont">
-						<a href="#">Yamme отзыв от Алёна (Доставка 23.09.15)</a>
-						<h6>25 Сентября 2015</h6>
-						<h6>К букету: Особый из 9 роз</h6>
-						<p>Огромное вам спасибо за работу! Мгновенное реагирование на заказ, сервис и работа всех сотрудников на высоте. Букет счастливая именинница получила уже через 1,5 часа после заказа. При этом доставка была в г. Дербент, куда вообще очень сложно заказать доставку цветов, находясь в Москве. Выбрать легко, оплатить удобно, букет очень красивый, по факту оказался лучше, чем на фото, ещё и воздушные шарики есть в наличии, и всё очень быстро и качественно! Спасибо!</p>
+					<div class="yamme-text-block articles">
+						<div class="article-cont">
+							<h2 class="b-title">Сколько стоит букет из хризантем</h2>
+							<h6>25 Июня 2014</h6>
+							<h2>Хризантема - золотой цветок Востока</h2>
+							<p>Хризантема — один из самых красивых и популярных цветков на сегодняшний день. Если вас интересует, сколько стоит букет из хризантем, обратите внимание на то, что его цена значительно ниже стоимости, например, роз. Но своей красотой и элегантностью хризантемы совершенно не уступают другим цветам. Стоит отметить, что этот цветок является одним из наиболее древних, поскольку он используется в декоративных целях уже на протяжении многих столетий. Насколько давно начали выращивать эти удивительно красивые цветы хризантемы точно неизвестно. Но археологи находили их изображения на гончарных и мраморных изделиях, древних монетах и в узорах восточного фарфора.</p>
+							<h3>История хризантем</h3>
+							<p>Родиной цветка многие считают Китай, поскольку именно там нашли о нем наиболее ранние упоминания в древних текстах. На протяжении последних двух тысяч лет в этой стране активно культивируются хризантемы, с ними связано немало легенд и традиций. Нельзя не отметить и то, что цветок стал символом еще одной восточной страны — Японии. Его завезли в эту страну в IV веке и назвали в честь солнца - «кику». При этом, в те времена было известно уже более 100 сортов этого растения. До сих пор японцы чтят цветок, который стал их национальным символом. В Европе растение появилось только в 1676 году. Оно было завезено в Англию из Японии. Но стоит отметить, что до сих пор не утихают споры относительно того, в какой-то стране впервые появились эти цветы. Например, французы оказывают, что их завез путешественник Пьер Бланкшир в Марсель в 1789 году. Тем не менее, неважно, когда и в какую страну впервые привезли хризантемы, поскольку активно выращивать их начали только в XIX веке. Особенно много сортов хризантем было представлено на выставке в Париже в 1889 году. Посетители этой выставки получили возможность увидеть хризантемы с лучистыми, трубчатыми, язычковыми и перьевидными лепестками. Особенное внимание привлек к себе уникальный сорт «Виллис», цветки которого достигали 40 сантиметров в диаметре.</p>
+							<div class="center-block">
+						        <img src="i/t/item-1.jpg" alt="">
+						       <img src="i/t/item-1.jpg" alt="">
+						    </div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -477,7 +452,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-oneclick">Номер телефона:</label>
-					<input class="right" type="text" id="tel-oneclick" name="phone" required/>
+					<input class="right phone" type="text" id="tel-oneclick" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Покупка в один клик"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">
@@ -495,7 +470,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<div class="clearfix input-cont">
 					<label class="left input-title" for="tel-callback">Номер телефона:</label>
-					<input class="right" type="text" id="tel-callback" name="phone" required/>
+					<input class="right phone" type="text" id="tel-callback" name="phone" required/>
 				</div>
 				<input type="hidden" name="subject" value="Обратный звонок"/>
 				<input type="submit" class="ajax btn btn-g" value="Заказать">
@@ -580,12 +555,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<div id="b-text-popup">
 		<div class="for_all b-popup">
 			<h3 class="popup-title">Текст</h3>
-				<div class="b-text">
-					<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
-					<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
-					<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
-				</div>
-			</form>
+			<div class="b-text">
+				<p>Букет из 15 роз – сама нежность, выраженная в цветах. Легкий розовый оттенок делает их наиболее востребованными для романтических встреч. Классический по своему исполнению, букет обвязан лентой в цвет.</p>
+				<p>Вы можете закать обратный звонок. Просто оставьте свой номер и мы свяжемся с Вами в течении 10 минут.</p>
+				<input type="submit" class="btn btn-g" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			</div>
 		</div>
 	</div>
 	<div id="b-popup-error">
@@ -607,10 +581,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/datepicker-ru.js"></script>
-<script type="text/javascript" src="js/KitProgress.js"></script>
+<script type="text/javascript" src="js/history.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
+<script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
+<script type="text/javascript" src="js/item.js"></script>
 
 </body>
 </html>
