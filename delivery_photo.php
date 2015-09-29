@@ -352,12 +352,36 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</div>
 					<h2>Фото с доставок</h2>
 					<ul class="delivery-photo append-to">
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
-						<li><img src="i/t/item-1.jpg"></li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
+						<li>
+							<img src="http://yamme.ru/upload/iblock/dfb/dfbd1a552e39b835c639066dcf715f09.jpg">
+							<p class="review-desc">Букет из 25 роз доставлен в Кашире 14 сентября. Фото 2</p>
+							<p class="review-flower">Букет: <a href="#">Букет из 25 белых роз</a></p>
+						</li>
 					</ul>
 					<div class="b-page-refresh"> <!-- когда прелоадерим - добавляем класс preloading. он анимирует стрелочку. -->
 						<a href="#" class="b-more-items" data-last="2" data-href="ajax/delivery.php"><span class="b-more-ico"></span>ПОКАЗАТЬ ЕЩЕ</a>

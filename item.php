@@ -356,7 +356,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="b-item-gallery-arrow right-arrow"><a href="#"></a></div>
 						<div class="royalSlider rsDefault">
 						   	<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
-							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+							<!-- <a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
 							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
 							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
 							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
@@ -370,7 +370,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
 							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
 							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-1.jpg" href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg" /></a>
-							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a>
+							<a class="rsImg bugaga" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/item-2.jpg" href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg" /></a> -->
 					    </div>
 					</div>
 				</div>

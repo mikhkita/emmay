@@ -78,6 +78,8 @@
 	    }).data('royalSlider');
 	}
 
+	if( $(".rsThumbs img").length ) $(".rsThumbs, .b-item-gallery-arrow").hide();
+
 })(jQuery, jQuery(document), jQuery(window));
 
 	
