@@ -3785,6 +3785,25 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	.review-detail h6 {
 		text-align: right;
 	}
+.delivery-photo {
+	font-size: 0;
+	margin-bottom: 50px;
+}
+	.delivery-photo li {
+		display: inline-block;
+		width: 31%;
+		vertical-align: top;
+		text-align: center;
+		margin-right: 3.5%;
+		margin-bottom: 3.5%;
+	}
+	.delivery-photo li:nth-child(3n) {
+		margin-right: 0;
+	}
+	.delivery-photo li img {
+		max-width: 100%;
+		border-radius: 5px;
+	}
 @media screen and (max-width: 1230px){
 	.free-card
 	{
