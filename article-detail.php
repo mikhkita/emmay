@@ -350,7 +350,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li><a href="#">Сколько стоит букет из хризантем</a></li>
 						</ul>
 					</div>
-					<div class="yamme-text-block articles">
+					<div class="yamme-text-block">
 						<div class="article-cont">
 							<h1 class="article-title">Сколько стоит букет из хризантем</h1>
 							<h6>25 Июня 2014</h6>
