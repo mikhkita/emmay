@@ -124,7 +124,7 @@ a
 			    font-size: 28px;
 			    margin-top: 21px;
 			}
-			.input-cont input[type=text],.input-cont select {
+			.input-cont input[type=text],.input-cont select, .input-cont textarea {
 			    width: 375px;
 			    padding: 15px 30px 13px 15px;
 			}
@@ -420,7 +420,7 @@ a
 	display: block;
 }
 	.b-cart-items{
-		width: 710px;
+		width: 708px;
 	}
 		.b-cart-items li{
 			padding: 18px 50px 0px 20px; 
@@ -1260,10 +1260,11 @@ a
 			}
 			.b-more-ico
 			{
-				width: 22px;
+				width: 30px;
 				margin-right: 8px;
-				height: 17px;
+				height: 24px;
 				margin-bottom: -4px;
+				background-size: 29px;
 			}
 	.b-seo-text
 	{
@@ -2509,4 +2510,235 @@ input.btn.btn-g.right {}
 }
 .order .input-cont textarea{
 	height: 150px;
+}
+.hidden{
+	display: none !important;
+}
+h2.b-title{
+	margin-bottom: 30px !important;
+	font-size: 50px !important;
+}
+.article-cont {
+	margin-bottom: 25px;
+	font-size: 32px;
+	line-height: 42px;
+}
+.article-cont a{
+		font-size: 40px;
+		font-family: inherit;
+		font-weight: 500;
+		line-height: 50px;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	.article-cont h6,.article-cont h5{
+		color: #808080;
+		font-size: 25px;
+	}
+	.article-cont .article-title {
+		margin-bottom: 0;
+	}
+.review {
+
+}
+	.review .order-item {
+	}
+		.review .order-item form{
+			width: 710px;
+			display: inline-block;
+			padding: 20px 0px;
+		}
+			.review .order-item .btn{
+				margin-top: 10px;
+				margin-right: 125px;
+			}
+.review-detail {
+
+}
+	.review-detail h6 {
+		text-align: right;
+	}
+	.review-detail h6 a,
+	.article-cont h6 a{
+		font-size: 32px;
+		margin: 0px;
+	}
+		.review-detail h6 a:hover,
+		.article-cont h6 a:hover{
+		}
+.delivery-photo {
+	font-size: 0;
+	margin-bottom: 50px;
+	padding-top: 10px;
+}
+	.delivery-photo li {
+		display: inline-block;
+		padding-top: 39px;
+		padding-bottom: 35px;
+		width: 100%;
+		vertical-align: top;
+		text-align: center;
+		margin-right: 0px;
+		margin-bottom: 40px;
+	}
+	.delivery-photo li:nth-child(3n) {
+		margin-right: 0;
+	}
+		.delivery-photo li img {
+			width: 90%;
+			border-radius: 5px;
+		}
+		.delivery-photo p{
+			text-align: left;
+			font-size: 14px;
+			width: 90%;
+			margin-left: 5%;
+		}
+			.delivery-photo p a{
+			}
+		.delivery-photo p.review-desc{
+			font-size: 32px;
+		}
+		.delivery-photo p.review-flower{
+			font-size: 28px;
+			font-weight: 500;
+			text-align: right;
+		}
+.yamme-text-block {
+    margin: 0;
+    font-size: 14px;
+	line-height: 20px;
+    letter-spacing: normal;
+    padding-bottom: 40px;
+}
+.yamme-text-block a {
+    background: 0 0;
+    text-decoration: underline;
+}
+.yamme-text-block a:hover {
+    text-decoration: none;
+}
+
+.yamme-text-block b, .yamme-text-block strong {
+    font-weight: 700;
+}
+
+.yamme-text-block img {
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.yamme-text-block .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.yamme-text-block .img-mvertical {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.yamme-text-block .img-rounded {
+    border-radius: 6px;
+}
+.yamme-text-block .img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+.yamme-text-block .img-circle {
+    border-radius: 50%}
+.yamme-text-block hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+.yamme-text-block table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.yamme-text-block td, .yamme-text-block th {
+    padding: 0;
+}
+.yamme-text-block *, .yamme-text-block :after, .yamme-text-block :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.yamme-text-block hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+}
+.yamme-text-block .h1, .yamme-text-block .h2, .yamme-text-block .h3, .yamme-text-block .h4, .yamme-text-block .h5, .yamme-text-block .h6, .yamme-text-block h1, .yamme-text-block h2, .yamme-text-block h3, .yamme-text-block h4, .yamme-text-block h5, .yamme-text-block h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: normal !important;
+}
+.yamme-text-block .h1 .small, .yamme-text-block .h1 small, .yamme-text-block .h2 .small, .yamme-text-block .h2 small, .yamme-text-block .h3 .small, .yamme-text-block .h3 small, .yamme-text-block .h4 .small, .yamme-text-block .h4 small, .yamme-text-block .h5 .small, .yamme-text-block .h5 small, .yamme-text-block .h6 .small, .yamme-text-block .h6 small, .yamme-text-block h1 .small, .yamme-text-block h1 small, .yamme-text-block h2 .small, .yamme-text-block h2 small, .yamme-text-block h3 .small, .yamme-text-block h3 small, .yamme-text-block h4 .small, .yamme-text-block h4 small, .yamme-text-block h5 .small, .yamme-text-block h5 small, .yamme-text-block h6 .small, .yamme-text-block h6 small {
+    font-weight: 400;
+    line-height: 1;
+}
+.yamme-text-block .h1, .yamme-text-block .h2, .yamme-text-block .h3, .yamme-text-block h1, .yamme-text-block h2, .yamme-text-block h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.yamme-text-block h1 {
+    margin-bottom: 20px;
+}
+.yamme-text-block .h1 .small, .yamme-text-block .h1 small, .yamme-text-block .h2 .small, .yamme-text-block .h2 small, .yamme-text-block .h3 .small, .yamme-text-block .h3 small, .yamme-text-block h1 .small, .yamme-text-block h1 small, .yamme-text-block h2 .small, .yamme-text-block h2 small, .yamme-text-block h3 .small, .yamme-text-block h3 small {
+    font-size: 65%}
+.yamme-text-block .h4, .yamme-text-block .h5, .yamme-text-block .h6, .yamme-text-block h4, .yamme-text-block h5, .yamme-text-block h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.yamme-text-block .h4 .small, .yamme-text-block .h4 small, .yamme-text-block .h5 .small, .yamme-text-block .h5 small, .yamme-text-block .h6 .small, .yamme-text-block .h6 small, .yamme-text-block h4 .small, .yamme-text-block h4 small, .yamme-text-block h5 .small, .yamme-text-block h5 small, .yamme-text-block h6 .small, .yamme-text-block h6 small {
+    font-size: 75%}
+.yamme-text-block .h1, .yamme-text-block h1 {
+    font-size: 50px;
+}
+.yamme-text-block .h2, .yamme-text-block h2 {
+    font-size: 42px;
+}
+.yamme-text-block .h3, .yamme-text-block h3 {
+    font-size: 38px;
+}
+.yamme-text-block .h4, .yamme-text-block h4 {
+    font-size: 35px;
+}
+.yamme-text-block .h5, .yamme-text-block h5 {
+    font-size: 34px;
+}
+.yamme-text-block .h6, .yamme-text-block h6 {
+    font-size: 32px;
+}
+.yamme-text-block .h6, .yamme-text-block h6,
+.yamme-text-block .h1, .yamme-text-block h1,
+.yamme-text-block .h2, .yamme-text-block h2,
+.yamme-text-block .h3, .yamme-text-block h3,
+.yamme-text-block .h4, .yamme-text-block h4,
+.yamme-text-block .h5, .yamme-text-block h5,
+.yamme-text-block p{
+	max-height: 10000px;
+}
+
+.yamme-text-block p {
+    margin: 0 0 10px;
+}
+.order-item .input-cont{
+	margin-bottom: 30px;
+}
+.order-item .input-cont label{
+	font-size: 32px;
+	line-height: 44px;
+}
+.order-item img{
+	width: 302px;
+	margin-top: 2px;
+}
+.review-detail h6{
+	margin-top: 30px;
 }

@@ -58,10 +58,17 @@
 		      paddingBottom: 4
 		    }
 	    }).data('royalSlider');
+
+	    rsCase.ev.on('rsAfterContentSet', function() {
+		    if( $(".rsThumbs img").length ){
+		    	$(".rsThumbs, .b-item-gallery-arrow").hide();
+		    	$(".rsArrow").addClass("hidden");
+		    }
+		});
 		
 		
 		//похожие товары 
-		var rsCase = $('.b-catalog-relative').find('.royalSlider').royalSlider({
+		var rsCase1 = $('.b-catalog-relative').find('.royalSlider').royalSlider({
 	    	keyboardNavEnabled: true,
 	        controlNavigation: 'bullets',
 	        loop: true,
@@ -79,8 +86,6 @@
 	        arrowsNav: false,
 	        arrowsNavAutoHide: false
 	    }).data('royalSlider');
-
-	    if( $(".rsThumbs img").length ) $(".rsThumbs, .b-item-gallery-arrow").hide();
 	}
 
 })(jQuery, jQuery(document), jQuery(window));
