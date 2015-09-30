@@ -542,10 +542,56 @@ var progress;
                 });
             }
         });
-        // $("#minicart")
         return false;
     });
-    
+
+    $(".fancy-ajax").each(function(){
+        var $this = $(this);
+        $this.removeClass(".fancy-ajax");
+        $this.fancybox({
+            padding : 0,
+            type : "ajax",
+            helpers: {
+                overlay: {
+                    locked: true 
+                }
+            },
+            beforeShow: function(){
+                
+            },
+            afterShow: function(){
+                
+            },
+            beforeClose: function(){
+                
+            },
+            afterClose: function(){
+                
+            }
+        });
+    });
+
+    $("#select-tooltip-2").hide();
+    $(".step .step-num,.step .step-title,.next").click(function(){
+        var step;
+        step = ($(this).parent().hasClass("step")) ? $(this).parent().attr("data-step") : $(this).attr("data-step");
+        if(!$(step).hasClass("active")) {
+            var oldstep = $("#order-form >div.active").attr("id");
+            if( $("input.valid:visible[required='required']").length == $("input:visible[required='required']").length || $("input:visible[required='required']").length == $("input:visible[disabled='disabled']").length) {
+                $(".step[data-step='#"+oldstep+"']").addClass("complete");
+            } else $(".step[data-step='#"+oldstep+"']").removeClass("complete");
+            $("#order-form >div.active").hide().removeClass("active");
+            $(step).show().addClass("active");
+            $(".step.active").removeClass("active");
+            $(".step[data-step='"+step+"']").addClass("active");
+        }
+    });
+    $("#order-form").submit(function(){
+        if($('.step:not(.complete)').length) {
+            $('.step:not(.complete)').eq(0).find(".step-num").click();
+            $("#order-form").validate();
+        }
+    });
     
 })(jQuery, jQuery(document), jQuery(window));
 
