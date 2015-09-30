@@ -216,13 +216,13 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	border: 1px solid #E3E3E3;
 	border-radius: 4px;
 	box-sizing:border-box;
-	max-width: 215px;
+	max-width: 242px;
 	
 }
 .email-tooltip {
 	left: 672px;
 	bottom: 0;
-	width: 215px;
+	width: 242px;
 	display: none;
 }
 
@@ -2638,127 +2638,119 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .payment-nav {
     margin-bottom: 30px;
 }
-	.payment-nav .b-wrap p{
-		width: 42%;
-		height: 30px;
-		float: left;
-		margin-right: 1.5%;
+	.b-payment-nav-cont{
 		position: relative;
-		font-family: "ProximaNova-Bold";
-	}	
-		.b-payment-nav-cont{
-			position: relative;
-		}
-		.b-payment-nav-cont:before {
-			position: absolute;
-		    content: "s";
-		    font-size: 0px;	    
-			top: 15px;	    
-			background-color: #F3F3F3;   
-			height: 2px;
-		    width: 50%;
-		}
-		.b-payment-nav-cont:after {
-			position: absolute;
-		    content: "s";
-		    font-size: 0px;	    
-			top: 15px;	    
-			background-color: #F3F3F3;   
-			height: 2px;
-		    width: 50%;
-		}
-	
-		.payment-nav .b-wrap p .step-num{
-			position: absolute;	
-		    font-size: 16px;    
-			box-sizing: border-box;
-			text-align: center;
-			padding-top: 3px;
-			border-radius: 50%;
-			background-color: #F8F8F8;
-		    border: 2px solid #E4E4E4;
-		    color: #BBBBBB;
-		    line-height: 20px;	    
-			height: 30px;	    
-			width: 30px;
-			z-index: 10;
-		}	
+		height: 30px;
+	}
 
-		.payment-nav .b-wrap p .step-title {
-			position: absolute;
-			left: -21px;
-			padding-left: 62px;
-			padding-right: 25px;
-			font-size: 20px;
-			line-height: 24px;
-			color: #B4B4B4;
-			top: 3px;
-			z-index: 5;
-			background-color: #fff;
-		}
-	.payment-nav .b-wrap p:nth-child(2){
-		width: auto;
-		max-width: 532px;
+	.payment-nav .b-wrap .step-num{
+		position: absolute;	
+	    font-size: 16px;    
+		box-sizing: border-box;
+		text-align: center;
+		padding-top: 3px;
+		border-radius: 50%;
+		background-color: #F8F8F8;
+	    border: 2px solid #E4E4E4;
+	    color: #BBBBBB;
+	    line-height: 20px;	    
+		height: 30px;	    
+		width: 30px;
+		z-index: 10;
+		cursor: pointer;
+		
+	}	
+
+	.payment-nav .b-wrap .step-title {
+		position: absolute;
+		right: 0;
+		padding-left: 65px;
+		padding-right: 25px;
+		font-size: 20px;
+		line-height: 24px;
+		color: #B4B4B4;
+		top: 3px;
+		z-index: 5;
+		background-color: #fff;
+		cursor: pointer;
 	}
-	.payment-nav .b-wrap p:last-child{
-		float: right;
-		width: 112px;
-		margin-right: 0;
+
+	.b-payment-nav-cont .step {
+		width: 21.9%;
+		height: 30px;
+		position: relative;
+		float: left;
+	    /*margin-right: 1.5%;*/
+	    position: relative;
+	    font-family: "ProximaNova-Bold";
 	}
-		.payment-nav .b-wrap p:last-child:before {
-			display: none;
+	.b-payment-nav-cont .step-1 {
+		width: 14.6%;
+	}
+		.b-payment-nav-cont .step-1 .step-num {
+			left: 0;
 		}
-		.payment-nav .b-wrap p:last-child .step-title {
+		.b-payment-nav-cont .step-1 .step-title {
+			padding-left: 41px;
+			left: 0;
+   	 		right: auto;
+		}
+	.b-payment-nav-cont .step-2 {
+		width: 22%;
+	}
+		.b-payment-nav-cont .step-2 .step-num{
+			right: 168px;
+		}
+	.b-payment-nav-cont .step-3 {
+		width: 23.5%;
+	}
+		.b-payment-nav-cont .step-3 .step-num{
+			right: 150px;
+		}
+	.b-payment-nav-cont .step-4 {
+		width: 23%;
+	}
+		.b-payment-nav-cont .step-4 .step-num{
+			right: 144px;
+		}
+	.b-payment-nav-cont .step-5 {
+		width: 16.9%;
+	}
+		.b-payment-nav-cont .step-5 .step-num{
+			right: 85px;
+			
+		}
+		.b-payment-nav-cont .step-5 .step-title {
 			padding-right: 0;
 		}
-		.payment-nav .b-wrap p.active .step-num{
+		.b-payment-nav-cont .step-line {
+			position: absolute;
+			z-index: 1;
+			top: 15px;
+			left: -75px;
+			width: 100%;
+			background-color: #F3F3F3;
+    		height: 2px;
+		}
+		.b-payment-nav-cont .active .step-num {
 			background-color: #EC5973;
 			color: #fff;
 			border-color: #B44256;
 		}
-		.payment-nav .b-wrap p.active .step-title {
+		.b-payment-nav-cont .active .step-title,.b-payment-nav-cont .complete .step-title {
 			color: #444444;
 		}
-		.payment-nav .b-wrap p.complete:before {
+		.b-payment-nav-cont .active .step-line {
 			background-color: #EC5973;
 		}
-		.payment-nav .b-wrap p.complete .step-num{
+		.b-payment-nav-cont .complete .step-num {
 			background-color: #38BB49;
 			color: #fff;
 			border-color: #2DA73D;
 		}
-		.payment-nav .b-wrap p.complete .step-title {
-			color: #444444;
+		.b-payment-nav-cont .complete .step-line {
+			background-color: #38BB49;
 		}
-
-	.b-payment-nav-cont.step-1 p:nth-child(1) .step-num,
-	.b-payment-nav-cont.step-2 p:nth-child(2) .step-num,
-	.b-payment-nav-cont.step-3 p:nth-child(3) .step-num {
-		background-color: #EC5973;
-		color: #fff;
-		border-color: #B44256;
-	}
-	.b-payment-nav-cont.step-1 p:nth-child(1) .step-title,
-	.b-payment-nav-cont.step-2 p:nth-child(1) .step-title,
-	.b-payment-nav-cont.step-3 p:nth-child(1) .step-title,
-	.b-payment-nav-cont.step-2 p:nth-child(2) .step-title,
-	.b-payment-nav-cont.step-3 p:nth-child(2) .step-title,
-	.b-payment-nav-cont.step-3 p:nth-child(3) .step-title{
-		color: #444444;
-	}
-	.b-payment-nav-cont.step-2 p:nth-child(1) .step-num,
-	.b-payment-nav-cont.step-3 p:nth-child(1) .step-num,
-	.b-payment-nav-cont.step-3 p:nth-child(2) .step-num{
-		background-color: #38BB49;
-		color: #fff;
-		border-color: #2DA73D;
-	}
-	.b-payment-nav-cont.step-2:before,.b-payment-nav-cont.step-3:after {
-		background-color: #EC5973;
-	}
-	.b-payment-nav-cont.step-3:before {
-		background-color: #38BB49;
-	}
 	
 
 .basket {
@@ -3253,6 +3245,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	}
 		.b-payment .b-wrap .tooltip-cont {
 			margin-bottom: 30px;
+			height: 49px;
 		}
 			.b-payment .b-wrap .tooltip{
 				position: relative;
@@ -3891,10 +3884,29 @@ h2.b-title {
 	color: #7C7C7C;
     font-size: 22px;
 }
+
+#order-form > div {
+	display: none;
+}
+#order-form > div.active {
+	display: block;
+}
 @media screen and (max-width: 1230px){
 	.free-card
 	{
 		width: 100px;
+	}
+	.b-payment-nav-cont .step-2 {
+		width: 25%;
+	}
+	.b-payment-nav-cont .step-3 {
+		width: 22.5%;
+	}
+	.b-payment-nav-cont .step-4 {
+		width: 22%;
+	}
+	.b-payment-nav-cont .step-5 {
+		width: 15.4%;
 	}
 }	
 
