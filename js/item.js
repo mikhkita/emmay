@@ -9,11 +9,12 @@
 
 	//фильтры товаров
 	$("body").on('change',"input[name='item-color'],input[name='item-count']",function(){
+		var item = $(this).val();
 		progress.start(1.5);
         $.ajax({
             type: $("#item-form").attr("method"),
             url: $("#item-form").attr("action"),
-            data:  $("#item-form").serialize(),
+            data:  { item: item },
             success: function(msg){
             	progress.end(function(){
             		$(".ajax-container").html(msg);		
