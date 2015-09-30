@@ -21,6 +21,7 @@
             		sliders_init();
             		history.pushState(null,null,this.href);
             		history.replaceState(null,null,$(".b-container.item").attr("data-href"));
+            		bindFancy();
                 });
             	
             }
@@ -32,6 +33,7 @@
     window.onpopstate = function(event) {
     	window.location.assign(document.location);
 	};
+
     function sliders_init() {
 		// фото с доставок
 		var rsCase = $('.b-item-gallery').find('.royalSlider').royalSlider({
@@ -77,9 +79,9 @@
 	        arrowsNav: false,
 	        arrowsNavAutoHide: false
 	    }).data('royalSlider');
-	}
 
-	if( $(".rsThumbs img").length ) $(".rsThumbs, .b-item-gallery-arrow").hide();
+	    if( $(".rsThumbs img").length ) $(".rsThumbs, .b-item-gallery-arrow").hide();
+	}
 
 })(jQuery, jQuery(document), jQuery(window));
 

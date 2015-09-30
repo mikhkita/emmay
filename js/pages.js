@@ -4,6 +4,8 @@ var progress;
         $(this).attr("href",$(this).attr("data-href"));
     });
 
+    bindFancy();
+
     progress = new KitProgress("#f98411",2);
 
     progress.endDuration = 0.1;
@@ -521,3 +523,73 @@ var progress;
     
 })(jQuery, jQuery(document), jQuery(window));
 
+function bindFancy(){
+    $(".fancy").each(function(){
+        var $popup = $($(this).attr("data-block")),
+            $this = $(this);
+
+        $this.removeClass(".fancy");
+        $this.fancybox({
+            padding : 0,
+            content : $popup,
+            helpers: {
+                overlay: {
+                    locked: true 
+                }
+            },
+            beforeShow: function(){
+                $popup.find(".b-first-step").show();
+                $popup.find(".b-second-step, .b-third-step").hide();
+                $popup.find(".custom-field").remove();
+                if( $this.attr("data-value") ){
+                    var name = getNextField($popup.find("form"));
+                    $popup.find("form").append("<input type='hidden' class='custom-field' name='"+name+"' value='"+$this.attr("data-value")+"'/><input type='hidden' class='custom-field' name='"+name+"-name' value='"+$this.attr("data-name")+"'/>");
+                }
+                if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
+                    customHandlers[$this.attr("data-beforeShow")]($this);
+                }
+            },
+            afterShow: function(){
+                if( $this.attr("data-afterShow") && customHandlers[$this.attr("data-afterShow")] ){
+                    customHandlers[$this.attr("data-afterShow")]($this);
+                }
+            },
+            beforeClose: function(){
+                if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
+                    customHandlers[$this.attr("data-beforeClose")]($this);
+                }
+            },
+            afterClose: function(){
+                if( $this.attr("data-afterClose") && customHandlers[$this.attr("data-afterClose")] ){
+                    customHandlers[$this.attr("data-afterClose")]($this);
+                }
+            }
+        });
+    });
+
+    $(".fancy-ajax").each(function(){
+        var $this = $(this);
+        $this.removeClass(".fancy-ajax");
+        $this.fancybox({
+            padding : 0,
+            type : "ajax",
+            helpers: {
+                overlay: {
+                    locked: true 
+                }
+            },
+            beforeShow: function(){
+                
+            },
+            afterShow: function(){
+                
+            },
+            beforeClose: function(){
+                
+            },
+            afterClose: function(){
+                
+            }
+        });
+    });
+}
