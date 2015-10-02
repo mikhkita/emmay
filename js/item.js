@@ -60,7 +60,7 @@
 	    }).data('royalSlider');
 
 	    rsCase.ev.on('rsAfterContentSet', function() {
-		    if( $(".rsThumbs img").length ){
+		    if( $(".rsThumbs img").length <= 1 ){
 		    	$(".rsThumbs, .b-item-gallery-arrow").hide();
 		    	$(".rsArrow").addClass("hidden");
 		    }

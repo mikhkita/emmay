@@ -342,7 +342,14 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		</div>
 		<div class="b-container payment-nav">
 			<div class="b-wrap clearfix">
-				<div class="b-payment-nav-cont">
+				<ul class="b-order-nav clearfix">
+					<li><span>Корзина</span></li>
+					<li><span>Ваши данные</span></li>
+					<li><span>Получатель</span></li>
+					<li><span>О доставке</span></li>
+					<li class="active"><span>Оплата</span></li>
+				</ul>
+				<!-- <div class="b-payment-nav-cont">
 					<div class="step step-1 active" data-step="#order-basket">
 						<span class="step-num">1</span>
 						<span class="step-title">Корзина</span>
@@ -367,7 +374,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<span class="step-num">5</span>
 						<span class="step-title">Оплата</span>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<form action="#" id="order-form">

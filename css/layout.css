@@ -1811,7 +1811,6 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 		}
 			.b-review-from
 			{
-				padding-top: 1.5em;
 				color: #818181;
 				font-size: 12px;
 				line-height: 20px;
@@ -3891,6 +3890,120 @@ h2.b-title {
 #order-form > div.active {
 	display: block;
 }
+
+.b-item-reviews{
+
+}
+	.b-item-reviews h4{
+		margin-bottom: 19px;
+    	font-size: 18px;
+    	line-height: 23px;
+    	font-weight: 500;
+	}
+	.b-review-item{
+		padding-bottom: 20px;
+	}
+		.b-review-item p{
+			line-height: 22px;
+    		font-size: 14px;
+		}
+		.b-review-item p.b-review-from{
+			margin-top: 10px;
+		}
+.b-order-nav{
+	/*border-radius: 4px;*/
+}
+	.b-order-nav li{
+		float: left;
+		background-color: #FCFCFD;
+		list-style: none;
+		width: 20%;
+		box-sizing: border-box;
+		text-align: center;
+		padding: 18px 0px;
+		position: relative;
+		cursor: pointer;
+		border: 1px solid #E3E3E3;
+		border-left: 0px;
+		border-right: 0px;
+	}
+		.b-order-nav li:before{
+			position: absolute;
+			content: "s";
+			font-size: 0px;
+			width: 20px;
+			height: 60px;
+			left: 0px;
+			top: -1px;
+			background-position: 0% 50%;
+			background-repeat: no-repeat;
+			background-image: url('../i/order-nav.png');
+			background-size: 105px;
+			z-index: 1;
+		}
+	.b-order-nav li:first-child{
+		border-radius: 4px 0px 0px 4px;
+		border-left: 1px solid #E3E3E3;
+	}
+	.b-order-nav li:last-child{
+		border-radius: 0px 4px 4px 0px;
+		border-right: 1px solid #E3E3E3;
+	}
+	.b-order-nav li.active:last-child{
+		/*border-radius: 0px 2px 2px 0px;*/
+	}
+		.b-order-nav li:first-child:before{
+			display: none;
+		}
+	.b-order-nav li.active,
+	.b-order-nav li:hover{
+		background-color: #38BB49;
+		border-color: #269034;
+	}
+		.b-order-nav li.active:before,
+		.b-order-nav li:hover:before{
+			position: absolute;
+			content: "s";
+			font-size: 0px;
+			width: 35px;
+			height: 60px;
+			left: -18px;
+			top: -1px;
+			background-position: 50% 0%;
+			background-repeat: no-repeat;
+			background-image: url('../i/order-nav.png');
+			background-size: 105px;
+		}
+		.b-order-nav li.active:after,
+		.b-order-nav li:hover:after{
+			position: absolute;
+			content: "s";
+			font-size: 0px;
+			width: 35px;
+			height: 60px;
+			right: -17px;
+			top: -1px;
+			background-position: 100% 0%;
+			background-repeat: no-repeat;
+			background-image: url('../i/order-nav.png');
+			background-size: 105px;
+			z-index: 10;
+		}
+		.b-order-nav li:last-child.active:after{
+			display: none;
+		}
+		.b-order-nav li span{
+			font-size: 20px;
+			font-family: "ProximaNova-Semibold";
+			color: #444444;
+		}
+		.b-order-nav li.active span,
+		.b-order-nav li:hover span{
+			color: #FFF;
+		}
+
+
+
 @media screen and (max-width: 1230px){
 	.free-card
 	{

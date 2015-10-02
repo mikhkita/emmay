@@ -449,8 +449,7 @@ var progress;
 
         $.ajax({
             type: "GET",
-            url: url,
-            data: ( (url.split("?").length>1)?"&":"?" )+"PAGEN_1="+$(".b-page-refresh .b-more-items").attr("data-cur"),
+            url: url+( (url.split("?").length>1)?"&":"?" )+"PAGEN_1="+$(".b-page-refresh .b-more-items").attr("data-cur"),
             success: function(msg){
                 progress.end();
                 $(".b-page-refresh").removeClass("preloading");
@@ -530,7 +529,7 @@ var progress;
 
                     if( !opened ) {
                         toggleCartMenu();
-                        $(".b-small-cart-icon").click();
+                        if( winW < 768 ) $(".b-small-cart-icon").click();
                     }
 
                     if( $("#minicart .b-topmenu-basket").hasClass("empty") ){
