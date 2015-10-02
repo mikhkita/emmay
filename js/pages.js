@@ -587,9 +587,9 @@ var progress;
     });
     $("#order-form").submit(function(){
         if($('.b-order-nav li:not(.complete)').length) {
-            $('.b-order-nav li:not(.complete)').eq(0).click();
-            $("#order-form").validate();
+            $('.b-order-nav li:not(.complete)').eq(0).click();       
         }
+        $("#order-form").validate();
     });
     
 })(jQuery, jQuery(document), jQuery(window));
