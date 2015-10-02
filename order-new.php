@@ -343,11 +343,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-container payment-nav">
 			<div class="b-wrap clearfix">
 				<ul class="b-order-nav clearfix">
-					<li><span>Корзина</span></li>
-					<li><span>Ваши данные</span></li>
-					<li><span>Получатель</span></li>
-					<li><span>О доставке</span></li>
-					<li class="active"><span>Оплата</span></li>
+					<li class="active" data-step="#order-basket"><span>Корзина</span></li>
+					<li data-step="#order-contacts"><span>Ваши данные</span></li>
+					<li data-step="#order-contacts-2"><span>Получатель</span></li>
+					<li data-step="#order-delivery"><span>О доставке</span></li>
+					<li data-step="#order-payment"><span>Оплата</span></li>
 				</ul>
 				<!-- <div class="b-payment-nav-cont">
 					<div class="step step-1 active" data-step="#order-basket">
