@@ -571,25 +571,25 @@ var progress;
     });
 
     $("#select-tooltip-2").hide();
-    $(".step .step-num,.step .step-title,.next").click(function(){
+    $(".b-order-nav li,.next").click(function(){
         var step;
-        step = ($(this).parent().hasClass("step")) ? $(this).parent().attr("data-step") : $(this).attr("data-step");
+        step = $(this).attr("data-step");
         if(!$(step).hasClass("active")) {
             var oldstep = $("#order-form >div.active").attr("id");
             if( $("input.valid:visible[required='required']").length == $("input:visible[required='required']").length || $("input:visible[required='required']").length == $("input:visible[disabled='disabled']").length) {
-                $(".step[data-step='#"+oldstep+"']").addClass("complete");
-            } else $(".step[data-step='#"+oldstep+"']").removeClass("complete");
+                $(".b-order-nav li[data-step='#"+oldstep+"']").addClass("complete");
+            } else $(".b-order-nav li[data-step='#"+oldstep+"']").removeClass("complete");
             $("#order-form >div.active").hide().removeClass("active");
             $(step).show().addClass("active");
-            $(".step.active").removeClass("active");
-            $(".step[data-step='"+step+"']").addClass("active");
+            $(".b-order-nav li.active").removeClass("active");
+            $(".b-order-nav li[data-step='"+step+"']").addClass("active");
         }
     });
     $("#order-form").submit(function(){
-        if($('.step:not(.complete)').length) {
-            $('.step:not(.complete)').eq(0).find(".step-num").click();
-            $("#order-form").validate();
+        if($('.b-order-nav li:not(.complete)').length) {
+            $('.b-order-nav li:not(.complete)').eq(0).click();       
         }
+        $("#order-form").validate();
     });
     
 })(jQuery, jQuery(document), jQuery(window));
