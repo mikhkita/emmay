@@ -625,7 +625,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			}
 				.b-aside-nav-wrap .b-menu-list a
 				{
-					font-family: 'Helvetica Neue', tahoma, arial;	
+					font-family: 'Helvetica Neue', helvetica, arial, serif;	
 					color: #333;
 					text-decoration: none;
 					text-transform: uppercase;
@@ -663,7 +663,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 					font-weight: normal;
 					font-size: 16px;
 					margin-bottom: 10px;
-					font-family: 'helveticaneuecyrroman', 'Helvetica Neue', tahoma, arial;										
+					font-family: 'Helvetica Neue', helvetica, arial, serif;										
 				}
 					.b-aside-nav .b-menu-item ul
 					{
@@ -743,7 +743,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			.tablet-menu li a
 			{
 				text-transform: uppercase;
-				font-family: 'Helvetica Neue', tahoma, arial;	
+				font-family: 'Helvetica Neue', helvetica, arial, serif;	
 				color: #333;
 				display: block;
 				-webkit-transition: all 120ms linear;
@@ -776,7 +776,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				border: 0px !important;
 				font-weight: normal;
 				margin-bottom: 17px;
-				font-family: 'Helvetica Neue', tahoma, arial;	
+				font-family: 'Helvetica Neue', helvetica, arial, serif;	
 				-webkit-appearance: none;
 				-webkit-border-radius: 40px;
 					border-radius: 40px;
@@ -1249,7 +1249,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 						.b-nav-list .b-submenu li a{
 							color: #9FDEA7;
 							font-size: 14px;
-							font-family: "ProximaNova-Semibold";
+							font-family: "ProximaNova-Semibold",'ProximaNova-Bold';
 							text-decoration: none;
 							text-transform: uppercase;
 							padding: 15px 16px 11px;
@@ -1319,7 +1319,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 					display: block;
 					width: 100%;
 					text-align: center;
-					font-family: 'Helvetica Neue';
+					font-family: 'Helvetica Neue', helvetica, arial, serif;
 					font-weight: bold;
 					font-size: 11px;
 					color: #FFFFFF;
@@ -2052,7 +2052,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 		}
 		.b-seo-text p
 		{
-			font-family: 'Helvetica Neue';
+			font-family: 'Helvetica Neue', helvetica, arial, serif;
 			font-size: 13px;
 			color: #444444;
 			margin-bottom: 1.5em;
@@ -2199,7 +2199,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			.b-item-cost{
 				font-size: 48px;
 				color: #444444;
-				font-family: "ProximaNova-Semibold";
+				font-family: "ProximaNova-Semibold",'ProximaNova-Bold';
 				line-height: 58px;
 				padding-top: 1px;
 			}
@@ -2601,7 +2601,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 		}
 			.b-paginator li a, .b-paginator li span
 			{
-				font-family: 'helveticaneuecyrroman', 'Helvetica Neue', tahoma, arial;					
+				font-family: 'Helvetica Neue', helvetica, arial, serif;					
 				font-size: 14px;
 				color: #fff;
 				background: #999;
@@ -2869,7 +2869,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 							height: 30px;
 							text-align: center;
 							font-weight: 500;
-							font-family: "Helvetica Neue";
+							font-family: 'Helvetica Neue', helvetica, arial, serif;
 							color: #BCBCBC;
 						}
 						.count-cont span.minus:after{
@@ -3408,7 +3408,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			}
 		.b-menu-wrap
 		{
-			font-family: 'Helvetica Neue';
+			font-family: 'Helvetica Neue', helvetica, arial, serif;
 			font-size: 13px;
 			color: #444;
 			line-height: 26px;
@@ -3456,7 +3456,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	height: 53px !important;
 	font-size: 14px;
 	font-weight: normal;
-	font-family: 'helveticaneuecyrroman', 'Helvetica Neue', tahoma, arial;	
+	font-family: 'Helvetica Neue', helvetica, arial, serif;	
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 			box-sizing: border-box;
@@ -3475,7 +3475,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	line-height: 19px;
 	min-height: 168px;
 	font-weight: normal;
-	font-family: 'helveticaneuecyrroman', 'Helvetica Neue', tahoma, arial;	
+	font-family: 'Helvetica Neue', helvetica, arial, serif;	
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 			box-sizing: border-box;
@@ -3601,7 +3601,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', helvetica, arial, serif;
     font-size: 14px;
 	line-height: 20px;
     color: #444;
@@ -3994,7 +3994,7 @@ h2.b-title {
 		}
 		.b-order-nav li span{
 			font-size: 20px;
-			font-family: "ProximaNova-Semibold";
+			font-family: "ProximaNova-Semibold",'ProximaNova-Bold';
 			color: #444444;
 		}
 		.b-order-nav li.active span,
