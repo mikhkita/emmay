@@ -349,32 +349,6 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<li data-step="#order-delivery"><span>О доставке</span></li>
 					<li data-step="#order-payment"><span>Оплата</span></li>
 				</ul>
-				<!-- <div class="b-payment-nav-cont">
-					<div class="step step-1 active" data-step="#order-basket">
-						<span class="step-num">1</span>
-						<span class="step-title">Корзина</span>
-					</div>
-					<div class="step step-2" data-step="#order-contacts">
-						<span class="step-line"></span>
-						<span class="step-num">2</span>
-						<span class="step-title">Ваши данные</span>
-					</div>
-					<div class="step step-3" data-step="#order-contacts-2">
-						<span class="step-line"></span>
-						<span class="step-num">3</span>
-						<span class="step-title">Получатель</span>
-					</div>
-					<div class="step step-4" data-step="#order-delivery">
-						<span class="step-line"></span>
-						<span class="step-num">4</span>
-						<span class="step-title">О доставке</span>
-					</div>
-					<div class="step step-5" data-step="#order-payment">
-						<span class="step-line"></span>
-						<span class="step-num">5</span>
-						<span class="step-title">Оплата</span>
-					</div>
-				</div> -->
 			</div>
 		</div>
 		<form action="#" id="order-form">
@@ -672,37 +646,44 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</div>
 						<div class="b-payment-cont-left">
 							<h2 class="title">СПОСОБ ОПЛАТЫ</h2>
-							<div class="pay-type-cont">
-								<div class="pay-type clearfix">
-									<div class="left" id="pay1">
-										<img src="i/sber.png" alt="">
+							<div class="pay-type-cont clearfix">
+								<div class="pay-type left">
+									<div id="pay1" class="active card">
+										<p>Пластиковой картой<br>на сайте</p>
 									</div>
-									<div class="right active" id="pay2">
+									<div class="robo" id="pay2">
+										<p>Пластиковой картой через платёжную систему</p>
 										<img src="i/robokassa.png" alt="">	
 									</div>
+									<div id="pay3" class="other">
+										<p>Все способы оплаты</p>	
+										<img src="i/payment.png" alt="">
+									</div>
 								</div>
-								<div class="pay-desc">
+								<div class="pay-desc first left">
 									<div class="pay1">
-										<h3>Сбербанк</h3>
-										<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой, Yandex деньги, Webmoney, Альфа-Клик, с мобильного телефона</p>
-										<div class="clearfix">
-											<div class="left">
-												<h3>Доступные способы оплаты:</h3>
-												<img src="i/pay.png" alt="">
+										<div class="b-payment-desc">
+											<div class="b-image-cont">
+												<img src="i/sber.png" width="160" style="margin-bottom: -9px;" alt="">
 											</div>
-											<input type="submit" class="btn btn-g right" value="Оплатить">
+											<h3>Оплата производится через платёжную систему Сбербанка</h3>
+											<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой</p>
+											<input type="submit" class="btn btn-g" value="Оплатить">
 										</div>
 									</div>
 									<div class="pay2">
-										<h3>Безопасный и удобный способ оплатить Ваш заказ в интернете</h3>
-										<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой, Yandex деньги, Webmoney, Альфа-Клик, с мобильного телефона</p>
-										<div class="clearfix">
-											<div class="left">
-												<h3>Доступные способы оплаты:</h3>
-												<img src="i/pay.png" alt="">
+										<div class="b-payment-desc">
+											<div class="b-image-cont">
+												<img src="i/robokassa.png" width="177" alt="">
 											</div>
-											<input type="submit" class="btn btn-g right" value="Оплатить">
+											<h3>Оплата производится через платёжную систему ROBOKASSA</h3>
+											<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой</p>
+											<input type="submit" class="btn btn-g" value="Оплатить">
 										</div>
+									</div>
+									<div class="pay3">
+										<h3>Текст</h3>
+										<p>Хуекст</p>
 									</div>
 								</div>
 							</div>

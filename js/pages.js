@@ -326,6 +326,11 @@ var progress;
     $(".pay-type div").click(function(){
         $(".pay-type div").removeClass("active");
         $(".pay-desc > div").hide();
+        if( $(this).index() == 0 ){
+            $(".pay-desc").addClass("first");
+        }else{
+            $(".pay-desc").removeClass("first");
+        }
         $(".pay-desc").find("."+$(this).attr("id")).show();
         $(this).addClass("active");
     });
