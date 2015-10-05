@@ -355,6 +355,7 @@ var progress;
     });
    
     $( "#datepicker" ).datepicker({
+        minDate: 0,
         onClose: function() {
             $( "#datepicker" ).valid();
         }
