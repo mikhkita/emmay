@@ -343,7 +343,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-container payment-nav">
 			<div class="b-wrap clearfix">
 				<ul class="b-order-nav clearfix">
-					<li class="active" data-step="#order-basket"><span>Корзина</span></li>
+					<li class="active complete" data-step="#order-basket"><span>Корзина</span></li>
 					<li data-step="#order-contacts"><span>Ваши данные</span></li>
 					<li data-step="#order-contacts-2"><span>Получатель</span></li>
 					<li data-step="#order-delivery"><span>О доставке</span></li>
@@ -351,11 +351,19 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</ul>
 			</div>
 		</div>
-		<form action="#" id="order-form">
+		<form action="ajax/add-order.php" id="order-form">
 		<div id="order-basket" class="active">
 			<div class="b-container basket">
 			<div class="b-wrap clearfix">
-				<h3 class="title">ТОВАРЫ В КОРЗИНЕ:</h3>
+				<div class="tooltip-cont">
+					<div class="tooltip">Повседневная практика показывает, что начало повседневной работы по формированию позиции способствует подготовки<span class="tooltip-close"></span></div>
+				</div>
+				<div class="clearfix">
+					<h3 class="title left">ТОВАРЫ В КОРЗИНЕ:</h3>
+					<div class="right b-change-order">
+						<input type="button" class="change-order btn btn-g" value="Изменить заказ">
+					</div>
+				</div>
 				<table>
 					<tbody>
 						<tr>
@@ -381,7 +389,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 								</div>
 					   		</td>
 					   		<td>1 580 руб.</td>
-					   		<td><span>Удалить</span></td>
+					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
 					    <tr>
 					   		<td class="item-title">
@@ -400,7 +408,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 								</div>
 					   		</td>
 					   		<td>1 580 руб.</td>
-					   		<td><span>Удалить</span></td>
+					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
 					    <tr>
 					   		<td class="item-title">
@@ -419,7 +427,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 								</div>
 					   		</td>
 					   		<td>1 580 руб.</td>
-					   		<td><span>Удалить</span></td>
+					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
 					</tbody>
 				</table>
@@ -459,7 +467,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 					<li class="clearfix">
@@ -469,7 +477,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 					<li class="clearfix">
@@ -479,7 +487,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 					<li class="clearfix">
@@ -489,7 +497,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 					<li class="clearfix">
@@ -499,7 +507,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 					<li class="clearfix">
@@ -509,7 +517,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 					<li class="clearfix">
@@ -519,7 +527,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 					<li class="clearfix">
@@ -529,7 +537,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="right">
 							<h4>Воздушные шары (5шт)</h4>
 							<h5>450<span>руб.</span></h5>
-							<a href="#">ДОБАВИТЬ</a>
+							<a href="#" class="flower-add-button">ДОБАВИТЬ</a>
 						</div>
 					</li>
 				</ul>
@@ -596,7 +604,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="input-cont clearfix">
 							<label class="left">Адрес: Москва</label>
 							<textarea class="right" name="city"></textarea>
-							<a class="city fancy" href="#" data-block="#b-city">Изменить город</a>
+							<a class="city b-change-city-butt fancy" href="#" data-block="#b-city">Изменить город</a>
+							<a class="city b-change-city-butt-disabled" style="display: none;" href="#">Изменить город</a>
 							<div class="tooltip email-tooltip">Если вы не знаете точный адрес, или не уверены что получатель будет на месте, мы можем позвонить и согласовать получение заказа и не скажем что это цветы. Доставка в удалённые районы оплачивается дополнительно.</div>
 						</div>
 						<div class="input-cont clearfix">
@@ -636,11 +645,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<div class="pay-data">
 								<div class="input-cont">
 									<label for="order-number">Номер заказа:</label>
-									<input id="order-number" type="text" name="order-number" required>
+									<input id="order-number" type="text" name="order-number" disabled required>
 								</div>
 								<div class="input-cont">
-									<label for="summ">Сумма:</label>
-									<input id="summ" type="number" name="summ" min="1" max="999999" required>
+									<label for="sum">Сумма:</label>
+									<input id="sum" type="number" name="sum" min="1" max="999999" disabled required>
 								</div>
 							</div>	
 						</div>
@@ -668,7 +677,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 											</div>
 											<h3>Оплата производится через платёжную систему Сбербанка</h3>
 											<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой</p>
-											<input type="submit" class="btn btn-g" value="Оплатить">
+											<input type="submit" class="btn btn-g b-sber-pay" value="Оплатить">
+											<iframe src="http://google.com/" frameborder="0"></iframe>
 										</div>
 									</div>
 									<div class="pay2">
@@ -907,6 +917,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/datepicker-ru.js"></script>
 <script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>

@@ -193,6 +193,8 @@ var progress;
         if($(this).val()=='') $(this).val("1");
     });
     $(".plus").click(function(){
+        if( $(this).parents(".count-cont").hasClass("disabled") ) return false;
+
         var input = $(this).closest(".count-cont").find("input");
         count = input.val()*1;
         if(count<999) {
@@ -200,6 +202,8 @@ var progress;
         }
     });
     $(".minus").click(function(){
+        if( $(this).parents(".count-cont").hasClass("disabled") ) return false;
+
         var input = $(this).closest(".count-cont").find("input");
         count = input.val()*1;
         if(count>1) {
@@ -318,7 +322,7 @@ var progress;
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
     });
 
-    $(".tooltip-close").click(function() {
+    $("body").on("click",".tooltip-close",function() {
         $(this).closest(".tooltip").fadeOut();
     });
 
@@ -497,14 +501,17 @@ var progress;
         $(".input-cont .email-tooltip:visible").fadeOut();
     });
 
-    $("input[name='self']").change(function(){
-        if($(this).prop("checked")){
+    $("input[name='self']").change(checkSelf);
+
+    checkSelf();
+
+    function checkSelf(){
+        if($("input[name='self']").prop("checked")){
             $("input[name='name2'],input[name='phone2']").val("").removeClass("valid error").prop("disabled",true);
         } else {
             $("input[name='name2'],input[name='phone2']").prop("disabled",false);
         }
-        
-    });
+    }
 
     $("body").on("click",".ajax-href",function(){
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
@@ -581,22 +588,106 @@ var progress;
         var step;
         step = $(this).attr("data-step");
         if(!$(step).hasClass("active")) {
-            var oldstep = $("#order-form >div.active").attr("id");
-            if( $("input.valid:visible[required='required']").length == $("input:visible[required='required']").length || $("input:visible[required='required']").length == $("input:visible[disabled='disabled']").length) {
-                $(".b-order-nav li[data-step='#"+oldstep+"']").addClass("complete");
-            } else $(".b-order-nav li[data-step='#"+oldstep+"']").removeClass("complete");
-            $("#order-form >div.active").hide().removeClass("active");
-            $(step).show().addClass("active");
-            $(".b-order-nav li.active").removeClass("active");
-            $(".b-order-nav li[data-step='"+step+"']").addClass("active");
+            var show = true;
+            if( step == "#order-payment" ){
+                $("#order-form").submit();
+                show = $("#order-form").valid();
+            }
+            if( show ){
+                var oldstep = $("#order-form >div.active").attr("id");
+                if( $("input.valid:visible[required='required']").length == $("input:visible[required='required']").length || $("input:visible[required='required']").length == $("input:visible[disabled='disabled']").length) {
+                    $(".b-order-nav li[data-step='#"+oldstep+"']").addClass("complete");
+                } else $(".b-order-nav li[data-step='#"+oldstep+"']").removeClass("complete");
+                $("#order-form >div.active").hide().removeClass("active");
+                $(step).show().addClass("active");
+                $(".b-order-nav li.active").removeClass("active");
+                $(".b-order-nav li[data-step='"+step+"']").addClass("active");
+            }
         }
     });
     $("#order-form").submit(function(){
+        if( $(this).hasClass("loaded") ) return false;
+
         if($('.b-order-nav li:not(.complete)').length) {
             $('.b-order-nav li:not(.complete)').eq(0).click();       
         }
-        $("#order-form").validate();
+        // $("#order-form").validate();
+        if( $("#order-form").valid() ){
+            var $form = $(this);
+
+            progress.start(1.5);
+
+            $.ajax({
+                type: $form.attr("method"),
+                url: $form.attr("action"),
+                data:  $form.serialize(),
+                success: function(msg){
+                    var json = JSON.parse(msg);
+
+                    if( json.result == "success" ){
+                        $form.addClass("loaded");
+                        $(".tooltip-cont .tooltip").html(json.text+'<span class="tooltip-close"></span>').fadeIn(300);
+                        $(".b-change-order").show();
+
+                        $(".count-cont, .b-cart-delete, .flower-add-button").addClass("disabled");
+                        $(".count-cont input").attr("disabled","disabled");
+
+                        $(".b-change-city-butt").hide();
+                        $(".b-change-city-butt-disabled").show();
+
+                        $("#order-number").val(json.id);
+                        $("#sum").val(json.sum);
+
+                        $(".b-sber-pay").attr("data-href",json.sber);
+                    }else{
+                        alert( (json.message)?json.message:"Ошибка создания заказа" );
+                    }
+                },
+                error: function(){
+                    alert( "Ошибка создания заказа" );
+                },
+                complete: function() {
+                    progress.end();
+                }
+            });
+        }
+        return false;
     });
+
+    $(".b-cart-delete, .flower-add-button").click(function(){
+        if( $(this).hasClass("disabled") ) return false;
+    });
+
+    $(".b-change-city-butt-disabled").click(function(){
+        return false;
+    });
+
+    $(".b-sber-pay").click(function(){
+        if( !$(this).attr("data-href") ) return false;
+        var $this = $(this);
+
+        progress.start(1.5);
+
+            $.ajax({
+                type: "GET",
+                url: $this.attr("data-href"),
+                success: function(msg){
+                    $(".b-payment-desc iframe").attr("src",msg).show();
+                    $(".b-sber-pay").hide();
+                },
+                error: function(){
+                    alert( "Ошибка получения формы оплаты" );
+                },
+                complete: function() {
+                    progress.end();
+                }
+            });
+    });
+
+    $(".change-order").click(function(){
+        
+    });
+
     
 })(jQuery, jQuery(document), jQuery(window));
 
