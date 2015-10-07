@@ -340,7 +340,7 @@ var progress;
     });
 
     $("#promo-butt").click(function(){
-        if($("#promo-code").val() != "") {
+        if($("#promo-code").val() != "" && !$(this).hasClass("disabled")) {
             $.ajax({
                 type: "POST",
                 url: "ajax/promo-code.php",
@@ -629,8 +629,8 @@ var progress;
                         $(".tooltip-cont .tooltip").html(json.text+'<span class="tooltip-close"></span>').fadeIn(300);
                         $(".b-change-order").show();
 
-                        $(".count-cont, .b-cart-delete, .flower-add-button").addClass("disabled");
-                        $(".count-cont input").attr("disabled","disabled");
+                        $(".count-cont, .b-cart-delete, .flower-add-button, #promo-butt, #promo-code").addClass("disabled");
+                        $(".count-cont input,#promo-code").attr("disabled","disabled");
 
                         $(".b-change-city-butt").hide();
                         $(".b-change-city-butt-disabled").show();

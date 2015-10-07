@@ -4086,7 +4086,9 @@ h2.b-title {
 		.b-order-nav li:hover span{
 			color: #FFF;
 		}
-
+#promo-butt.disabled{
+	cursor: default !important;
+}
 
 
 @media screen and (max-width: 1230px){
