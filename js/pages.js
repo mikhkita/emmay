@@ -1,4 +1,5 @@
-var progress;
+var progress,
+    changeCity = false;
 (function ($, $document, $window) {
     $(".fancy-ajax").each(function(){
         $(this).attr("href",$(this).attr("data-href"));
@@ -195,20 +196,20 @@ var progress;
     $(".plus").click(function(){
         if( $(this).parents(".count-cont").hasClass("disabled") ) return false;
 
-        var input = $(this).closest(".count-cont").find("input");
-        count = input.val()*1;
-        if(count<999) {
-            input.val(count+1);
-        }
+        // var input = $(this).closest(".count-cont").find("input");
+        // count = input.val()*1;
+        // if(count<999) {
+        //     input.val(count+1);
+        // }
     });
     $(".minus").click(function(){
         if( $(this).parents(".count-cont").hasClass("disabled") ) return false;
 
-        var input = $(this).closest(".count-cont").find("input");
-        count = input.val()*1;
-        if(count>1) {
-            input.val(count-1);
-        }
+        // var input = $(this).closest(".count-cont").find("input");
+        // count = input.val()*1;
+        // if(count>1) {
+        //     input.val(count-1);
+        // }
     });
 
     var availableTags = [
@@ -501,15 +502,31 @@ var progress;
         $(".input-cont .email-tooltip:visible").fadeOut();
     });
 
-    $("input[name='self']").change(checkSelf);
+    customHandlers["cityBefore"] = function(){
+        changeCity = true;
+    };
+
+    customHandlers["cityAfter"] = function(){
+        changeCity = false;
+    };
+
+    $("body").on("click",".city-list a",function(){
+        if( changeCity ){
+            $("#order-form").attr("action",$(this).attr("href")).attr("method","POST").append("<input type='hidden' name='CHANGE_CITY' value='Y'>");
+            $("#order-form")[0].submit();
+            return false;
+        }
+    });
+
+    $("input[name='ORDER_PROP_10']").change(checkSelf);
 
     checkSelf();
 
     function checkSelf(){
-        if($("input[name='self']").prop("checked")){
-            $("input[name='name2'],input[name='phone2']").val("").removeClass("valid error").prop("disabled",true);
+        if($("input[name='ORDER_PROP_10']").prop("checked")){
+            $("input[name='ORDER_PROP_8'],input[name='ORDER_PROP_9']").val("").removeClass("valid error").prop("disabled",true);
         } else {
-            $("input[name='name2'],input[name='phone2']").prop("disabled",false);
+            $("input[name='ORDER_PROP_8'],input[name='ORDER_PROP_9']").prop("disabled",false);
         }
     }
 

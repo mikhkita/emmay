@@ -347,7 +347,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<li data-step="#order-contacts"><span>Ваши данные</span></li>
 					<li data-step="#order-contacts-2"><span>Получатель</span></li>
 					<li data-step="#order-delivery"><span>О доставке</span></li>
-					<li data-step="#order-payment"><span>Оплата</span></li>
+					<li data-step="#order-payment" class="complete"><span>Оплата</span></li>
 				</ul>
 			</div>
 		</div>
@@ -604,7 +604,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="input-cont clearfix">
 							<label class="left">Адрес: Москва</label>
 							<textarea class="right" name="city"></textarea>
-							<a class="city b-change-city-butt fancy" href="#" data-block="#b-city">Изменить город</a>
+							<a class="city b-change-city-butt fancy" href="#" data-block="#b-city" data-beforeShow="cityBefore" data-beforeClose="cityAfter">Изменить город</a>
 							<a class="city b-change-city-butt-disabled" style="display: none;" href="#">Изменить город</a>
 							<div class="tooltip email-tooltip">Если вы не знаете точный адрес, или не уверены что получатель будет на месте, мы можем позвонить и согласовать получение заказа и не скажем что это цветы. Доставка в удалённые районы оплачивается дополнительно.</div>
 						</div>

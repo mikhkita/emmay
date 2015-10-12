@@ -19,12 +19,13 @@ $(document).ready(function(){
 	$("form").each(function(){
 		$(this).validate({
 			rules: {
-				date : {
+				ORDER_PROP_12 : {
                 	date : false
             	},
 				email: 'email',
 				phone: 'number',
-				phone2: 'number'
+				phone2: 'number',
+				ORDER_PROP_21: 'email'
 			}
 		});
 		// if( $(this).find("input.phone").length ){
