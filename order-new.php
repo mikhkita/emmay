@@ -619,9 +619,9 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<p class="select-tooltip right" id="select-tooltip-1">Мы согласуем время с получателем (и не скажем про цветы)</p>
 							<input class="select-tooltip time right" type="text" name="time" placeholder="до 11, после 14, утром" id="select-tooltip-2">
 							<select class="time right" name="time-type" id="time-select">
-								<option selected value="В ближайщее время">В ближайшее время</option>
+								<option value="В ближайщее время">В ближайшее время</option>
 								<option value="Уточнить у получателя">Уточнить у получателя</option>
-								<option value="Указать время">Указать время</option>
+								<option selected value="Указать время">Указать время</option>
 							</select>
 						</div>
 						<div class="input-cont clearfix">
@@ -688,7 +688,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 											</div>
 											<h3>Оплата производится через платёжную систему ROBOKASSA</h3>
 											<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой</p>
-											<input type="submit" class="btn btn-g" value="Оплатить">
+											<input type="submit" class="btn btn-g b-robo-pay" value="Оплатить">
 										</div>
 									</div>
 									<div class="pay3">

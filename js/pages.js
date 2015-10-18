@@ -489,7 +489,15 @@ var progress,
         };     
     }
 
-    select_tooltip();
+    setTimeout(function(){
+        for (var i = 0; i <= $("#time-select option").length; i++) {
+            if($("#time-select option").eq(i).prop("selected")) {
+                $("#select-tooltip-2").removeClass("error valid");
+                $(".select-tooltip:visible").hide();
+                $("#select-tooltip-"+i).show();
+            } 
+        }; 
+    },150);
 
     $("#time-select").change(function(){ 
         select_tooltip();
@@ -512,7 +520,8 @@ var progress,
 
     $("body").on("click",".city-list a",function(){
         if( changeCity ){
-            $("#order-form").attr("action",$(this).attr("href")).attr("method","POST").append("<input type='hidden' name='CHANGE_CITY' value='Y'>");
+            $("#order-form input[name='BasketRefresh']").remove();
+            $("#order-form").attr("action",$(this).attr("href")+"cart/").attr("method","POST").append("<input type='hidden' name='change_order_city' value='Y'>");
             $("#order-form")[0].submit();
             return false;
         }
@@ -623,7 +632,7 @@ var progress,
         }
     });
     $("#order-form").submit(function(){
-        if( $(this).hasClass("loaded") ) return false;
+        // if( $(this).hasClass("loaded") ) return false;
 
         if($('.b-order-nav li:not(.complete)').length) {
             $('.b-order-nav li:not(.complete)').eq(0).click();       
@@ -633,6 +642,8 @@ var progress,
             var $form = $(this);
 
             progress.start(1.5);
+
+            $(".b-payment-desc .btn").hide();
 
             $.ajax({
                 type: $form.attr("method"),
@@ -655,7 +666,12 @@ var progress,
                         $("#order-number").val(json.id);
                         $("#sum").val(json.sum);
 
+                        $(".b-payment-desc .btn").fadeIn();
+
                         $(".b-sber-pay").attr("data-href",json.sber);
+
+                        $("#robokassa-form").remove();
+                        $(".b-allwrap").append(json.robo);
                     }else{
                         alert( (json.message)?json.message:"Ошибка создания заказа" );
                     }
@@ -679,9 +695,16 @@ var progress,
         return false;
     });
 
+    $(".b-robo-pay").click(function(){
+        $("#robokassa-form").submit();
+        return false;
+    });
+
     $(".b-sber-pay").click(function(){
         if( !$(this).attr("data-href") ) return false;
         var $this = $(this);
+
+        $this.parent().find("p").fadeOut();
 
         progress.start(1.5);
 
@@ -699,10 +722,15 @@ var progress,
                     progress.end();
                 }
             });
+
+        return false;
     });
 
     $(".change-order").click(function(){
-        
+        $("#order-form input[name='BasketRefresh']").remove();
+        $("#order-form").attr("action","").attr("method","POST").append("<input type='hidden' name='change_current_order' value='Y'>");
+        $("#order-form")[0].submit();
+        return false;
     });
 
     
