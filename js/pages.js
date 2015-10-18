@@ -805,4 +805,23 @@ function bindFancy(){
             }
         });
     });
+
+
+    $(".coupon-form").submit(function(){
+        if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
+            var form = $(this);
+            $.ajax({
+                type: form.attr("method"),
+                url: form.attr("action"),
+                data:  form.serialize(),
+                success: function(msg){
+                    var obj = jQuery.parseJSON(msg);
+                    var message = form.parent().find(".message");            
+                    if(obj.result=="success") message.removeClass("error"); else message.addClass("error");
+                    message.text(obj.message);
+                }
+            });
+        }
+        return false;
+    });
 }

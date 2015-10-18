@@ -4089,8 +4089,28 @@ h2.b-title {
 #promo-butt.disabled{
 	cursor: default !important;
 }
+.coupon {
 
-
+}
+	.coupon .coupon-cont,.coupon .order-number {
+		width: 45%;
+	}
+	.coupon .coupon-cont {
+		margin-right: 10%;
+	}
+	.coupon .input-cont {
+		margin-bottom: 10px;
+	}
+		.coupon .input-cont input {
+			max-width: 350px;
+			width: 60%;
+		}
+	.coupon h4 {
+		margin-top: 5px;
+	}
+		.coupon h4.error {
+			color: #DF9EA9;
+		}
 @media screen and (max-width: 1230px){
 	.free-card
 	{
