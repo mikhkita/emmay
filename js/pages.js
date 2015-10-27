@@ -17,8 +17,6 @@ var progress,
 
     var topMenuHeight = 62;
 
-    $(".b-issue").attr("data-default",$(".b-issue").val());
-
     var resizePort = function () {
 		winW = $window.width();
         if (winW < 1000) {
@@ -48,10 +46,6 @@ var progress,
             "width":winW,
             "margin-left":$(".b-wrap").offset().left*-1
         });
-        if( $(".b-issue").length )
-            $(".b-issue").each(function(){
-                $(this).val(( winW < $(this).attr("data-width")*1 )?$(this).attr("data-value"):$(this).attr("data-default"));
-            });
     };
     $window.resize(function () {
         resizePort();
@@ -171,9 +165,9 @@ var progress,
 	// });
 
     $(".b-nav-list > li").hover(function(){
-        $(this).find(".b-submenu").stop().slideDown(250).addClass("opened");
+        $(this).find(".b-submenu").stop().slideDown(100).addClass("opened");
     },function(){
-        $(this).find(".b-submenu").stop().slideUp(250).removeClass("opened");
+        $(this).find(".b-submenu").stop().slideUp(100).removeClass("opened");
     });
 
     $("body").on('click',".b-radio>*",function(){
@@ -261,18 +255,18 @@ var progress,
             if (!li.hasClass('active')) {
                 li.parent().find('> .active > a').trigger('click');
                 li.addClass('active');
-                li.find('> ul').slideDown(200, function() {
+                li.find('> ul').slideDown(100, function() {
                     var scrollTop = suvlakSide.scrollTop();
                     var top = li.offset().top + scrollTop;
                     if (top < scrollTop) {
                         suvlakSide.animate({
                             scrollTop: top
-                        }, 200);
+                        }, 100);
                     };
                 });
             } else {
                 li.removeClass('active');
-                li.find('> ul').slideUp(200);
+                li.find('> ul').slideUp(100);
             };
             return false;
         });
@@ -363,6 +357,13 @@ var progress,
         minDate: 0,
         onClose: function() {
             $( "#datepicker" ).valid();
+        },
+        onSelect: function(){
+            var date = $( "#datepicker" ).val();
+            if( $.datepicker.formatDate('dd.mm.yy', new Date()) != date ){
+                $("#time-select").val("Указать время").trigger("change");
+                $("#select-tooltip-2").focus();
+            }
         }
     }).datepicker( $.datepicker.regional[ "ru" ] );
 
@@ -550,34 +551,33 @@ var progress,
             type: "POST",
             url: $(this).attr("data-href"),
             success: function(msg){
-                progress.end(function(){
-                    var cart = $("#minicart .b-cart-menu").attr("class"),
-                        opened = $("#minicart .b-cart-menu").hasClass("opened") || ( ($(".fancybox-inner").length)?true:false );
+                var cart = $("#minicart .b-cart-menu").attr("class"),
+                    opened = $("#minicart .b-cart-menu").hasClass("opened") || ( ($(".fancybox-inner").length)?true:false );
 
-                    $("#minicart").html(msg);
-                    $("#minicart .b-cart-menu").attr("class",cart);
-                    $("#minicart .b-cart-menu.opened").show();
+                $("#minicart").html(msg);
+                $("#minicart .b-cart-menu").attr("class",cart);
+                $("#minicart .b-cart-menu.opened").show();
 
-                    $(".b-cart-menu").html($("#minicart .b-cart-menu").html());
+                $(".b-cart-menu").html($("#minicart .b-cart-menu").html());
 
-                    $.fancybox.update();
+                $.fancybox.update();
 
-                    $(".b-small-cart-icon").addClass("fancy");
+                $(".b-small-cart-icon").addClass("fancy");
 
-                    bindFancy();
+                bindFancy();
 
-                    if( !opened ) {
-                        toggleCartMenu();
-                        if( winW < 768 ) $(".b-small-cart-icon").click();
-                    }
+                if( !opened ) {
+                    toggleCartMenu();
+                    if( winW < 768 ) $(".b-small-cart-icon").click();
+                }
 
-                    if( $("#minicart .b-topmenu-basket").hasClass("empty") ){
-                        $(".b-topmenu-basket").addClass("empty");
-                    }else{
-                        $(".b-topmenu-basket").removeClass("empty");
-                    }
-                    $(".b-top-basket-count").text($("#minicart .b-top-basket-count").text());
-                });
+                if( $("#minicart .b-topmenu-basket").hasClass("empty") ){
+                    $(".b-topmenu-basket").addClass("empty");
+                }else{
+                    $(".b-topmenu-basket").removeClass("empty");
+                }
+                $(".b-top-basket-count").text($("#minicart .b-top-basket-count").text());
+                progress.end();
             }
         });
         return false;
@@ -591,7 +591,8 @@ var progress,
             type : "ajax",
             helpers: {
                 overlay: {
-                    locked: true 
+                    locked: true,
+                    speedOut: 0
                 }
             },
             beforeShow: function(){
@@ -605,7 +606,9 @@ var progress,
             },
             afterClose: function(){
                 
-            }
+            },
+            openSpeed : 0,
+            closeSpeed : 0
         });
     });
 
@@ -614,6 +617,7 @@ var progress,
         var step;
         step = $(this).attr("data-step");
         if(!$(step).hasClass("active")) {
+            window.location.hash = $(".b-order-nav li[data-step='"+step+"']").attr("data-hash");
             var show = true;
             if( step == "#order-payment" ){
                 $("#order-form").submit();
@@ -631,6 +635,10 @@ var progress,
             }
         }
     });
+
+    if( window.location.hash != "" )
+        $(".b-order-nav li[data-hash='"+window.location.hash+"']").trigger("click");
+
     $("#order-form").submit(function(){
         // if( $(this).hasClass("loaded") ) return false;
 
@@ -700,6 +708,15 @@ var progress,
         return false;
     });
 
+    $("#b-data-order").validate();
+
+    $(".b-pay-pay").click(function(){
+        if($("#b-data-order").valid()){
+            $(this).parents("form").submit();
+        }
+        return false;
+    });
+
     $(".b-sber-pay").click(function(){
         if( !$(this).attr("data-href") ) return false;
         var $this = $(this);
@@ -747,9 +764,12 @@ function bindFancy(){
             content : $popup,
             helpers: {
                 overlay: {
-                    locked: true 
+                    locked: true,
+                    speedOut: 0
                 }
             },
+            openSpeed : 0,
+            closeSpeed : 0,
             beforeShow: function(){
                 $popup.find(".b-first-step").show();
                 $popup.find(".b-second-step, .b-third-step").hide();
@@ -788,7 +808,8 @@ function bindFancy(){
             type : "ajax",
             helpers: {
                 overlay: {
-                    locked: true 
+                    locked: true,
+                    speedOut: 0
                 }
             },
             beforeShow: function(){
@@ -802,7 +823,9 @@ function bindFancy(){
             },
             afterClose: function(){
                 
-            }
+            },
+            openSpeed : 0,
+            closeSpeed : 0
         });
     });
 

@@ -340,7 +340,6 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</ul>
 			</div>
 		</div>
-		<form action="ajax/add-order.php" id="order-form">
 		<div id="order-payment" class="active">
 			<div class="b-container b-payment">
 				<div class="b-wrap clearfix">
@@ -351,14 +350,16 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="b-payment-cont-right">
 							<h2 class="title">ДАННЫЕ ЗАКАЗА</h2>
 							<div class="pay-data">
-								<div class="input-cont">
-									<label for="order-number">Номер заказа:</label>
-									<input id="order-number" type="text" name="order-number" disabled required>
-								</div>
-								<div class="input-cont">
-									<label for="sum">Сумма:</label>
-									<input id="sum" type="number" name="sum" min="1" max="999999" disabled required>
-								</div>
+								<form action="" id="b-data-order">
+									<div class="input-cont">
+										<label for="order-number">Номер заказа:</label>
+										<input id="order-number" type="number" min="1" max="999999" name="order-number" required>
+									</div>
+									<div class="input-cont">
+										<label for="sum">Сумма:</label>
+										<input id="sum" type="number" name="sum" min="1" max="999999" required>
+									</div>
+								</form>
 							</div>	
 						</div>
 						<div class="b-payment-cont-left">
@@ -385,7 +386,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 											</div>
 											<h3>Оплата производится через платёжную систему Сбербанка</h3>
 											<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой</p>
-											<input type="submit" class="btn btn-g b-sber-pay" value="Оплатить">
+											<input type="submit" class="btn btn-g b-pay-pay" value="Оплатить">
 											<iframe src="http://google.com/" frameborder="0"></iframe>
 										</div>
 									</div>
@@ -396,7 +397,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 											</div>
 											<h3>Оплата производится через платёжную систему ROBOKASSA</h3>
 											<p>Нажмите "Оплатить" и выберите способ оплаты: Банковской картой</p>
-											<input type="submit" class="btn btn-g b-robo-pay" value="Оплатить">
+											<input type="submit" class="btn btn-g b-pay-pay" value="Оплатить">
 										</div>
 									</div>
 									<div class="pay3">
@@ -410,7 +411,6 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 			</div>
 		</div>
-		</form>
 	</div>
 </div>
 <div class="all-overlay"></div>

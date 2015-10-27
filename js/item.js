@@ -16,23 +16,24 @@
             url: $("#item-form").attr("action"),
             data:  { item: item },
             success: function(msg){
-            	progress.end(function(){
-            		$(".ajax-container").html(msg);		
-            		sliders_init();
-            		history.pushState(null,null,this.href);
-            		history.replaceState(null,null,$(".b-container.item").attr("data-href"));
-            		bindFancy();
-                });
-            	
+            	progress.end();
+        		$(".ajax-container").html(msg);		
+        		sliders_init();
+        		history.pushState(null,null,this.href);
+        		history.replaceState(null,null,$(".b-container.item").attr("data-href"));
+        		bindFancy();
             }
         });
 
     });
     sliders_init();
+    var blocked = true;
 
-    window.onpopstate = function(event) {
-    	window.location.assign(document.location);
-	};
+    $(document).load(function(){
+    	window.onpopstate = function(event) {
+	    	window.location.assign(document.location);
+		};
+    });
 
     function sliders_init() {
 		// фото с доставок

@@ -343,11 +343,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 		<div class="b-container payment-nav">
 			<div class="b-wrap clearfix">
 				<ul class="b-order-nav clearfix">
-					<li class="active complete" data-step="#order-basket"><span>Корзина</span></li>
-					<li data-step="#order-contacts"><span>Ваши данные</span></li>
-					<li data-step="#order-contacts-2"><span>Получатель</span></li>
-					<li data-step="#order-delivery"><span>О доставке</span></li>
-					<li data-step="#order-payment" class="complete"><span>Оплата</span></li>
+					<li class="active complete" data-step="#order-basket" data-hash="#basket"><span>Корзина</span></li>
+					<li data-step="#order-contacts" data-hash="#personal-data"><span>Ваши данные</span></li>
+					<li data-step="#order-contacts-2" data-hash="#recipient"><span>Получатель</span></li>
+					<li data-step="#order-delivery" data-hash="#delivery"><span>О доставке</span></li>
+					<li data-step="#order-payment" data-hash="#payment" class="complete"><span>Оплата</span></li>
 				</ul>
 			</div>
 		</div>
@@ -388,7 +388,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									<span class="plus right" onselectstart="return false;"></span>
 								</div>
 					   		</td>
-					   		<td>1 580 руб.</td>
+					   		<td>1 580 <span class="b-rub-long">руб.</span><span class="b-rub-short">Р</span></td>
 					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
 					    <tr>
@@ -407,7 +407,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									<span class="plus right" onselectstart="return false;"></span>
 								</div>
 					   		</td>
-					   		<td>1 580 руб.</td>
+					   		<td>1 580 <span class="b-rub-long">руб.</span><span class="b-rub-short">Р</span></td>
 					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
 					    <tr>
@@ -426,7 +426,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									<span class="plus right" onselectstart="return false;"></span>
 								</div>
 					   		</td>
-					   		<td>1 580 руб.</td>
+					   		<td>1 580 <span class="b-rub-long">руб.</span><span class="b-rub-short">Р</span></td>
 					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
 					</tbody>
@@ -619,9 +619,9 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<p class="select-tooltip right" id="select-tooltip-1">Мы согласуем время с получателем (и не скажем про цветы)</p>
 							<input class="select-tooltip time right" type="text" name="time" placeholder="до 11, после 14, утром" id="select-tooltip-2">
 							<select class="time right" name="time-type" id="time-select">
-								<option value="В ближайщее время">В ближайшее время</option>
+								<option selected value="В ближайшее время">В ближайшее время</option>
 								<option value="Уточнить у получателя">Уточнить у получателя</option>
-								<option selected value="Указать время">Указать время</option>
+								<option value="Указать время">Указать время</option>
 							</select>
 						</div>
 						<div class="input-cont clearfix">

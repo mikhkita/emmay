@@ -198,7 +198,9 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 			<div class="b-container b-nav" data-spy="affix" data-child=".b-cart-menu" data-offset-top="181" data-offset-bottom="200">
 				<div class="b-wrap">	
 					<div class="b-mobile-nav clearfix">
-						<a href="#" class="b-burger-button burger-link left"></a>
+						<a href="#" class="b-burger-button burger-link left">
+							Меню
+						</a>
 						<div class="b-phone">
 							<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
 							<span class="b-nav-phone-time">24 ЧАСА 7 ДНЕЙ В НЕДЕЛЮ</span>

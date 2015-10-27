@@ -559,10 +559,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			bottom: 0px;
 			background: rgba(0,0,0,.4);
 			z-index: 100;
-			opacity: 0;
-			-webkit-transition: all 200ms ease-in-out;
-			   -moz-transition: all 200ms ease-in-out;
-					transition: all 200ms ease-in-out;				
+			opacity: 0;			
 			z-index: -1;
 		}
 			.all-overlay.active-overlay
@@ -595,9 +592,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	    -ms-transform: translateX(-510px);
 	   	 -o-transform: translateX(-510px);
 			transform: translateX(-510px);
-	-webkit-transition: all 400ms ease-in-out;
-	   -moz-transition: all 400ms ease-in-out;
-			transition: all 400ms ease-in-out;	
+	-webkit-transition: all 150ms ease-in-out;
+	   -moz-transition: all 150ms ease-in-out;
+			transition: all 150ms ease-in-out;	
 	-webkit-box-shadow: -5px 0 10px 0 rgba(0,0,0,.5);
 	   -moz-box-shadow: -5px 0 10px 0 rgba(0,0,0,.5);
 			box-shadow: -5px 0 10px 0 rgba(0,0,0,.5);	
@@ -1439,11 +1436,11 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 	background: #FFFFFF;
 	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.20);
 	border-radius: 4px;
-	-webkit-transition: all 300ms ease-out;
-	   -moz-transition: all 300ms ease-out;
-	    -ms-transition: all 300ms ease-out;
-	   	 -o-transition: all 300ms ease-out;
-			transition: all 300ms ease-out;
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+	    -ms-transition: all 100ms ease-out;
+	   	 -o-transition: all 100ms ease-out;
+			transition: all 100ms ease-out;
 	display: none;
 	-webkit-transform: translateY(-20px);
 	   -moz-transform: translateY(-20px);
@@ -4111,6 +4108,9 @@ h2.b-title {
 		.coupon h4.error {
 			color: #DF9EA9;
 		}
+.b-rub-short{
+	display: none;
+}
 @media screen and (max-width: 1230px){
 	.free-card
 	{

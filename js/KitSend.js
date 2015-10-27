@@ -135,7 +135,9 @@ $(document).ready(function(){
 					$this.find("input[type=text],textarea").val("");
 					$.fancybox.open({
 						content : $form,
-						padding : 0
+						padding : 0,
+						openSpeed : 0,
+						closeSpeed : 0
 					});	
 				}
 			});
