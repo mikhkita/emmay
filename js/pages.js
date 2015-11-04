@@ -844,6 +844,24 @@ function bindFancy(){
         });
     });
 
+    jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function(arg) {
+        return function( elem ) {
+            return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+        };
+    });
+
+    if( $(".contacts-search").length ){
+        $(".contacts-search").bind("keyup",function(){
+            $(".b-contacts-cont a").hide();
+            $(".b-contacts-cont").hide();
+            $(".b-contacts-cont a:Contains('"+$(this).val()+"')").show().parents(".b-contacts-cont").show();
+            if( !$(".b-contacts-cont a:Contains('"+$(this).val()+"')").length ){
+                $(".b-not-found").show();
+            }else{
+                $(".b-not-found").hide();
+            }
+        });
+    }
 
     $(".coupon-form").submit(function(){
         if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
