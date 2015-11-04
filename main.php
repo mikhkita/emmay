@@ -13,6 +13,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
 
     <? if( $mobile ): ?>
 	<meta name="viewport" content="width=750, user-scalable=no">
@@ -113,7 +114,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</form>
 					</li>
 					<li class="b-menu-item">
-						<p><span class="b-menu-phone"><a href="tel://8-800-775-93-00">8 (800) 775-93-80</a> - Круглосуточно</span></p>
+						<p><span class="b-menu-phone"><a href="callto:3177594940">8 (800) 775-93-80</a> - Круглосуточно</span></p>
 						<p>Группа <a href="http://vk.com/yammeflowers">Вконтакте</a></p>
 						<p>Напишите нам: <a href="mailtp:info@yamme.ru">info@yamme.ru</a></p>
 						<p>© 2009-2015 yamme.ru</p>
@@ -168,7 +169,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</a>
 				</div>
 				<div class="b-topmenu-help">
-					<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
+					<a href="callto:3177594940" class="topmenu-tel">8 (800) 775-93-80</a>
 					<a href="#" class="b-topmenu-callback fancy" data-block="#b-callback">Заказать звонок</a>
 				</div>						
 				<div class="b-topmenu-links">
@@ -202,7 +203,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							Меню
 						</a>
 						<div class="b-phone">
-							<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
+							<a href="callto:3177594940" class="topmenu-tel">8 (800) 775-93-80</a>
 							<span class="b-nav-phone-time">24 ЧАСА 7 ДНЕЙ В НЕДЕЛЮ</span>
 						</div>
 						<a href="#" class="b-small-cart-icon right fancy" data-block=".b-cart-menu"></a>
@@ -274,7 +275,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<!-- /mobile-view burder -->	
 					<!-- affix-shown block -->
 					<div class="b-nav-phone">
-						<a href="tel://8-800-775-93-00" class="topmenu-tel">8 (800) 775-93-80</a>
+						<a href="callto:3177594940" class="topmenu-tel">8 (800) 775-93-80</a>
 						<span class="b-nav-phone-time">24 ЧАСА 7 ДНЕЙ В НЕДЕЛЮ</span>
 					</div>
 					<a href="#" class="b-topmenu-basket">
@@ -355,21 +356,21 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<form action="ajax/filter.php" id="filter-form">
 						<div class="b-filter-group f-group-1">
 							<h3>БУКЕТ ИЗ:</h3>
-							<input type="radio" checked hidden name="filter-1" value="1-1" id="filter-1-1"/>
-							<label class="active" for="filter-1-1">Все</label>
-							<input type="radio" hidden name="filter-1" value="1-2" id="filter-1-2"/>
+							<input type="checkbox" checked hidden name="filter-1" value="1-1" class="b-filter-all" id="filter-1-1"/>
+							<label class="active b-filter-all" for="filter-1-1">Все</label>
+							<input type="checkbox" hidden name="filter-1" value="1-2" id="filter-1-2"/>
 							<label for="filter-1-2">РОЗЫ</label>
-							<input type="radio" hidden name="filter-1" value="1-3" id="filter-1-3"/>
+							<input type="checkbox" hidden name="filter-1" value="1-3" id="filter-1-3"/>
 							<label for="filter-1-3">ТЮЛЬПАНЫ</label>
-							<input type="radio" hidden name="filter-1" value="1-4" id="filter-1-4"/>
+							<input type="checkbox" hidden name="filter-1" value="1-4" id="filter-1-4"/>
 							<label for="filter-1-4">ИРИСЫ</label>
-							<input type="radio" hidden name="filter-1" value="1-5" id="filter-1-5"/>
+							<input type="checkbox" hidden name="filter-1" value="1-5" id="filter-1-5"/>
 							<label for="filter-1-5">ГЕРБЕРЫ</label>
 						</div>
 						<div class="b-filter-group f-group-2">
 							<h3>ПО ЦЕНЕ:</h3>
-							<input type="radio" checked hidden name="filter-2" value="2-1" id="filter-2-1"/>
-							<label class="active" for="filter-2-1">Все</label>
+							<input type="radio" checked hidden name="filter-2" class="b-filter-all" value="2-1" id="filter-2-1"/>
+							<label class="active b-filter-all" for="filter-2-1">Все</label>
 							<input type="radio" hidden name="filter-2" value="2-2" id="filter-2-2"/>
 							<label for="filter-2-2">ОТ 2000 ₽</label>
 							<input type="radio" hidden name="filter-2" value="2-3" id="filter-2-3"/>
@@ -381,45 +382,45 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</div>
 						<div class="b-filter-group f-group-3">
 							<h3>ПО СОБЫТИЮ:</h3>
-							<input type="radio" checked hidden name="filter-3" value="3-1" id="filter-3-1"/>
-							<label class="active" for="filter-3-1">Все</label>
-							<input type="radio" hidden name="filter-3" value="3-2" id="filter-3-2"/>
+							<input type="checkbox" checked hidden name="filter-3" class="b-filter-all" value="3-1" id="filter-3-1"/>
+							<label class="active b-filter-all" for="filter-3-1">Все</label>
+							<input type="checkbox" hidden name="filter-3" value="3-2" id="filter-3-2"/>
 							<label for="filter-3-2">СВАДЬБА</label>
-							<input type="radio" hidden name="filter-3" value="3-3" id="filter-3-3"/>
+							<input type="checkbox" hidden name="filter-3" value="3-3" id="filter-3-3"/>
 							<label for="filter-3-3">ДЛЯ БАБУШКИ</label>
-							<input type="radio" hidden name="filter-3" value="3-4" id="filter-3-4"/>
+							<input type="checkbox" hidden name="filter-3" value="3-4" id="filter-3-4"/>
 							<label for="filter-3-4">ДЛЯ МАМЫ</label>
-							<input type="radio" hidden name="filter-3" value="3-5" id="filter-3-5"/>
+							<input type="checkbox" hidden name="filter-3" value="3-5" id="filter-3-5"/>
 							<label for="filter-3-5">РУКОВОДИТЕЛЮ</label>
-							<input type="radio" hidden name="filter-3" value="3-6" id="filter-3-6"/>
+							<input type="checkbox" hidden name="filter-3" value="3-6" id="filter-3-6"/>
 							<label for="filter-3-6">8 МАРТА</label>
-							<input type="radio" hidden name="filter-3" value="3-7" id="filter-3-7"/>
+							<input type="checkbox" hidden name="filter-3" value="3-7" id="filter-3-7"/>
 							<label for="filter-3-7">ДЕНЬ РОЖДЕНИЯ</label>
 						</div>						
 						<div class="b-filter-group f-group-4">
 							<h3>ПО ЦВЕТУ:</h3>
-							<input type="radio" hidden checked name="filter-4" value="4-1" id="filter-4-1"/>
-							<label class="active" for="filter-4-1">Все</label>
-							<input type="radio" hidden name="filter-4" value="4-2" id="filter-4-2"/>
+							<input type="checkbox" hidden checked name="filter-4" class="b-filter-all" value="4-1" id="filter-4-1"/>
+							<label class="active b-filter-all" for="filter-4-1">Все</label>
+							<input type="checkbox" hidden name="filter-4" value="4-2" id="filter-4-2"/>
 							<label for="filter-4-2">КРАСНЫЙ</label>
-							<input type="radio" hidden name="filter-4" value="4-3" id="filter-4-3"/>
+							<input type="checkbox" hidden name="filter-4" value="4-3" id="filter-4-3"/>
 							<label for="filter-4-3">ЖЕЛТЫЙ</label>
-							<input type="radio" hidden name="filter-4" value="4-4" id="filter-4-4"/>
+							<input type="checkbox" hidden name="filter-4" value="4-4" id="filter-4-4"/>
 							<label for="filter-4-4">БЕЛЫЙ</label>
-							<input type="radio" hidden name="filter-4" value="4-5" id="filter-4-5"/>
+							<input type="checkbox" hidden name="filter-4" value="4-5" id="filter-4-5"/>
 							<label for="filter-4-5">РОЗОВЫЙ</label>
 						</div>
 						<div class="b-filter-group f-group-5">
 							<h3>КОМУ:</h3>
-							<input type="radio" checked hidden name="filter-5" value="5-1" id="filter-5-1"/>
-							<label class="active" for="filter-5-1">Все</label>
-							<input type="radio" hidden name="filter-5" value="5-2" id="filter-5-2"/>
+							<input type="checkbox" checked hidden name="filter-5" class="b-filter-all" value="5-1" id="filter-5-1"/>
+							<label class="active b-filter-all" for="filter-5-1">Все</label>
+							<input type="checkbox" hidden name="filter-5" value="5-2" id="filter-5-2"/>
 							<label for="filter-5-2">МУЖЧИНЕ</label>
-							<input type="radio" hidden name="filter-5" value="5-3" id="filter-5-3"/>
+							<input type="checkbox" hidden name="filter-5" value="5-3" id="filter-5-3"/>
 							<label for="filter-5-3">ЖЕНЩИНЕ</label>
-							<input type="radio" hidden name="filter-5" value="5-4" id="filter-5-4"/>
+							<input type="checkbox" hidden name="filter-5" value="5-4" id="filter-5-4"/>
 							<label for="filter-5-4">ДЕТСКИЕ БУКЕТЫ</label>
-							<input type="radio" hidden name="filter-5" value="5-5" id="filter-5-5"/>
+							<input type="checkbox" hidden name="filter-5" value="5-5" id="filter-5-5"/>
 							<label for="filter-5-5">ДЛЯ ПОЖИЛЫХ</label>
 						</div>
 						</form>
@@ -708,7 +709,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					<div class="b-menu-wrap">
 					<h3>КОНТАКТЫ</h3>
 						<p>© 2009-2014 yamme.ru</p>
-						<p><span class="b-menu-phone"><a href="tel://8-800-775-93-00">8 (800) 775-93-80</a> - Круглосуточно</span><br/></p>
+						<p><span class="b-menu-phone"><a href="callto:3177594940">8 (800) 775-93-80</a> - Круглосуточно</span><br/></p>
 						<p><a href="http://vk.com/yammeflowers">Группа Вконтакте</a></p>
 						<p>Напишите нам: <a href="mailto:info@yamme.ru">info@yamme.ru</a></p>
 					</div>

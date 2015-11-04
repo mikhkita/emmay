@@ -431,7 +431,12 @@ var progress,
         }
     }
     var filter_change = false;
-    $(".b-filters input[type=radio]").change(function(){ 
+    $(".b-filters input[type=radio], .b-filters input[type=checkbox]").change(function(){ 
+        if( $(this).attr("type") == "checkbox" ) $(this).parents(".b-filter-group").find(".b-filter-all").removeAttr("checked").hide();
+        $(".structure .b-aside h1, .b-banner-gallery").hide();
+        $("body, html").animate({
+            scrollTop : $(".structure").offset().top-100
+        },300);
         filter_change = true;
         $("input[name=PAGEN_1]").val(1);
         filter_ajax(true,filter_change,$("#filter-form").attr("action"));   
@@ -624,6 +629,9 @@ var progress,
                 show = $("#order-form").valid();
             }
             if( show ){
+                $("body, html").animate({
+                    scrollTop : $(".payment-nav").offset().top-100
+                },300);
                 var oldstep = $("#order-form >div.active").attr("id");
                 if( $("input.valid:visible[required='required']").length == $("input:visible[required='required']").length || $("input:visible[required='required']").length == $("input:visible[disabled='disabled']").length) {
                     $(".b-order-nav li[data-step='#"+oldstep+"']").addClass("complete");
@@ -634,6 +642,13 @@ var progress,
                 $(".b-order-nav li[data-step='"+step+"']").addClass("active");
             }
         }
+    });
+
+    $(".flower-add-button").on("click",function(){
+        $("body, html").animate({
+            scrollTop : $(".payment-nav").offset().top-100
+        },300);
+        return false;
     });
 
     if( window.location.hash != "" )
