@@ -3449,6 +3449,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 					.b-payment .b-wrap .b-payment-cont-right .pay-data input {
 						width: 100%;
 					}
+.b-not-found{
+	display: none;
+}
 /* footer */	
 .b-footer
 {
@@ -4197,11 +4200,15 @@ h2.b-title {
 	.contacts-list li
 	{
 		display: inline-block;
-		margin-right: 30px;
 		list-style:none;
 		margin-bottom: 15px;
 		font-size: 16px;
 	}
+		.contacts-list li a
+		{
+			display: inline-block;
+			margin-right: 30px;
+		}
 	.b-contacts-name
 	{
 		font-size: 18px;

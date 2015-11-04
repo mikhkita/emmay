@@ -351,12 +351,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					</div>
 					<div class="yamme-text-block">
 						<h2 class="contacts-head"><span>Доставка цветов по России</span> <a href="#">Доставка цветов по всему миру</a></h2>
-						<form action="" class="contacts-search-block">
+						<div class="contacts-search-block">
 							<div class="input-contsearch clearfix">
 								<input class="contacts-search" type="text" placeholder="Введите название города" name="searcher-context" >	
 								<button type="button" class="contacts-searcher"><span></span></button>
 							</div>
-						</form>
+						</div>
 						<div class="b-contacts-name contacts-country">Россия</div>
 						<div class="b-contacts-cont">
 							<div class="b-contacts-name">A</div>

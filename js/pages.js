@@ -323,15 +323,24 @@ var progress,
 
     $(".pay-desc").find("."+$(".pay-type .active").attr("id")).show();
     $(".pay-type div").click(function(){
-        $(".pay-type div").removeClass("active");
-        $(".pay-desc > div").hide();
-        if( $(this).index() == 0 ){
-            $(".pay-desc").addClass("first");
+        if( winW > 760 ){
+            $(".pay-type div").removeClass("active");
+            $(".pay-desc > div").hide();
+            if( $(this).index() == 0 ){
+                $(".pay-desc").addClass("first");
+            }else{
+                $(".pay-desc").removeClass("first");
+            }
+            $(".pay-desc").find("."+$(this).attr("id")).show();
+            $(this).addClass("active");
         }else{
-            $(".pay-desc").removeClass("first");
+            $(".pay-type").fadeOut(300,function(){
+                $(".pay-desc").addClass("relative");
+            });
+            $(".pay-desc > div").hide();
+            $(".pay-desc").find("."+$(this).attr("id")).show();
+            $(".pay-desc").addClass("shown");
         }
-        $(".pay-desc").find("."+$(this).attr("id")).show();
-        $(this).addClass("active");
     });
 
     $("#promo-butt").click(function(){

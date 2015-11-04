@@ -2276,16 +2276,18 @@ a
 				.b-payment .b-wrap .b-payment-cont-left .pay-type-cont {
 					width: 100%;
 				}
-					.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type {			
-					    height: 90px;
+					.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type {
+					    height: auto;
 					}
 						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type > div{
-							width: 49%;	
-							height: 80px;
+							width: 710px;
+							padding-bottom: 25px;
+							height: auto;
 							padding-top: 20px;
 						}
 						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type > div.active {
-							height: 91px;
+							height: auto;
+							width: 710px;
 						}
 
 						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type .right{
@@ -2294,6 +2296,13 @@ a
 						}
 					.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc{
 						padding: 25px 30px 25px 20px;
+						width: 710px;
+						position: absolute;
+						left: 20px;
+						right: 0px;
+						box-sizing: border-box;
+						background: #FFF;
+						/* display: none; */
 					}
 						.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-desc >div{
 						}	
@@ -2866,6 +2875,49 @@ h2.b-title{
 	    top: -17px;
 	    background-image: url("../i/cross-del.png");
 	}
+.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type > div.active{
+	background-color: transparent;
+}
+.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type > div p{
+	font-size: 32px;
+	line-height: 40px;
+	max-width: 700px;
+}
+.pay-desc{
+	-webkit-transition: all 150ms ease-out;
+	   -moz-transition: all 150ms ease-out;
+	    -ms-transition: all 150ms ease-out;
+	   	 -o-transition: all 150ms ease-out;
+			transition: all 150ms ease-out;
+	-webkit-transform: translateX(760px);
+	   -moz-transform: translateX(760px);
+	    -ms-transform: translateX(760px);
+	   	 -o-transform: translateX(760px);
+			transform: translateX(760px);
+}
+	.pay-desc.shown{
+		-webkit-transform: translateX(0px);
+		   -moz-transform: translateX(0px);
+		    -ms-transform: translateX(0px);
+		   	 -o-transform: translateX(0px);
+				transform: translateX(0px);		
+	}
+	.pay-desc.relative{
+		-webkit-transition: all 0ms ease-out;
+		   -moz-transition: all 0ms ease-out;
+		    -ms-transition: all 0ms ease-out;
+		   	 -o-transition: all 0ms ease-out;
+				transition: all 0ms ease-out;
+		position: relative !important;
+		left: 0px !important;
+		top: 0px !important;
+	}
+.robo p{
+	padding-top: 13px;
+}
+.b-payment .b-wrap .b-payment-cont-left .pay-type-cont .pay-type > div.active:after{
+	display: none;
+}
 .b-rub-long{
 	display: none;
 }
