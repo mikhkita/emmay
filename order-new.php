@@ -372,7 +372,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						    <th>Цена</th>
 						    <th></th>
 					    </tr>
-					    <tr>
+					    <tr data-type="present">
 					   		<td class="item-title">
 					   			<div>
 					   				<div class="img-cont">
@@ -391,7 +391,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					   		<td>1 580 <span class="b-rub-long">руб.</span><span class="b-rub-short">Р</span></td>
 					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
-					    <tr>
+					    <tr data-type="item">
 					   		<td class="item-title">
 					   			<div>
 					   				<div class="img-cont">
@@ -410,7 +410,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					   		<td>1 580 <span class="b-rub-long">руб.</span><span class="b-rub-short">Р</span></td>
 					   		<td><a href="#" class="b-cart-delete">Удалить</a></td>
 					    </tr>
-					    <tr>
+					    <tr data-type="present">
 					   		<td class="item-title">
 					   			<div>
 					   				<div class="img-cont">

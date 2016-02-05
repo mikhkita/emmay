@@ -1,5 +1,6 @@
 var progress,
-    changeCity = false;
+    changeCity = false,
+    isEmpty = false;
 (function ($, $document, $window) {
     $(".fancy-ajax").each(function(){
         $(this).attr("href",$(this).attr("data-href"));
@@ -206,32 +207,25 @@ var progress,
         // }
     });
 
-    var availableTags = [
-        "Москва",
-        "Санкт-Петербург",
-        "Астрахань",
-        "Барнаул",
-        "Владивосток",
-        "Волгоград",
-        "Воронеж",
-        "Екатеринбург",
-        "Ижевск",
-        "Иркутск",
-        "Казань",
-        "Кемерово",
-        "Краснодар",
-        "Красноярск",
-        "Липецк",
-        "Набережные Челны",
-        "Новокузнецк",
-        "Нижний Новгород",
-        "Новокузнецк",
-        "Новосибирск",
-        "Омск",
-        "Оренбург"
-    ];
+    var availableTags = [],
+        cities = {};
+
+    $("#b-cities li a").each(function(){
+        availableTags.push($(this).text());
+        cities[$(this).text()] = $(this);
+    });
     $( "#tags" ).autocomplete({
         source: availableTags
+    });
+
+    $("#b-city-confirm").click(function(){
+        if( typeof cities[$("#tags").val()] != "undefined" ){
+            $( "#tags" ).removeClass("error");
+            cities[$("#tags").val()][0].click();
+        }else{
+            $( "#tags" ).addClass("error").focus();
+        }
+        return false;
     });
 
     $("#show-btn").click(function(){
@@ -321,6 +315,9 @@ var progress,
         $(this).closest(".tooltip").fadeOut();
     });
 
+    var payinter,
+        prevPay = null;
+
     $(".pay-desc").find("."+$(".pay-type .active").attr("id")).show();
     $(".pay-type div").click(function(){
         if( winW > 760 ){
@@ -334,14 +331,65 @@ var progress,
             $(".pay-desc").find("."+$(this).attr("id")).show();
             $(this).addClass("active");
         }else{
+            prevPay = $(this);
             $(".pay-type").fadeOut(300,function(){
                 $(".pay-desc").addClass("relative");
             });
             $(".pay-desc > div").hide();
             $(".pay-desc").find("."+$(this).attr("id")).show();
             $(".pay-desc").addClass("shown");
+            clearInterval(payinter);
+            changePay();
         }
     });
+
+    function changePay(){
+        window.location.hash = "#desc";
+
+        payinter = setInterval(function(){
+            if( window.location.hash != "#desc" ){
+                closePay();
+            }
+        },100);
+    }
+
+    function startCheck(){
+        payinter = setInterval(function(){
+            if( window.location.hash == "#desc" ){
+                prevPay.trigger("click");
+            }
+        },100);
+    }
+
+    if( $("#payment-cont").length ){
+        var swipeh = new MobiSwipe("payment-cont");
+            swipeh.direction = swipeh.HORIZONTAL;
+            swipeh.onswiperight = function() { 
+                closePay();
+            };
+    }
+
+    $(".b-pay-back").click(function(){
+        closePay();
+        return false;
+    });
+
+    function closePay(){
+        clearInterval(payinter);
+        var scroll = ((document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop);
+        window.location.hash = "";
+        $("body, html").animate({
+            scrollTop : scroll
+        },0);
+        if( winW < 760 ){
+            $(".pay-desc.shown").removeClass("relative").removeClass("shown");
+
+            $(".pay-type").fadeIn(300);
+        }
+        startCheck();
+    }
+
+
 
     $("#promo-butt").click(function(){
         if($("#promo-code").val() != "" && !$(this).hasClass("disabled")) {
@@ -555,6 +603,7 @@ var progress,
     }
 
     $("body").on("click",".ajax-href",function(){
+        $.fancybox.close();
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top)?"#FFF":"#EC5973");
         progress.setColor( ($("body").scrollTop()>$(".b-navigation").offset().top || $("body").width() < 768)?"#FFF":"#EC5973");
         progress.start(1.5);
@@ -586,15 +635,22 @@ var progress,
                 }
 
                 if( $("#minicart .b-topmenu-basket").hasClass("empty") ){
-                    $(".b-topmenu-basket").addClass("empty");
+                    $(".b-topmenu-basket, .b-small-cart-icon").addClass("empty");
                 }else{
-                    $(".b-topmenu-basket").removeClass("empty");
+                    $(".b-topmenu-basket, .b-small-cart-icon").removeClass("empty");
                 }
                 $(".b-top-basket-count").text($("#minicart .b-top-basket-count").text());
                 progress.end();
             }
         });
         return false;
+    });
+
+    $(".b-small-cart-icon").bind('click',function(){
+        if( $(this).hasClass("empty") ){
+            // console.log("1");
+            isEmpty = true;    
+        }
     });
 
     $(".fancy-ajax").each(function(){
@@ -627,17 +683,21 @@ var progress,
     });
 
     $("#select-tooltip-2").hide();
-    $(".b-order-nav li,.next").click(function(){
+    $("body").on("click",".b-order-nav li,.next",function(){
         var step;
         step = $(this).attr("data-step");
         if(!$(step).hasClass("active")) {
-            window.location.hash = $(".b-order-nav li[data-step='"+step+"']").attr("data-hash");
             var show = true;
             if( step == "#order-payment" ){
                 $("#order-form").submit();
                 show = $("#order-form").valid();
             }
+            if( $("#order-basket table tr").length-1 == $("#order-basket table tr[data-type='present']").length ){
+                show = false;
+                $("#order-basket .tooltip-cont .tooltip").html('Вы не можете купить дополнения к букету без букета.<span class="tooltip-close"></span>').fadeIn(300);
+            }
             if( show ){
+                window.location.hash = $(".b-order-nav li[data-step='"+step+"']").attr("data-hash");
                 $("body, html").animate({
                     scrollTop : $(".payment-nav").offset().top-100
                 },300);
@@ -660,8 +720,6 @@ var progress,
         return false;
     });
 
-    if( window.location.hash != "" )
-        $(".b-order-nav li[data-hash='"+window.location.hash+"']").trigger("click");
 
     $("#order-form").submit(function(){
         // if( $(this).hasClass("loaded") ) return false;
@@ -704,6 +762,7 @@ var progress,
 
                         $("#robokassa-form").remove();
                         $(".b-allwrap").append(json.robo);
+                        $("#basket_form_container,.b-container.flower-add").addClass("greyscale");
                     }else{
                         alert( (json.message)?json.message:"Ошибка создания заказа" );
                     }
@@ -728,7 +787,14 @@ var progress,
     });
 
     $(".b-robo-pay").click(function(){
-        $("#robokassa-form").submit();
+        $.ajax({
+            type: "GET",
+            url: "/ajax/remove_order.php",
+            complete: function() {
+                $("#robokassa-form").submit();
+            }
+        });
+
         return false;
     });
 
@@ -743,7 +809,20 @@ var progress,
 
     $(".b-sber-pay").click(function(){
         if( !$(this).attr("data-href") ) return false;
-        var $this = $(this);
+        
+        $.ajax({
+            type: "GET",
+            url: "/ajax/remove_order.php",
+            complete: function() {
+                sberPay();
+            }
+        });
+
+        return false;
+    });
+
+    function sberPay(){
+        var $this = $(".b-sber-pay");
 
         $this.parent().find("p").fadeOut();
 
@@ -763,9 +842,7 @@ var progress,
                     progress.end();
                 }
             });
-
-        return false;
-    });
+    }
 
     $(".change-order").click(function(){
         $("#order-form input[name='BasketRefresh']").remove();
@@ -773,6 +850,9 @@ var progress,
         $("#order-form")[0].submit();
         return false;
     });
+
+    if( window.location.hash != "" )
+        $(".b-order-nav li[data-hash='"+window.location.hash+"']").trigger("click");
 
     
 })(jQuery, jQuery(document), jQuery(window));
@@ -795,6 +875,10 @@ function bindFancy(){
             openSpeed : 0,
             closeSpeed : 0,
             beforeShow: function(){
+                // console.log("2");
+                setTimeout(function(){
+                    if( isEmpty ) $.fancybox.close();
+                },0);
                 $popup.find(".b-first-step").show();
                 $popup.find(".b-second-step, .b-third-step").hide();
                 $popup.find(".custom-field").remove();

@@ -364,7 +364,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						</div>
 						<div class="b-payment-cont-left">
 							<h2 class="title">СПОСОБ ОПЛАТЫ</h2>
-							<div class="pay-type-cont clearfix">
+							<div class="pay-type-cont clearfix" id="payment-cont">
 								<div class="pay-type left">
 									<div id="pay1" class="active card">
 										<p>Пластиковой картой<br>на сайте</p>
@@ -381,6 +381,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 								<div class="pay-desc first left">
 									<div class="pay1">
 										<div class="b-payment-desc">
+											<a href="#" class="b-pay-back">&larr; Назад</a>
 											<div class="b-image-cont">
 												<img src="i/sber.png" width="160" style="margin-bottom: -9px;" alt="">
 											</div>
@@ -392,6 +393,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									</div>
 									<div class="pay2">
 										<div class="b-payment-desc">
+											<a href="#" class="b-pay-back">&larr; Назад</a>
 											<div class="b-image-cont">
 												<img src="i/robokassa.png" width="177" alt="">
 											</div>
@@ -401,8 +403,11 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 										</div>
 									</div>
 									<div class="pay3">
-										<h3>Текст</h3>
-										<p>Хуекст</p>
+										<div class="b-payment-desc">
+											<a href="#" class="b-pay-back">&larr; Назад</a>
+											<h3>Текст</h3>
+											<p>Хуекст</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -531,7 +536,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 				</div>
 				<h4>Если нет - выберите из списка</h4>
 				<div class="city-list">
-					<ul class="clearfix">
+					<ul class="clearfix" id="b-cities">
 						<li class="active"><a rel="nofollow" href="http://yamme.ru">Москва</a></li>
 						<li><a rel="nofollow" href="http://spb.yamme.ru">Санкт-Петербург</a></li>
 						<li><a rel="nofollow" href="http://astrakhan.yamme.ru">Астрахань</a></li>
@@ -592,7 +597,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	        	<label for="tags" class="desktop-label">Или укажите в поле:</label>
 	        	<label for="tags" class="mobile-label">Если нет - укажите в поле:</label>
 	           	<input id="tags">
-	           	<a href="#">Выбрать</a>
+	           	<a href="#" id="b-city-confirm">Выбрать</a>
 	        </div>
 		</div>
 	</div>
@@ -626,6 +631,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/bootstrap-affix.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/datepicker-ru.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
 <script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>

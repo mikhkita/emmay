@@ -241,11 +241,11 @@ a
 			font-size: 28px;
 }
 		.ui-autocomplete {
-			
+			width: 490px !important;
 		}
 		.ui-autocomplete .ui-menu-item {
 			font-size: 24px;
-			width: 365px;
+			width: 490px !important;
 			padding: 10px 20px;
 		}
 		.ui-autocomplete .ui-menu-item:hover {
@@ -586,6 +586,15 @@ a
 {
 	padding: 20px 0px;
 	min-height: 0px;
+	display: none;
+}
+.b-topmenu-bottom{
+	display: block;
+	padding-bottom: 20px !important;
+	margin-bottom: 22px;
+	margin-top: -18px;
+	padding-top: 0px;
+	border-bottom: 1px solid #DADADA;
 }
 	.b-topmenu a
 	{
@@ -636,6 +645,7 @@ a
 		.b-topmenu-links a
 		{
 			letter-spacing: 1px;
+			font-size: 32px;
 		}
 			.b-topmenu-links a:hover
 			{
@@ -2912,6 +2922,13 @@ h2.b-title{
 		left: 0px !important;
 		top: 0px !important;
 	}
+.b-pay-back{
+	text-decoration: none;
+	display: block;
+	font-size: 32px;
+	margin-bottom: 50px;
+	margin-top: -10px;
+}
 .robo p{
 	padding-top: 13px;
 }

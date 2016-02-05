@@ -664,6 +664,16 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <div class="all-overlay"></div>
 <div class="b-footer">
 	<div class="b-container">
+		<div class="b-container b-topmenu b-topmenu-bottom">
+			<div class="b-wrap clearfix">				
+				<div class="b-topmenu-links">
+					<ul>
+						<li><a href="#">СТАТУС ЗАКАЗА</a></li>
+						<li><a href="#">ОПЛАТА ПО НОМЕРУ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
 		<div class="b-wrap clearfix">
 			<ul class="b-menu-list">
 				<li class="b-menu-item b-f-clients">
@@ -834,6 +844,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	            </div>      
 			</div>
 			<div class="show-btn clearfix">
+				<a class="left" href="#">Международная доставка</a>
 	           	<a class="right" href="#" id="show-btn">Показать все города</a>
 	        </div>
 	        <div class="b-city-select-cont">

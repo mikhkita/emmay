@@ -11,6 +11,9 @@
 	$("body").on('change',"input[name='item-color'],input[name='item-count']",function(){
 		var item = $(this).val();
 		progress.start(1.5);
+		$("body, html").animate({
+			scrollTop : $(".b-item-left").offset().top-80
+		},400);
         $.ajax({
             type: $("#item-form").attr("method"),
             url: $("#item-form").attr("action"),
