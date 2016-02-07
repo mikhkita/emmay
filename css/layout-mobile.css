@@ -1312,7 +1312,8 @@ a
 }	
 	.b-item-left
 	{
-		width: 100%;
+		width: 96%;
+		margin: 0 2%;
 	}
 	.b-item-right
 	{
@@ -1351,7 +1352,7 @@ a
 	{
 		margin-top: 30px;
 		max-width: 100%;
-		margin-left: 10px;
+		/* margin-left: 10px; */
 	}
 		.b-item-gallery .rsDefault .rsThumbsHor{
 			display: none;
@@ -1395,9 +1396,21 @@ a
 			.rsThumbsArrowRight div{
 
 			}
+
+		.b-item-gallery .zoom {
+			display: none;
+		}
+		.b-item-left .delivery-link {
+			font-size: 32px;
+			margin-top: 0;
+		}
+			.b-item-left .delivery-link:after {
+				
+top: 20px;
+			}
 	/* item right */
 .b-item-right{
-	margin-top: -20px;
+	margin-top: 20px;
 }
 	.b-item-description{
 		/*width: 581px;*/
@@ -1607,7 +1620,6 @@ a
 		margin-top: 28px;
 		line-height: 42px;
 		font-size: 32px;
-	
 }
 		.b-item-about h4{
 			margin-bottom: 19px;
@@ -2508,7 +2520,7 @@ input.btn.btn-g.right {}
     width: 50px !important;
 }
 .rsDefault.rsHor .rsArrowRight {
-    right: 10px !important;
+    /*right: 10px !important;*/
 }
 .rsDefault.rsHor .rsArrowRight .rsArrowIcn {
     background-position: -54px -55px !important;
