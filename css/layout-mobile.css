@@ -1313,6 +1313,7 @@ a
 	.b-item-left
 	{
 		width: 96%;
+		max-width: 96%;
 		margin: 0 2%;
 	}
 	.b-item-right

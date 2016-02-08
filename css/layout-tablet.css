@@ -731,14 +731,17 @@ a
 		/*margin-left: 10px;*/
 	}	
 		.b-item-gallery .royalSlider .rsOverflow {
-			max-height: 466px !important;
+			/*max-height: 466px !important;*/
 		}
 		.b-item-gallery .rsDefault .rsThumbsHor{
 			/*margin-left: 0 !important;*/
 		}
 		.b-item-gallery .royalSlider
 		{
-			height: 611px !important;
+			height: 540px !important;
+		}
+		.b-item-left .b-photo-delivery a{
+			margin-right: 1px;
 		}
 		.b-item-gallery .royalSlider .rsThumbsHor {
 			width: 60%;
@@ -747,7 +750,7 @@ a
 			.b-item-gallery-arrow {
 				width: 30px;
 				height: 81px;
-				bottom: 1px;
+				bottom: -57px;
 			}
 			.b-item-gallery-arrow.left-arrow{
 				left: 10%;

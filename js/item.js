@@ -52,11 +52,10 @@
 		// фото с доставок
 		rsCase = $('.b-item-gallery').find('.royalSlider').royalSlider({
 	    	controlNavigation: 'thumbnails',
-		    autoScaleSlider: true, 
-	//	    autoScaleSliderWidth: 960,     
-	//	    autoScaleSliderHeight: 500,
+		    // autoScaleSlider: true, 
 		    loop: true,
 		    imageScaleMode: 'fit-if-smaller',
+		    imageScalePadding: 0,
 		    navigateByClick: true,
 		    numImagesToPreload:2,
 		    arrowsNav:true,
@@ -80,8 +79,12 @@
 					innerzoom: true,
 					magnifierborder: "none",
 					magnifiereffectanimate: "fadeIn",
-					zindex: 99	 
+					zindex: 99,
+					switchsides: false,
+					leftoffset: 0,
+					rightoffset: 0	 
 				});
+
 			} else delivery = false;
 		    if( $(".rsThumbs img").length <= 1 ){
 		    	$(".rsThumbs, .b-item-gallery-arrow").hide();
