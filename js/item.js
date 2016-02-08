@@ -56,7 +56,7 @@
 	//	    autoScaleSliderWidth: 960,     
 	//	    autoScaleSliderHeight: 500,
 		    loop: true,
-		    imageScaleMode: 'none',
+		    imageScaleMode: 'fit-if-smaller',
 		    navigateByClick: true,
 		    numImagesToPreload:2,
 		    arrowsNav:true,
