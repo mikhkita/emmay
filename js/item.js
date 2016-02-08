@@ -77,7 +77,7 @@
 	    		$(slideObject.content[0]).attr("data-large",$(slideObject.thumbnail).attr("data-large"));
 		    	$(slideObject.content[0]).imagezoomsl({
 					innerzoom: true,
-					magnifierborder: "none",
+					magnifierborder: "fit-if-smaller",
 					magnifiereffectanimate: "fadeIn",
 					zindex: 99,
 					switchsides: false,
