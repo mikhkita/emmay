@@ -23,6 +23,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/> 
     <link rel="stylesheet" type="text/css" href="css/layout.css" />	
     <link rel="stylesheet" type="text/css" href="css/retina.css" />	
 
@@ -351,6 +352,14 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 							<li><a href="#">Розы</a></li>
 						</ul>
 					</div>
+					<div class="slick-big">
+						<div class="big-slide"><div><div><img src="i/t/dev-1.jpg" /></div></div></div>
+						<div class="big-slide"><div><div><img src="i/t/dev-2.jpg" /></div></div></div>
+						<div class="big-slide"><div><div><img src="i/t/dev-3.jpg" /></div></div></div>
+						<div class="big-slide"><div><div><img src="i/t/dev-1.jpg" /></div></div></div>
+						<div class="big-slide"><div><div><img src="i/t/dev-2.jpg" /></div></div></div>
+						<div class="big-slide"><div><div><img src="i/t/dev-3.jpg" /></div></div></div>
+					</div>
 					<div class="b-item-gallery">
 						<div class="b-item-gallery-arrow left-arrow"><a href="#"></a></div>
 						<div class="b-item-gallery-arrow right-arrow"><a href="#"></a></div>
@@ -375,13 +384,13 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					    </div>
 					</div>
 					<a class="delivery-link" href="#">Фото доставок этого букета</a>
-					<div class="b-photo-delivery clearfix" id="dev-photo">
-						<a class="rsImg slide-delivery" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/dev-1.jpg" href="i/t/dev-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/dev-1.jpg" /></a>
-						<a class="rsImg slide-delivery" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/dev-2.jpg" href="i/t/dev-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/dev-2.jpg" /></a>
-						<a class="rsImg slide-delivery" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/dev-3.jpg" href="i/t/dev-3.jpg"><img width="86" height="86" class="rsTmb" src="i/t/dev-3.jpg" /></a>
-						<a class="rsImg slide-delivery" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/dev-1.jpg" href="i/t/dev-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/dev-1.jpg" /></a>
-						<a class="rsImg slide-delivery" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/dev-2.jpg" href="i/t/dev-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/dev-2.jpg" /></a>
-						<a class="rsImg slide-delivery" data-rsw="460" data-rsh=""  data-rsBigImg="i/t/dev-3.jpg" href="i/t/dev-3.jpg"><img width="86" height="86" class="rsTmb" src="i/t/dev-3.jpg" /></a>
+					<div class="b-photo-delivery">
+						<div class="dev-slide"><img src="i/t/dev-1.jpg" /></div>
+						<div class="dev-slide"><img src="i/t/dev-2.jpg" /></div>
+						<div class="dev-slide"><img src="i/t/dev-3.jpg" /></div>
+						<div class="dev-slide"><img src="i/t/dev-1.jpg" /></div>
+						<div class="dev-slide"><img src="i/t/dev-2.jpg" /></div>
+						<div class="dev-slide"><img src="i/t/dev-3.jpg" /></div>
 					</div>
 				</div>
 				<div class="b-item-right">
@@ -854,6 +863,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/history.js"></script>
 <script type="text/javascript" src="js/KitSend.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/KitProgress.js"></script>
 <script type="text/javascript" src="js/zoomsl-3.0.min.js"></script>
 <script type="text/javascript" src="js/pages.js"></script>
