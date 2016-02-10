@@ -779,6 +779,12 @@ a
 			.rsThumbsArrowRight div{
 
 			}
+		.b-item-left .slick-big {
+			height: 456px;
+		}
+			.b-item-left .slick-big .big-slide {
+				height: 456px;
+			}
 	/* item right */
 .b-item-right{
 	/*margin-top: 11px;*/

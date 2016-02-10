@@ -58,6 +58,7 @@
 		    imageScalePadding: 0,
 		    navigateByClick: true,
 		    numImagesToPreload:2,
+		    transitionSpeed: 300,
 		    arrowsNav:true,
 		    arrowsNavAutoHide: false,
 		    arrowsNavHideOnTouch: false,
@@ -68,7 +69,8 @@
 		    addActiveClass: true,
 		    thumbs: {
 		      appendSpan: true,
-		      firstMargin: true
+		      firstMargin: true,
+		      transitionSpeed: 300
 		    }
 	    }).data('royalSlider');
 
@@ -78,19 +80,16 @@
 		});
 
 	    rsCase.ev.on('rsAfterContentSet', function(e, slideObject) {
-	  //   	if(!delivery) {
-	  //   		$(slideObject.content[0]).attr("data-large",$(slideObject.thumbnail).attr("data-large"));
-		 //    	$(slideObject.content[0]).imagezoomsl({
-			// 		innerzoom: true,
-			// 		magnifierborder: "fit-if-smaller",
-			// 		magnifiereffectanimate: "fadeIn",
-			// 		zindex: 99,
-			// 		switchsides: false,
-			// 		leftoffset: 0,
-			// 		rightoffset: 0	 
-			// 	});
-
-			// } else delivery = false;
+    		$(slideObject.content[0]).attr("data-large",$(slideObject.thumbnail).attr("data-large"));
+	    	$(slideObject.content[0]).imagezoomsl({
+				innerzoom: true,
+				magnifierborder: "fit-if-smaller",
+				magnifiereffectanimate: "fadeIn",
+				zindex: 99,
+				switchsides: false,
+				leftoffset: 0,
+				rightoffset: 0	 
+			});
 		    if( $(".rsThumbs img").length <= 1 ){
 		    	$(".rsThumbs, .b-item-gallery-arrow").hide();
 		    	$(".rsArrow").addClass("hidden");
@@ -144,42 +143,15 @@
 		$('.slick-big').slick({
   			prevArrow: '<span class="slick-arrow slick-prev"></span>',
             nextArrow: '<span class="slick-arrow slick-next"></span>',
-            asNavFor: '.b-photo-delivery'
+            asNavFor: '.b-photo-delivery',
+            speed: 300
 		});
 		$('.b-photo-delivery').slick({
 			arrows: false,
 			slidesToShow: 6,
 			slidesToScroll: 1,
 			asNavFor: '.slick-big',
-			focusOnSelect: true,
-			 responsive: [
-		    {
-		      breakpoint: 1024,
-		      settings: {
-		        slidesToShow: 3,
-		        slidesToScroll: 3,
-		        infinite: true,
-		        dots: true
-		      }
-		    },
-		    {
-		      breakpoint: 600,
-		      settings: {
-		        slidesToShow: 2,
-		        slidesToScroll: 2
-		      }
-		    },
-		    {
-		      breakpoint: 480,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
-		    }
-		    // You can unslick at a given breakpoint now by adding:
-		    // settings: "unslick"
-		    // instead of a settings object
-		  ]
+			focusOnSelect: true
 		});
 
 		rsCase.ev.on('rsBeforeMove', function(event, type, userAction ) {
