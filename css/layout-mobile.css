@@ -1409,6 +1409,9 @@ a
 				
 top: 20px;
 			}
+		.b-item-left .b-photo-delivery .dev-slide {
+			max-height: 115px;
+		}
 	/* item right */
 .b-item-right{
 	margin-top: 20px;
@@ -2504,9 +2507,9 @@ input.btn.btn-g.right {}
 	font-size: 16px;
 }
 .rsArrow{
-	display: block !important; 
+	/*display: block !important; 
 	opacity: 1 !important;
-	visibility: visible !important;
+	visibility: visible !important;*/
 }
 .rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
     background-position: -55px -23px !important;
@@ -2516,6 +2519,24 @@ input.btn.btn-g.right {}
     height: 50px !important;
     left: 0px !important;
     margin-left: 0px !important;
+}
+.b-item-left .slick-big .slick-arrow {
+	width: 50px !important;
+    height: 50px !important;
+    margin-top: -25px;
+}
+	.b-item-left .slick-big .slick-arrow.slick-prev {
+		background-position: -55px -23px !important;
+	}
+	.b-item-left .slick-big .slick-arrow.slick-next {
+		background-position: -54px -55px !important;
+	}
+.b-item-left .slick-big {
+	margin-top: 113px;
+	height: 471px;
+}  
+.b-item-left .slick-big .big-slide {
+	height: 471px;
 }
 .rsDefault .rsArrow {
     width: 50px !important;
