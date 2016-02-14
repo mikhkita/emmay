@@ -77,6 +77,7 @@
 		rsCase.ev.on('rsAfterSlideChange', function(event) {
 		    $(".rsThumb").css("border","2px solid rgba(0,0,0,0)");
 			$(".rsThumb.rsNavSelected").css("border","2px solid #00cd71");
+			$(".zoomContainer").remove();
 			$(".rsSlide.rsActiveSlide img").elevateZoom({
 			  zoomType				: "inner",
 			  cursor: "crosshair"
@@ -86,6 +87,7 @@
 
 	    rsCase.ev.on('rsAfterContentSet', function(e, slideObject) {
     		$(slideObject.content[0]).attr("data-zoom-image",$(slideObject.thumbnail).attr("data-zoom-image"));
+    		$(".zoomContainer").remove();
     		if(slideObject.id==0) {
 	    		$(slideObject.content[0]).elevateZoom({
 				  zoomType				: "inner",
