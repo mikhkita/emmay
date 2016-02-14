@@ -2075,7 +2075,13 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .item
 {
 	
-}	
+}		
+	.zoomContainer {
+		z-index: 98;
+	}
+	.rsDefault .rsArrow {
+		z-index: 99 !important;
+	}
 	.item .b-wrap {
 		padding: 0;
 	}

@@ -77,19 +77,34 @@
 		rsCase.ev.on('rsAfterSlideChange', function(event) {
 		    $(".rsThumb").css("border","2px solid rgba(0,0,0,0)");
 			$(".rsThumb.rsNavSelected").css("border","2px solid #00cd71");
+			$(".rsSlide.rsActiveSlide img").elevateZoom({
+			  zoomType				: "inner",
+			  cursor: "crosshair"
+			});
+
 		});
 
 	    rsCase.ev.on('rsAfterContentSet', function(e, slideObject) {
-    		$(slideObject.content[0]).attr("data-large",$(slideObject.thumbnail).attr("data-large"));
-	    	$(slideObject.content[0]).imagezoomsl({
-				innerzoom: true,
-				magnifierborder: "fit-if-smaller",
-				magnifiereffectanimate: "fadeIn",
-				zindex: 99,
-				switchsides: false,
-				leftoffset: 0,
-				rightoffset: 0	 
-			});
+    		$(slideObject.content[0]).attr("data-zoom-image",$(slideObject.thumbnail).attr("data-zoom-image"));
+    		if(slideObject.id==0) {
+	    		$(slideObject.content[0]).elevateZoom({
+				  zoomType				: "inner",
+				  cursor: "crosshair"
+				});
+    		}
+	  //   	$(slideObject.content[0]).imagezoomsl({
+			// 	innerzoom: true,
+			// 	magnifierborder: "fit-if-smaller",
+			// 	magnifiereffectanimate: "fadeIn",
+			// 	zindex: 99,
+			// 	switchsides: false,
+			// 	leftoffset: 0,
+			// 	rightoffset: 0	 
+			// });
+			// $(slideObject.content[0]).elevateZoom({
+			//   zoomType				: "inner",
+			//   cursor: "crosshair"
+			// });
 		    if( $(".rsThumbs img").length <= 1 ){
 		    	$(".rsThumbs, .b-item-gallery-arrow").hide();
 		    	$(".rsArrow").addClass("hidden");
@@ -154,13 +169,13 @@
 			focusOnSelect: true
 		});
 
-		rsCase.ev.on('rsBeforeMove', function(event, type, userAction ) {
-			if(delivery_id != false) {
-	    		rsCase.removeSlide(delivery_id);
-	    		delivery_id = false;
-	    		$(".b-item-gallery .zoom").show();
-	    	}
-		});
+		// rsCase.ev.on('rsBeforeMove', function(event, type, userAction ) {
+		// 	if(delivery_id != false) {
+	 //    		rsCase.removeSlide(delivery_id);
+	 //    		delivery_id = false;
+	 //    		$(".b-item-gallery .zoom").show();
+	 //    	}
+		// });
 		
 		//похожие товары 
 		rsCase1 = $('.b-catalog-relative').find('.royalSlider').royalSlider({
