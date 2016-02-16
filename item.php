@@ -359,6 +359,8 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="big-slide"><div><div><img src="i/t/dev-1.jpg" /></div></div></div>
 						<div class="big-slide"><div><div><img src="i/t/dev-2.jpg" /></div></div></div>
 						<div class="big-slide"><div><div><img src="i/t/dev-3.jpg" /></div></div></div>
+						<div class="big-slide"><div><div><img src="i/t/dev-3.jpg" /></div></div></div>
+						<div class="big-slide"><div><div><img src="i/t/dev-3.jpg" /></div></div></div>
 					</div>
 					<div class="b-item-gallery">
 						<div class="b-item-gallery-arrow left-arrow"><a href="#"></a></div>
@@ -384,13 +386,15 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 					    </div>
 					</div>
 					<a class="delivery-link" href="#">Фото доставок этого букета</a>
-					<div class="b-photo-delivery">
-						<div class="dev-slide"><img src="i/t/dev-1.jpg" /></div>
-						<div class="dev-slide"><img src="i/t/dev-2.jpg" /></div>
-						<div class="dev-slide"><img src="i/t/dev-3.jpg" /></div>
-						<div class="dev-slide"><img src="i/t/dev-1.jpg" /></div>
-						<div class="dev-slide"><img src="i/t/dev-2.jpg" /></div>
-						<div class="dev-slide"><img src="i/t/dev-3.jpg" /></div>
+					<div class="b-photo-delivery clearfix">
+						<img src="i/t/dev-1.jpg" />
+						<img src="i/t/dev-2.jpg" />
+						<img src="i/t/dev-3.jpg" />
+						<img src="i/t/dev-1.jpg" />
+						<img src="i/t/dev-2.jpg" />
+						<img src="i/t/dev-3.jpg" />
+						<img src="i/t/dev-3.jpg" />
+						<img src="i/t/dev-3.jpg" />
 					</div>
 				</div>
 				<div class="b-item-right">
