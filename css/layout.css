@@ -4281,6 +4281,9 @@ h2.b-title {
 		.b-order-nav li:hover span{
 			color: #FFF;
 		}
+.rsDefault.rsHor .rsArrowLeft {
+	left: 1px !important;
+}
 #promo-butt.disabled{
 	cursor: default !important;
 }
