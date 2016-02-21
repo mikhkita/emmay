@@ -96,9 +96,9 @@
     // 		}
 	    	$(slideObject.content[0]).imagezoomsl({
 				innerzoom: true,
-				magnifierborder: "1px solid rgba(0,0,0,0.2)",
+				magnifierborder: "1px solid rgba(0,0,0,0)",
 				magnifiereffectanimate: "fadeIn",
-				zindex: 99,
+				zindex: 98,
 				switchsides: false,
 				leftoffset: 0,
 				rightoffset: 0	 
@@ -115,11 +115,11 @@
 		
 		$("body").on("click",".delivery-link", function(){
 			if(!$(this).hasClass("active")) {
-				$(".b-photo-delivery").show();	
+				$(".b-photo-delivery").slideDown();	
 				$(this).addClass("active");
 			} else { 
 				$(this).removeClass("active");
-				$(".b-photo-delivery").hide();
+				$(".b-photo-delivery").slideUp();
 			}
 			return false;
 		});

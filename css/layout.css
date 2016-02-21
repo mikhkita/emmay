@@ -2196,15 +2196,29 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 					bottom: 50px;
 					right: 0;
 				}
-			.b-item-gallery .zoom {
+				.magnifier {
+					position: relative;
+				}
+				.rsContainer:after,.magnifier:after {
+					position: absolute;
+					font-size: 0;
+					content: "";
+					right: 30px;
+					top: 40px;
+					width: 47px;
+					height: 46px;
+					background-image: url("../i/zoom.png");
+					z-index: 99;
+				}
+			/*.b-item-gallery .zoom {
 				position: absolute;
 				right: 30px;
 				top: 40px;
 				width: 47px;
 				height: 46px;
 				background-image: url("../i/zoom.png");
-				z-index: 10;
-			}
+				z-index: 99;
+			}*/
 			.b-item-gallery .royalSlider .rsArrow {
 				width: 32px;
 			}
