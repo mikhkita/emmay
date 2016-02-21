@@ -2210,6 +2210,10 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 					background-image: url("../i/zoom.png");
 					z-index: 99;
 				}
+				.rsContainer:after {
+					right: 29px;
+					top: 41px;
+				}
 			/*.b-item-gallery .zoom {
 				position: absolute;
 				right: 30px;

@@ -1399,7 +1399,7 @@ a
 
 			}
 
-		.b-item-gallery .zoom {
+		.b-item-gallery .zoom,.rsContainer:after {
 			display: none;
 		}
 		.b-item-left .delivery-link {
