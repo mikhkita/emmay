@@ -128,7 +128,7 @@
 
 		    	$(slideObject.content[0]).imagezoomsl({
 					innerzoom: true,
-					scrollspeedanimate: 3,
+					scrollspeedanimate: 2,
 					magnifierborder: "1px solid rgba(0,0,0,0)",
 					magnifiereffectanimate: "fadeIn",
 					zindex: 98,
