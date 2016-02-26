@@ -2312,10 +2312,11 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			height: 6px;
 			background-image: url("../i/dev-arrow.png");
 			background-repeat: no-repeat;
-			background-position: 0 50%;
+			background-position: -10px 50%;
 		}
 			.b-item-left .delivery-link.active:after {
-				background-position: -10px 50%;
+				
+				background-position: 0 50%;
 			} 
 		.b-item-left .delivery-link:hover {
 			border-bottom: 1px dashed rgba(0,0,0,0);
