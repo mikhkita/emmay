@@ -106,6 +106,7 @@
 		rsCase.ev.on('rsAfterSlideChange', function(event) {
 		    $(".rsThumb").css("border","2px solid rgba(0,0,0,0)");
 			$(".rsThumb.rsNavSelected").css("border","2px solid #00cd71");
+			$(".slide-text").show();
 			// $(".zoomContainer").remove();
 			// $(".rsSlide.rsActiveSlide img").elevateZoom({
 			//   zoomType				: "inner",
@@ -115,7 +116,6 @@
 		});
 
 	    rsCase.ev.on('rsAfterContentSet', function(e, slideObject) {
-	    	$(".slide-text").show();
 	    	if( myWidth >= 768) {
 	    		$(slideObject.content[0]).attr("data-large",$(slideObject.thumbnail).attr("data-large"));
 	    		// $(".zoomContainer").remove();
