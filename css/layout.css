@@ -2155,9 +2155,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 				/*cursor: default;*/
 			}
 			.b-item-gallery .royalSlider .rsThumbsHor {
-			    width: 70%;
+			    width: 68%;
 			    /* min-width: 391px; */
-			    margin: 60px 15% 0;
+			    margin: 60px 16% 0;
 			}
 			.b-item-gallery .royalSlider .rsOverflow {
 				/*max-height: 561px !important;*/
@@ -2276,6 +2276,22 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			.rsThumbsArrowRight div{
 
 			}
+	.b-item-gallery {
+		position: relative;
+	}
+		.b-item-gallery .pre-init {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-position: 50%;
+			background-repeat: no-repeat;
+			top: -42px;
+		}
+
+	.b-item-left .slick-slider,.b-item-left .b-item-gallery,.b-item-left .delivery-link{
+		opacity: 0;
+	}
+	
 	.b-item-left .delivery-link {
 		margin-top: 50px;
 		border-bottom: 1px dashed #3166A1;
@@ -3856,6 +3872,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 		line-height: 18px;
 		margin-right: 32px;
 	}
+
 	.b-item-gallery .rsNavItem{
 		/*margin-right: 11px !important;*/
 		height: 72px !important;
@@ -4336,6 +4353,9 @@ h2.b-title {
 		}
 .b-rub-short{
 	display: none;
+}
+.rsVideoFrameHolder.rsVideoActive {
+	z-index: 1000;
 }
 @media screen and (max-width: 1230px){
 	.free-card

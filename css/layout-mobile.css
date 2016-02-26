@@ -2976,3 +2976,6 @@ h2.b-title{
 .b-rub-short{
 	display: inline;
 }
+.rsSlide:after, .magnifier:after {
+	display: none;
+}
