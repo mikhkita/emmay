@@ -49,9 +49,8 @@
   	$(window).resize(resize);
   	resize();
 
-  	var delivery_id = false,delivery=false,init=true;
+  	
     sliders_init();
-    var blocked = true;
 
     $(document).load(function(){
     	window.onpopstate = function(event) {
@@ -69,7 +68,9 @@
 	}    
  	function sliders_init() {
 		// фото с доставок
-
+		var init=true;
+		$(".b-item-left .slick-slider,.b-item-left .b-item-gallery,.b-item-left .delivery-link").css("opacity",0);
+		$(".b-item-gallery .pre-init").show();
 		rsCase = $('.b-item-gallery').find('.royalSlider').royalSlider({
 	    	controlNavigation: 'thumbnails',
 		    // autoScaleSlider: true, 
