@@ -2979,3 +2979,7 @@ h2.b-title{
 .rsSlide:after, .magnifier:after {
 	display: none;
 }
+.b-item-left .pre-init {
+	height: 471px;
+	top: 104px;
+}

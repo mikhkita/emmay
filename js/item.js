@@ -70,7 +70,7 @@
 		// фото с доставок
 		var init=true;
 		$(".b-item-left .slick-slider,.b-item-left .b-item-gallery,.b-item-left .delivery-link").css("opacity",0);
-		$(".b-item-gallery .pre-init").show();
+		$(".b-item-left .pre-init").show();
 		rsCase = $('.b-item-gallery').find('.royalSlider').royalSlider({
 	    	controlNavigation: 'thumbnails',
 		    // autoScaleSlider: true, 
@@ -99,7 +99,7 @@
 		rsCase.slides[0].holder.on('rsAfterContentSet', function() {
 			if(init) {
 		    	$(".b-item-left .slick-slider,.b-item-left .b-item-gallery,.b-item-left .delivery-link").css("opacity",1);
-		    	$(".b-item-gallery .pre-init").hide();
+		    	setTimeout(function() {$(".b-item-left .pre-init").fadeOut()}, 1000);
 		    	init = false;
 		    }
 		});

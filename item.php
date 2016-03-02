@@ -362,11 +362,12 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 						<div class="big-slide"><div><div><img src="i/t/dev-3.jpg" /></div></div></div>
 						<div class="big-slide"><div><div><img src="i/t/dev-3.jpg" /></div></div></div>
 					</div>
+					<div class="pre-init" style="background-image: url('i/t/item-1.jpg');"></div>
 					<div class="b-item-gallery">
 						<div class="b-item-gallery-arrow left-arrow"><a href="#"></a></div>
 						<div class="b-item-gallery-arrow right-arrow"><a href="#"></a></div>
 						<!-- <div class="zoom"></div> -->
-						<div class="pre-init" style="background-image: url('i/t/item-1.jpg');"></div>
+						
 						<div class="royalSlider rsDefault">
 						   	<a class="rsImg"  href="i/t/item-1.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-1_.jpg"  data-large="i/t/item-11.jpg"/><div class="slide-text vert">35 см</div><div class="slide-text">40 см</div></a>
 							<a class="rsImg"  href="i/t/item-2.jpg"><img width="86" height="86" class="rsTmb" src="i/t/item-2_.jpg"  data-large="i/t/item-22.jpg"/><div class="slide-text vert">35 см</div><div class="slide-text">40 см</div></a>
