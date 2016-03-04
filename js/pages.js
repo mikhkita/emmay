@@ -854,6 +854,12 @@ var progress,
     if( window.location.hash != "" )
         $(".b-order-nav li[data-hash='"+window.location.hash+"']").trigger("click");
 
+    if( winW < 768 ){
+        $("body").on("mouseover",".ui-autocomplete .ui-menu-item", function(){
+            $(this).click();
+        });
+    }
+
     // $("body").on("click",".b-cart-items .close-button",function(){
     //     var $this = $(this);
     //     $this.parents("li").hide();
