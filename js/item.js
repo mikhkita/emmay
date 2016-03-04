@@ -99,7 +99,7 @@
 		rsCase.slides[0].holder.on('rsAfterContentSet', function() {
 			if(init) {
 		    	$(".b-item-left .slick-slider,.b-item-left .b-item-gallery,.b-item-left .delivery-link").css("opacity",1);
-		    	setTimeout(function() {$(".b-item-left .pre-init").fadeOut()}, 1000);
+		    	setTimeout(function() {$(".b-item-left .pre-init").fadeOut()}, 300);
 		    	init = false;
 		    }
 		});
@@ -126,10 +126,19 @@
 					//   cursor: "crosshair"
 					// });
 	    // 		}
+	    		var zoom = [2,2];
+	    		if($(slideObject.content[0]).width() < 560) {
+	    			var temp = Math.round(560/$(slideObject.content[0]).width()) + 2;
+	    			zoom = [temp,temp];
+	    		}
 
 		    	$(slideObject.content[0]).imagezoomsl({
-					innerzoom: true,
+					// innerzoom: true,
+					descarea: ".rsOverflow",
 					scrollspeedanimate: 2,
+					cursorshadeopacity: 1,
+					zoomrange: zoom,
+					cursorshade: false,
 					magnifierborder: "1px solid rgba(0,0,0,0)",
 					magnifiereffectanimate: "fadeIn",
 					zindex: 98,

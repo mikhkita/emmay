@@ -2282,7 +2282,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 			width: 100%;
 			height: 560px;
 			background-position: 50%;
-			background-size: contain;
+			/*background-size: cover;*/
 			background-repeat: no-repeat;
 			top: 55px;
 		}
@@ -3679,6 +3679,19 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 					}
 .b-not-found{
 	display: none;
+}
+.magnifier {
+	/*left: 20% !important;*/
+	/*top: 0 !important;*/
+
+}
+/*.cursorshade {
+	border: 1px solid rgba(0,0,0,0) !important;
+	background-color: rgba(0,0,0,0) !important;
+}*/
+.rsOverflow {
+	width: 560px;
+	height: 560px;
 }
 /* footer */	
 .b-footer
