@@ -137,7 +137,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									<h4>5 200 руб.</h4>
 									<span class="b-cart-item-count">2шт.</span>
 								</div>
-								<a href="#" class="close-button"></a>
+								<a href="ajax/cart-remove.php" class="close-button"></a>
 							</li>
 							<li class="clearfix">
 								<img src="i/basket-table.jpg" alt="" class="left">
@@ -145,7 +145,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									<a href="#">Букет из 11 красных роз</a>
 									<h4>5 200 руб.</h4>
 								</div>
-								<a href="#" class="close-button"></a>
+								<a href="ajax/cart-remove.php" class="close-button"></a>
 							</li>
 							<li class="clearfix">
 								<img src="i/basket-table.jpg" alt="" class="left">
@@ -153,7 +153,7 @@ $mobile = (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|
 									<a href="#">Букет из 11 красных роз</a>
 									<h4>5 200 руб.</h4>
 								</div>
-								<a href="#" class="close-button"></a>
+								<a href="ajax/cart-remove.php" class="close-button"></a>
 							</li>
 						</ul>
 						<div class="b-cart-bottom clearfix">

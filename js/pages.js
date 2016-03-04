@@ -854,6 +854,28 @@ var progress,
     if( window.location.hash != "" )
         $(".b-order-nav li[data-hash='"+window.location.hash+"']").trigger("click");
 
+    // $("body").on("click",".b-cart-items .close-button",function(){
+    //     var $this = $(this);
+    //     $this.parents("li").hide();
+
+    //     $.ajax({
+    //         type: "GET",
+    //         url: $this.attr("href"),
+    //         success: function(msg){
+    //             var json = jQuery.parseJSON(msg);
+    //             if(json.result=="success"){
+    //                 $this.parents("li").remove();
+    //                 if( !$(".b-cart-items li").length ){
+    //                     toggleCartMenu(true);
+    //                 }
+    //             }else{
+    //                 $this.parents("li").show();
+    //             }
+    //         }
+    //     });
+    //     return false;
+    // });
+
     
 })(jQuery, jQuery(document), jQuery(window));
 
@@ -973,4 +995,5 @@ function bindFancy(){
         }
         return false;
     });
+
 }
